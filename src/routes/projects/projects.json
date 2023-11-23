@@ -1,0 +1,181 @@
+[
+    {
+        "name": "Portfolio",
+        "description": "Mon portfolio",
+        "date": "2023-11-23",
+        "type": "website",
+
+        "tools": {
+            "Language": "JavaScript",
+            "Framework": "Svelte",
+            "Illustrations": "Illustrator"
+        },
+        "main_image": "/images/projects/portfolio/0.png",
+        "button_label": "Voir sur GitHub",
+        "github_link": "https://github.com/Yoshiip/portfolio",
+        "link": "https://ilyva.sciencesky.fr",
+        "color": "#0000ff"
+    },
+    {
+        "name": "Mecharia",
+        "description": "Un jeu fait à l'occassion de la GMTK Jam 2023. C'est un jeu de Tower Defense dans lequelle on doit attaquer un jardin qui est défendu automatiquement par des plantes. Le jeu se rassemble énormément du gameplay de Plantes Vs. Zombies.",
+        "date": "2023-05-12",
+        "type": "game",
+        "tools": {
+            "Moteur": "Godot Engine",
+            "Modélisation": "Blender",
+            "Illustrations": "Illustrator"
+        },
+        "main_image": "/images/projects/mecharia/0.png",
+        "button_label": "Jouer",
+        "link": "https://yoshiip.itch.io/mecharia",
+        "logo": "/images/projects/mecharia/logo.png",
+        "color": "#ffc561"
+    },
+    {
+        "name": "Ilyva",
+        "main_image": "/images/projects/ilyva/2.jpg",
+        "left_image": "/images/projects/ilyva/0.jpg",
+        "right_image": "/images/projects/ilyva/1.jpg",
+        "description": "Un escape game original créé par des étudiants. Échappez-vous du monde parallèle dans lequel vous êtes bloqué(es) en vous exerçant à Bash.",
+        "button_label": "Jouer/Télécharger",
+        "date": "2023-01-9",
+        "type": "game",
+        "tools": {
+            "Moteur": "Godot Engine",
+            "Modélisation": "Blender",
+            "Illustrations": "Illustrator",
+            "Montage": "Premiere Pro"
+        },
+        "link": "https://ilyva.sciencesky.fr",
+        "github_link": "https://github.com/Yoshiip/ilyva",
+        "logo": "/images/projects/ilyva/logo.png",
+        "color": "#db281c"
+    },
+    {
+        "name": "Niptur's Curse",
+        "main_image": "/images/projects/niptur/0.png",
+        "left_image": "/images/projects/niptur/1.png",
+        "right_image": "/images/projects/niptur/2.png",
+        "description": "Niptur's Curse est un jeu issu d'une game jam nommé la Ludum Dare. Le concept est de fabriquer un jeu complet en moins de 72 heures, en faisant tout a partir de rien.<br>Ce jeu a été fait durant la Ludum Dare 52, s'étant déroulée du vendredi 6 janvier au lundi 9 janvier 2023.<br>Le but de jeu est d'explorer un monde infesté d'ennemies pour pousser des graines, permettant d'augmenter les caractérisiques de votre personnage ou débloquer de nouvelles armes.<br>Le code, les graphismes et la musique dans le jeu a été réalisé par moi-même.",
+        "button_label": "Jouer",
+        "date": "2023-01-9",
+        "type": "game",
+        "tools": {
+            "Moteur": "Godot Engine",
+            "Graphismes": "Aseprite",
+            "Musiques": "FL Studio"
+        },
+        "link": "https://yoshiip.xyz/niptur/",
+        "logo": "/images/projects/niptur/logo.png",
+        "color": "#239063"
+    },
+    {
+        "name": "Kahorn",
+        "main_image": "/images/projects/kahorn/0.png",
+        "left_image": "/images/projects/kahorn/1.png",
+        "right_image": "/images/projects/kahorn/2.png",
+        "description": "Kahorn est un projet d'école s'inspirant énormément du jeu sur le navigateur Kahoot. Kahorn se joue en multijoueur en ligne, et les questions sont récupéré depuis l'API TriviaDB.",
+        "icon": "",
+        "button_label": "Télécharger",
+        "date": "2022-04-14",
+        "type": "game",
+        "tools": {
+            "Réseau": "ENet",
+            "Moteur": "Godot Engine",
+            "Illustrations": "Illustrator"
+        },
+        
+        "link": "https://yoshiip.xyz/kahorn",
+        "logo": "/images/projects/kahorn/logo.png",
+        "color": "#fa1a32"
+    },
+    {
+        "name": "LavaRun",
+        "main_image": "/images/projects/lavarun/0.png",
+        "left_image": "/images/projects/lavarun/1.png",
+        "description": "LavaRun est un jeu réalisé en ijava dans le cadre du BUT Informatique. C'est un jeu dans lequel vous devez vous échapper d'un labyrinthe (généré procéduralement à chaque partie) et éviter la lave en répondant à des questions.",
+        "icon": "",
+        "button_label": "Voir sur GitHub",
+        "date": "2023-01-08",
+        "type": "game",
+        "tools": {
+            "Language": "Java"
+        },
+        "link": "https://github.com/Yoshiip/LavaRun",
+        "color": "#BC1B1B"
+
+    },
+    {
+        "name": "Yoshtimer",
+        "main_image": "/images/projects/yoshtimer/1.jpg",
+        "left_image": "/images/projects/yoshtimer/0.png",
+        "description": "LavaRun est un jeu réalisé en ijava dans le cadre du BUT Informatique. C'est un jeu dans lequel vous devez vous échapper d'un labyrinthe (généré procéduralement à chaque partie) et éviter la lave en répondant à des questions.",
+        "icon": "",
+        "button_label": "Consulter",
+        "date": "2022-08-21",
+        "type": "website",
+        "tools": {
+            "Language": "JavaScript",
+            "Framework": "Svelte"
+        },
+        "link": "https://yoshiip.xyz/timer",
+        "color": "#AC4EC7"
+    },
+    {
+        "name": "Ultimate Hangman",
+        "main_image": "/images/projects/ultimate_hangman/0.png",
+        "left_image": "/images/projects/ultimate_hangman/1.png",
+        "right_image": "/images/projects/ultimate_hangman/2.png",
+        "description": "Ultimate Hangman est un jeu de pendu, en amélioré. Le jeu inclut une interface graphique très ludique, des musiques, une carte du monde, et un scénario. Le jeu permet de jouer en 1 contre 1, en laissant deviner des mots à ses camarades.",
+        "logo": "/images/projects/ultimate_hangman/logo.png",
+        "button_label": "Jouer",
+        "date": "2021-01-23",
+        "type": "game",
+        "tools": {
+            "Language": "Python",
+            "Moteur": "Godot Engine"
+        },
+        "color": "#288bb6",
+        "link": "https://yoshiip.xyz/hangman"
+    },
+    {
+        "name": "Little Reactor",
+        "main_image": "/images/projects/little_reactor/0.png",
+        "left_image": "/images/projects/little_reactor/1.png",
+        "right_image": "/images/projects/little_reactor/2.png",
+        "logo":"/images/projects/little_reactor/logo.png",
+        "description": "Little Reactor est un jeu issu d'une game jam nommé la Ludum Dare. Le concept est de fabriquer un jeu complet en moins de 72 heures, en faisant tout à partir de rien.<br>Ce jeu a été fait durant la Ludum Dare 49, s'étant déroulé en octobre 2021.<br>Le but du jeu est d'empêcher des petits robots de tomber tout en respectant leur ordre pour progresser dans les niveaux.<br>Le code, les graphismes et la musique dans le jeu ont été réalisé par moi-même.",
+        "icon": "",
+        "button_label": "Jouer",
+        "date": "2021-10-11",
+        "type": "game",
+        "tools": {
+            "Moteur": "Godot Engine",
+            "Musiques/SFX": "FL Studio",
+            "Graphismes": "Aseprite"
+        },
+        "color": "#504c15",
+        "link": "https://yoshiip.xyz",
+        "github_link": "https://yoshiip.xyz"
+    },
+    {
+        "name": "Fall'em Down",
+        "main_image": "/images/projects/fall_em_down/0.png",
+        "left_image": "/images/projects/fall_em_down/1.png",
+        "right_image": "/images/projects/fall_em_down/2.png",
+        "description": "Fall'em Down est un jeu issu d'une game jam nommé la Ludum Dare. Le concept est de fabriquer un jeu complet en moins de 72 heures, en faisant tout à partir de rien.<br>Ce jeu a été fait durant la Ludum Dare 48, s'étant déroulé en avril 2021.<br>Le but du jeu est de tomber dans un puit en tuant les ennemies qui s'y dressent avec votre arme. Récupèrez les gemmes pour améliorer votre personnage et tuez les trois boss pour gagner.<br>Le code, les graphismes dans le jeu ont été réalisé par moi-même.",
+        "icon": "",
+        "button_label": "Jouer/Télécharger",
+        "date": "2021-04-13",
+        "color": "#6d2a09",
+        "logo":"/images/projects/fall_em_down/logo.png",
+        "type": "game",
+        "tools": {
+            "Moteur": "Godot Engine",
+            "Musiques/SFX": "FL Studio",
+            "Graphismes": "Aseprite"
+        },
+        "link": "https://yoshiip.xyz"
+    }
+]

@@ -10,7 +10,7 @@ header {
   height: 100vh;
   font-size: 18px;
 
-  background-image: url("/images/projects/header_background.png");
+  background-image: url("/images/projects/header_background.jpg");
   background-size: cover;
 }
 
@@ -27,6 +27,7 @@ header a {
   border-radius: 32px;
   font-weight: 900;
   appearance: button;
+  text-decoration: none;
 }
 
 header > .back_button {
@@ -35,11 +36,32 @@ header > .back_button {
   left: 32px;
 }
 
+header > .back_button > img {
+  vertical-align: middle;
+}
+
+
+
 .scroll_button {
   position: absolute;
   bottom: 32px;
   left: calc(50% - 120px);
 }
+
+.scroll_button > img {
+  position: absolute;
+  bottom: 64px;
+  left: calc(50% - 32px);
+  width: 64px;
+  animation: 3s ease-in-out 1s infinite alternate scroll_animation;
+}
+
+@keyframes scroll_animation {
+  from { transform: translate(0, 0); }
+  to   { transform: translate(0, 24px); }
+}
+
+
 
 body {
   scroll-behavior: smooth;
@@ -93,6 +115,8 @@ body {
   .project {
     width: calc(100svw - 64px);
   }
+
+  
 }
 
 
@@ -103,6 +127,9 @@ body {
 
   .project {
     width: calc(50svw - 32px);
+  }
+  header {
+    display: none;
   }
 }
 

@@ -1,24 +1,23 @@
 [
     {
         "name": "Portfolio",
-        "description": "Mon portfolio",
+        "description": "C'est le portfolio que vous consultez actuellement! Je l'ai réalisé avec Svelte.",
         "date": "2023-11-23",
         "type": "website",
 
         "tools": {
-            "Language": "JavaScript",
+            "Langage": "JavaScript",
             "Framework": "Svelte",
             "Illustrations": "Illustrator"
         },
         "main_image": "/images/projects/portfolio/0.png",
         "button_label": "Voir sur GitHub",
-        "github_link": "https://github.com/Yoshiip/portfolio",
-        "link": "https://ilyva.sciencesky.fr",
+        "link": "https://github.com/Yoshiip/portfolio",
         "color": "#0000ff"
     },
     {
         "name": "Mecharia",
-        "description": "Un jeu fait à l'occassion de la GMTK Jam 2023. C'est un jeu de Tower Defense dans lequelle on doit attaquer un jardin qui est défendu automatiquement par des plantes. Le jeu se rassemble énormément du gameplay de Plantes Vs. Zombies.",
+        "description": "Un jeu réalisé à l'occasion de la GMTK Jam 2023. Il s'agit d'un jeu de Tower Defense dans lequel le joueur doit attaquer un jardin défendu automatiquement par des plantes. Le jeu présente des similitudes avec le gameplay de Plants vs. Zombies.",
         "date": "2023-05-12",
         "type": "game",
         "tools": {
@@ -57,7 +56,7 @@
         "main_image": "/images/projects/niptur/0.png",
         "left_image": "/images/projects/niptur/1.png",
         "right_image": "/images/projects/niptur/2.png",
-        "description": "Niptur's Curse est un jeu issu d'une game jam nommé la Ludum Dare. Le concept est de fabriquer un jeu complet en moins de 72 heures, en faisant tout a partir de rien.<br>Ce jeu a été fait durant la Ludum Dare 52, s'étant déroulée du vendredi 6 janvier au lundi 9 janvier 2023.<br>Le but de jeu est d'explorer un monde infesté d'ennemies pour pousser des graines, permettant d'augmenter les caractérisiques de votre personnage ou débloquer de nouvelles armes.<br>Le code, les graphismes et la musique dans le jeu a été réalisé par moi-même.",
+        "description": "Niptur's Curse est un jeu issu d'une game jam nommée la Ludum Dare. Le concept est de fabriquer un jeu complet en moins de 72 heures, en partant de rien.<br>Ce jeu a été réalisé lors de la Ludum Dare 52, qui s'est déroulée du vendredi 6 janvier au lundi 9 janvier 2023.<br>Le but du jeu est d'explorer un monde infesté d'ennemis pour pousser des graines, permettant d'augmenter les caractéristiques de votre personnage ou de débloquer de nouvelles armes.<br>Le code, les graphismes et la musique du jeu ont été réalisés par moi-même.",
         "button_label": "Jouer",
         "date": "2023-01-9",
         "type": "game",
@@ -75,14 +74,13 @@
         "main_image": "/images/projects/kahorn/0.png",
         "left_image": "/images/projects/kahorn/1.png",
         "right_image": "/images/projects/kahorn/2.png",
-        "description": "Kahorn est un projet d'école s'inspirant énormément du jeu sur le navigateur Kahoot. Kahorn se joue en multijoueur en ligne, et les questions sont récupéré depuis l'API TriviaDB.",
-        "icon": "",
+        "description": "Kahorn est un projet d'école s'inspirant fortement du jeu en ligne Kahoot. Kahorn se joue en multijoueur en ligne, pouvant être joué jusqu'à 32 joueurs. Le jeu utilise le protocole UDP pour transférer les données entre les utilisateurs (à l'aide de l'application ENet), et il possède un client et un serveur. Les questions sont récupérées depuis l'API TriviaDB, une API gratuite et simple d'utilisation permettant de récupérer des questions à choix multiples/vrai ou faux très facilement.",
         "button_label": "Télécharger",
         "date": "2022-04-14",
         "type": "game",
         "tools": {
-            "Réseau": "ENet",
             "Moteur": "Godot Engine",
+            "Réseau": "ENet",
             "Illustrations": "Illustrator"
         },
         
@@ -94,13 +92,12 @@
         "name": "LavaRun",
         "main_image": "/images/projects/lavarun/0.png",
         "left_image": "/images/projects/lavarun/1.png",
-        "description": "LavaRun est un jeu réalisé en ijava dans le cadre du BUT Informatique. C'est un jeu dans lequel vous devez vous échapper d'un labyrinthe (généré procéduralement à chaque partie) et éviter la lave en répondant à des questions.",
-        "icon": "",
+        "description": "LavaRun est un jeu réalisé en IJava dans le cadre du BUT Informatique. C'est un jeu dans lequel vous devez vous échapper d'un labyrinthe (généré de manière procédurale à chaque partie) et éviter la lave en répondant correctement à des questions.",
         "button_label": "Voir sur GitHub",
         "date": "2023-01-08",
         "type": "game",
         "tools": {
-            "Language": "Java"
+            "Langage": "Java"
         },
         "link": "https://github.com/Yoshiip/LavaRun",
         "color": "#BC1B1B"
@@ -110,13 +107,12 @@
         "name": "Yoshtimer",
         "main_image": "/images/projects/yoshtimer/1.jpg",
         "left_image": "/images/projects/yoshtimer/0.png",
-        "description": "LavaRun est un jeu réalisé en ijava dans le cadre du BUT Informatique. C'est un jeu dans lequel vous devez vous échapper d'un labyrinthe (généré procéduralement à chaque partie) et éviter la lave en répondant à des questions.",
-        "icon": "",
+        "description": "Yoshtimer est une application web dans laquelle on peut paramétrer un chronomètre Pomodoro hautement personnalisable et écouter de la musique d'une playlist relaxante directement sur l'application.",
         "button_label": "Consulter",
         "date": "2022-08-21",
         "type": "website",
         "tools": {
-            "Language": "JavaScript",
+            "Langage": "JavaScript",
             "Framework": "Svelte"
         },
         "link": "https://yoshiip.xyz/timer",
@@ -127,14 +123,14 @@
         "main_image": "/images/projects/ultimate_hangman/0.png",
         "left_image": "/images/projects/ultimate_hangman/1.png",
         "right_image": "/images/projects/ultimate_hangman/2.png",
-        "description": "Ultimate Hangman est un jeu de pendu, en amélioré. Le jeu inclut une interface graphique très ludique, des musiques, une carte du monde, et un scénario. Le jeu permet de jouer en 1 contre 1, en laissant deviner des mots à ses camarades.",
+        "description": "Ultimate Hangman est une version améliorée du jeu du pendu. Il comprend une interface graphique très ludique, des musiques, une carte du monde et un scénario. Le jeu permet de jouer en multijoueur local, laissant les joueurs deviner des mots entre eux.",
         "logo": "/images/projects/ultimate_hangman/logo.png",
         "button_label": "Jouer",
         "date": "2021-01-23",
         "type": "game",
         "tools": {
-            "Language": "Python",
-            "Moteur": "Godot Engine"
+            "Moteur": "Godot Engine",
+            "Langage": "Python"
         },
         "color": "#288bb6",
         "link": "https://yoshiip.xyz/hangman"
@@ -145,8 +141,7 @@
         "left_image": "/images/projects/little_reactor/1.png",
         "right_image": "/images/projects/little_reactor/2.png",
         "logo":"/images/projects/little_reactor/logo.png",
-        "description": "Little Reactor est un jeu issu d'une game jam nommé la Ludum Dare. Le concept est de fabriquer un jeu complet en moins de 72 heures, en faisant tout à partir de rien.<br>Ce jeu a été fait durant la Ludum Dare 49, s'étant déroulé en octobre 2021.<br>Le but du jeu est d'empêcher des petits robots de tomber tout en respectant leur ordre pour progresser dans les niveaux.<br>Le code, les graphismes et la musique dans le jeu ont été réalisé par moi-même.",
-        "icon": "",
+        "description": "\"Little Reactor\" est un jeu issu d'une game jam nommée la Ludum Dare. Le concept est de fabriquer un jeu complet en moins de 72 heures, en partant de rien.<br>Ce jeu a été réalisé lors de la Ludum Dare 49, qui s'est déroulée en octobre 2021.<br>Le but du jeu est d'empêcher des petits robots de tomber tout en respectant leur ordre pour progresser dans les niveaux.<br>Le code, les graphismes et la musique du jeu ont été réalisés par moi-même.",
         "button_label": "Jouer",
         "date": "2021-10-11",
         "type": "game",
@@ -156,16 +151,14 @@
             "Graphismes": "Aseprite"
         },
         "color": "#504c15",
-        "link": "https://yoshiip.xyz",
-        "github_link": "https://yoshiip.xyz"
+        "link": "https://yoshiip.xyz/ld/49"
     },
     {
         "name": "Fall'em Down",
         "main_image": "/images/projects/fall_em_down/0.png",
         "left_image": "/images/projects/fall_em_down/1.png",
         "right_image": "/images/projects/fall_em_down/2.png",
-        "description": "Fall'em Down est un jeu issu d'une game jam nommé la Ludum Dare. Le concept est de fabriquer un jeu complet en moins de 72 heures, en faisant tout à partir de rien.<br>Ce jeu a été fait durant la Ludum Dare 48, s'étant déroulé en avril 2021.<br>Le but du jeu est de tomber dans un puit en tuant les ennemies qui s'y dressent avec votre arme. Récupèrez les gemmes pour améliorer votre personnage et tuez les trois boss pour gagner.<br>Le code, les graphismes dans le jeu ont été réalisé par moi-même.",
-        "icon": "",
+        "description": "Fall'em Down est un jeu issu d'une game jam nommée la Ludum Dare. Le concept est de fabriquer un jeu complet en moins de 72 heures, en partant de rien.<br>Ce jeu a été réalisé lors de la Ludum Dare 48, qui s'est déroulée en avril 2021.<br>Le but du jeu est de tomber dans un puits en tuant les ennemis qui s'y dressent avec votre arme. Récupérez les gemmes pour améliorer votre personnage et tuez les trois boss pour gagner.<br>Le code et les graphismes du jeu ont été réalisés par moi-même.",
         "button_label": "Jouer/Télécharger",
         "date": "2021-04-13",
         "color": "#6d2a09",
@@ -176,6 +169,6 @@
             "Musiques/SFX": "FL Studio",
             "Graphismes": "Aseprite"
         },
-        "link": "https://yoshiip.xyz"
+        "link": "https://yoshiip.xyz/ld/48"
     }
 ]

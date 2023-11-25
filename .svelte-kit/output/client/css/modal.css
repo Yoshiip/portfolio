@@ -1,42 +1,19 @@
 .black_background {
     position: fixed;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    left: 0;
-    top: 0;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.modal {
-    width: 80%;
-    height: 80%;
-    background-color: #D9D9D9;
-    border-radius: 10px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    overflow: hidden;
-    position: relative;
-}
-
-@media only screen and (max-width: 1024px) {
-    .modal {
-        width: 100%;
-        height: 100%;
-        border-radius: 0px;
-    }
-
-    .project_info_list {
-        overflow-y: scroll;
-        padding-bottom: 200px;
-    }
-}
-
 .project_info_list {
     background-color: #0f0f10;
     color: white;
-    width: 320px;
+    min-width: 320px;
     height: 100%;
     font-family: 'Space Mono', monospace;
 }
@@ -46,6 +23,7 @@
     margin-left: 20px;
     padding-top: 10px;
     font-size: 24px;
+    text-align: center;
     color: gray;
 }
 
@@ -81,6 +59,122 @@
 }
 
 
+
+.modal_header {
+    background-color: #0f0f10;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+    width: 100%;
+    height: 96px;
+}
+
+.modal_header > h2 {
+    font-size: 48px;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', monospace;
+}
+
+
+.modal {
+    width: 80%;
+    height: 80%;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    overflow: hidden;
+    position: relative;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    height: 100%;
+    width: 100%;
+}
+
+.close_btn {
+    position: absolute;
+    right: 0px;
+    top: 68px;
+    border: none;
+    background: none;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .modal {
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+        display: flex;
+
+    }
+
+
+
+    .project_info_list {
+        overflow-y: scroll;
+        padding-bottom: 200px;
+        position: initial;
+    }
+
+    .desktop {
+        visibility: hidden;
+    }
+
+    .mobile {
+        visibility: visible;
+    }
+
+    .close_btn {
+        position: absolute;
+        left: 50%;
+        width: 56px;
+        top: 36px;
+        height: 56px;
+        border-radius: 64px;
+        background: white;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal_header {
+        padding-top: 96px;
+        height: 220px;
+    }
+
+    .close_btn > img {
+        filter: invert();
+    }
+}
+
+
+@media only screen and (min-width: 1024px) {
+
+    .desktop {
+        visibility: visible;
+    }
+
+    .mobile {
+        visibility: hidden;
+    }
+}
+
+
+
+
 .images {
     display: flex;
     align-items: center;
@@ -108,9 +202,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    bottom: 20px;
-    width: 320px;
+    width: 100%;
+    height: 96px;
+    background-color: lightgray;
 }
 
 .button {
@@ -123,14 +217,30 @@
 
 .play_btn {
     background-color: blue;
+    border: none;
+    position: relative;
+    border-radius: 8px;
     color: white;
-    width: 200px;
+    width: 240px;
     margin-right: 20px;
     font-family: 'Space Mono', monospace;
 }
 
+.play_btn > img {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+}
+
+.play_btn:hover {
+    background-color: rgb(52, 52, 235);
+}
+
 .github_btn {
     width: 40px;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
 }
 
 .value > img {
@@ -138,47 +248,25 @@
     vertical-align: middle;
 }
 
-.close_btn {
-    position: absolute;
-    right: 0px;
-    width: 120px;
-    top: 68px;
-    transform: translate(-50%, -50%);
+
+
+.close_btn > img {
+    width: 48px;
+    height: 48px;
 }
 
 
 .modal_container {
-    overflow: hidden;
-    position: absolute;
-    left: 360px;
-    right: 40px;
-    top: 160px;
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+
+.modal_container > p {
     font-family: 'Space Mono', monospace;
+    padding: 8px;
 }
 
-.modal_header {
-    background-color: #0f0f10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    padding-top: 20px;
-
-    position: absolute;
-    left: 320px;
-    right: 0px;
-    top: 0px;
-    height: 96px;
-}
-
-.modal_header > h2 {
-    font-size: 48px;
-    color: white;
-    margin: 0;
-    padding: 0;
-    font-family: 'Seagram tfb';
-}
 
 .project_logo {
     height: 80px;
@@ -207,7 +295,12 @@
     right: 20px;
 }
 
-.arrow:hover > span {
+.arrow > span {
+    visibility: hidden;
     background-color: white;
     color: black;
+}
+
+.arrow:hover > span {
+    visibility: visible;
 }

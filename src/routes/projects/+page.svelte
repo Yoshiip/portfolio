@@ -47,8 +47,14 @@ function closeModal() {
 <main class:scroll-lock={disabledScroll}>
     <header>
         <ProjectAnimation showProject={showProject} />
-        <a href="/" class="back_button">Retour</a>
-        <a href="#projects" class="scroll_button">Voir mes projets</a>
+        <a href="/" class="back_button">
+            <img src="/images/icons/back.svg" alt="" srcset="">
+            Retour
+        </a>
+        <a href="#projects" class="scroll_button">
+            <img src="/images/icons/arrow_downward.svg" alt="" srcset="">
+            Voir mes projets
+        </a>
     </header>
     <div class="projects_container" id="projects">
         {#each projects as project, i}

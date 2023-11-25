@@ -108,59 +108,71 @@ function offsetProjectId(delta) {
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div class="black_background" on:click|self={closeProjectModal} transition:fade>
     <div class="modal" transition:scale>
-        <div class="project_info_list">
-            <h2>À propos</h2>
-            <ul>
-                {#each format_project_info(projects[projectId]) as project, i}
-                <li>
-                    <span class="element_index">00{i + 1}</span>
-                    <span class="label">{project[0]}</span>
-                    <span class="value">{#if project.length >= 3}
-                        <img alt="Brand logo" src={project[2]}>
-                    {/if}{project[1]}</span>
-                </li>
-                {/each}
-            </ul>
-            <div class="buttons_container">
-                
-                <button class="button play_btn" on:click={() => open(projects[projectId].link)}>
-                    {projects[projectId].button_label}
-                    <img src="/images/icons/open.svg" alt="" srcset="">
-                </button>
-                {#if projects[projectId].github_link}
-                <button class="button github_btn" on:click={() => open(projects[projectId].github_link)} alt="Github"><img alt="Github" src="/images/icons/github_black.png" width="24px"></button>
-                {/if}
-            </div>
-        </div>
         <div class="modal_header" style="background-color: {projects[projectId].color}">
             {#if "logo" in projects[projectId]}
                 <img src={projects[projectId].logo} alt="Project Logo" class="project_logo">
             {:else}
                 <h2>{projects[projectId].name}</h2>
             {/if}
-        </div>
-        <div class="modal_container">
-            <div class="images">
-                {#if "right_image" in projects[projectId]}
-                    <img alt="Project cover left" src={projects[projectId].left_image} class="secondary">
-                    <img alt="Project cover middle" src={projects[projectId].main_image} class="primary">
-                    <img alt="Project cover right" src={projects[projectId].right_image} class="secondary">
-                {:else if "left_image" in projects[projectId]}
-                    <img alt="Project cover left" src={projects[projectId].left_image} class="primary">
-                    <img alt="Project cover middle" src={projects[projectId].main_image} class="primary">
-                {:else}
-                    <img alt="Project cover middle" src={projects[projectId].main_image} class="primary">
-                {/if}
+
+            <div class="left_position arrow mobile" on:click={() => offsetProjectId(-1)}>
+                <img src="/images/icons/right-arrow.png" alt="arrow icon">
+                <span>Précedent</span>
             </div>
-            <p>{@html projects[projectId].description}</p>
+            <div class="right_position arrow mobile" on:click={() => offsetProjectId(1)}>
+                <img alt="Next project" src="/images/icons/right-arrow.png">
+                <span>Suivant</span>
+            </div>
         </div>
-        <button class="close_btn button" on:click={closeProjectModal}><span class="material-symbols-outlined">close</span></button>
+        <div class="content">
+            <div class="project_info_list">
+                <h2>À propos</h2>
+                <ul>
+                    {#each format_project_info(projects[projectId]) as project, i}
+                    <li>
+                        <span class="element_index">00{i + 1}</span>
+                        <span class="label">{project[0]}</span>
+                        <span class="value">{#if project.length >= 3}
+                            <img alt="Brand logo" src={project[2]}>
+                        {/if}{project[1]}</span>
+                    </li>
+                    {/each}
+                </ul>
+            </div>
+            <div class="modal_container">
+                <div class="images">
+                    {#if "right_image" in projects[projectId]}
+                        <img alt="Project cover left" src={projects[projectId].left_image} class="secondary">
+                        <img alt="Project cover middle" src={projects[projectId].main_image} class="primary">
+                        <img alt="Project cover right" src={projects[projectId].right_image} class="secondary">
+                    {:else if "left_image" in projects[projectId]}
+                        <img alt="Project cover left" src={projects[projectId].left_image} class="primary">
+                        <img alt="Project cover middle" src={projects[projectId].main_image} class="primary">
+                    {:else}
+                        <img alt="Project cover middle" src={projects[projectId].main_image} class="primary">
+                    {/if}
+                </div>
+                <p>{@html projects[projectId].description}</p>
+                <div class="buttons_container">
+                    <button class="button play_btn" on:click={() => open(projects[projectId].link)}>
+                        {projects[projectId].button_label}
+                        <img src="/images/icons/open.svg" alt="" srcset="">
+                    </button>
+                    {#if projects[projectId].github_link}
+                        <button class="button github_btn" on:click={() => open(projects[projectId].github_link)} alt="Github"><img alt="Github" src="/images/icons/github_black.png" width="24px"></button>
+                    {/if}
+                </div>
+            </div>
+        </div>
+        <button class="close_btn" on:click={closeProjectModal}>
+            <img src="/images/icons/close.svg" alt="Close" srcset="">
+        </button>
     </div>
-    <div class="left_position arrow" on:click={() => offsetProjectId(-1)}>
+    <div class="left_position arrow desktop" on:click={() => offsetProjectId(-1)}>
         <img src="/images/icons/right-arrow.png" alt="arrow icon">
         <span>Précedent</span>
     </div>
-    <div class="right_position arrow" on:click={() => offsetProjectId(1)}>
+    <div class="right_position arrow desktop" on:click={() => offsetProjectId(1)}>
         <img alt="Next project" src="/images/icons/right-arrow.png">
         <span>Suivant</span>
     </div>

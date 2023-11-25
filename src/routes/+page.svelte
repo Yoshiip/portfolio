@@ -57,14 +57,11 @@
     }
   
     onMount(() => {
+        console.log(show);
         show = true;
-        window.addEventListener("mousemove", handleMouseMove);
 
         setInterval (moveCircle,1000.0 / 60.0);
         
-        onDestroy(() => {
-            window.removeEventListener("mousemove", handleMouseMove);
-        });
     });
 
     let show = false;
@@ -95,8 +92,8 @@
 <div class="background" style="background-position: 0 {circleY}%"></div>
 
 {#if show}
-    <main>
-        <div transition:blur={{ duration: 2500 }}>
+    <main on:mousemove={handleMouseMove}>
+        <div transition:blur|local={{ duration: 2500 }}>
             <h1>TOURNEUR</h1>
             <div bind:this={container} class="eye_box">
                 <div class="eye" style="left: {mouseX}px; top: {mouseY}px; border-width: 2px; border-color: gray;"></div>
@@ -105,20 +102,20 @@
             </div>
             <h1 class="h1_outlined" style="display: inline-block; text-align: right;">AYMERI</h1>
         </div>
-        <p transition:slide={{delay: 500, duration: 1000 }}>
+        <p transition:slide|local={{delay: 500, duration: 1000 }}>
             Je suis un étudiant en 2ème année de BUT Informatique, à l'<strong>Université de Lille</strong>.<br>
             Je recherche actuellement un stage d'une durée de <strong>10 semaines</strong>, à partir du 15 avril 2024.<br>
             Sur ce site, vous retrouverez les projets que j'ai pu réaliser.<br>
         </p>
         
-        <a class="projects_button" href="/projects/" transition:fade={{delay: 500}}>
+        <a class="projects_button" href="/projects/" transition:fade|local={{delay: 500}}>
             <div>
                 <img src="/images/icons/star.svg" alt="" srcset="">
                 Mes projets
             </div>
         </a>
-        <h2 transition:fade={{delay: 625}}>Liens</h2>
-        <a href="https://github.com/Yoshiip" target="_blank" class="link_button" transition:fade={{delay: 750}}>
+        <h2 transition:fade|local={{delay: 625}}>Liens</h2>
+        <a href="https://github.com/Yoshiip" target="_blank" class="link_button" transition:fade|local={{delay: 750}}>
             <div class="text">
                 <img src="/images/icons/github.png" alt="" srcset="">
                 <span class="title">GitHub</span>
@@ -126,7 +123,7 @@
             </div>
             <img src="/images/icons/open.svg" alt="" srcset="">
         </a>
-        <a href="mailto:yoshiip59@gmail.com" class="link_button" transition:fade={{delay: 1000}}>
+        <a href="mailto:yoshiip59@gmail.com" class="link_button" transition:fade|local={{delay: 1000}}>
             <div class="text">
                 <img src="/images/icons/mail.svg" alt="" srcset="">
                 <span class="title">Mail</span>
@@ -136,5 +133,5 @@
         </a>
     </main>
 
-    <img transition:fade src="/images/home/side.svg" class="side" alt="" srcset="">
+    <img transition:fade|local src="/images/home/side.svg" class="side" alt="" srcset="">
 {/if}

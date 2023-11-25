@@ -109,11 +109,13 @@ function offsetProjectId(delta) {
 <div class="black_background" on:click|self={closeProjectModal} transition:fade>
     <div class="modal" transition:scale>
         <div class="modal_header" style="background-color: {projects[projectId].color}">
-            {#if "logo" in projects[projectId]}
-                <img src={projects[projectId].logo} alt="Project Logo" class="project_logo">
-            {:else}
-                <h2>{projects[projectId].name}</h2>
-            {/if}
+            <div class="name">
+                {#if "logo" in projects[projectId]}
+                    <img src={projects[projectId].logo} alt="Project Logo" class="project_logo">
+                {:else}
+                    <h2>{projects[projectId].name}</h2>
+                {/if}
+            </div>
 
             <div class="left_position arrow mobile" on:click={() => offsetProjectId(-1)}>
                 <img src="/images/icons/right-arrow.png" alt="arrow icon">
@@ -123,6 +125,9 @@ function offsetProjectId(delta) {
                 <img alt="Next project" src="/images/icons/right-arrow.png">
                 <span>Suivant</span>
             </div>
+
+
+
         </div>
         <div class="content">
             <div class="project_info_list">

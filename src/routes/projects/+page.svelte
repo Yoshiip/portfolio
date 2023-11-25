@@ -45,13 +45,13 @@ function closeModal() {
 <link rel="stylesheet" href="css/projects.css">
 <title>Projets • Tourneur Aymeri</title>
 <main class:scroll-lock={disabledScroll}>
-    <header>
+    <header id="top">
         <ProjectAnimation showProject={showProject} />
-        <a href="/" class="back_button">
+        <a href="/" class="stylized_button back_button">
             <img src="/images/icons/back.svg" alt="" srcset="">
             Retour
         </a>
-        <a href="#projects" class="scroll_button">
+        <a href="#projects" class="stylized_button scroll_button">
             <img src="/images/icons/arrow_downward.svg" alt="" srcset="">
             Voir mes projets
         </a>
@@ -63,6 +63,14 @@ function closeModal() {
         </button>
         {/each}
     </div>
+
+    <footer>
+        <a href="#top" class="stylized_button">Revenir en haut</a>
+        
+        <div class="made_with">
+            <span>Fait avec</span> <img src="/images/icons/svelte.svg" style="" alt="" srcset="" width="16"> <span>Svelte</span>
+        </div>
+    </footer>
 </main>
 
 

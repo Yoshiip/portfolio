@@ -1,12 +1,22 @@
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/home.css">
+
 <title>Tourneur Aymeri</title>
 
 <script>
     import { fade, blur, slide } from "svelte/transition";
-    import { onMount, onDestroy } from "svelte";
+    import { onMount } from "svelte";
 
     $: outerWidth = 0
 	$: outerHeight = 0
+
+    /**
+     * @type {number}
+     */
+    let mouseX = 0;
+    let mouseY = 0;
+    let circleX = 0;
+    let circleY = 0;
 
     const clamp = (/** @type {number} */ num, /** @type {number} */ min, /** @type {number} */ max) => Math.min(Math.max(num, min), max);
 
@@ -19,15 +29,6 @@
     function lerp (start, end, progress){
         return (1.0-progress)*start+progress*end
     }
-
-
-    /**
-     * @type {number}
-     */
-    let mouseX = 0;
-    let mouseY = 0;
-    let circleX = 0;
-    let circleY = 0;
 
     /**
      * @type {Element | null}
@@ -48,16 +49,8 @@
         circleX = lerp(circleX, mouseX, 0.025);
         circleY = lerp(circleY, mouseY, 0.025);
     }
-
-    /**
-     * @param {number | undefined} ms
-     */
-    function sleep(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-    }
   
     onMount(() => {
-        console.log(show);
         show = true;
 
         setInterval (moveCircle,1000.0 / 60.0);
@@ -67,26 +60,6 @@
     let show = false;
   </script>
 
-<style>
-    .eye_box {
-        width: 64px;
-        height: 64px;
-        color: white;
-        border: 4px solid black;
-        position: relative;
-        display: inline-block;
-    }
-
-    .eye {
-        border-radius: 16px;
-        border: 4px solid black;
-        width: 8px;
-        height: 8px;
-        position: absolute;
-        background-color: white;
-    }
-</style>
-
 <svelte:window bind:outerWidth bind:outerHeight/>
 
 <div class="background" style="background-position: 0 {circleY}%"></div>
@@ -95,10 +68,10 @@
     <main on:mousemove={handleMouseMove}>
         <div transition:blur|local={{ duration: 2500 }}>
             <h1>TOURNEUR</h1>
-            <div bind:this={container} class="eye_box">
+            <div bind:this={container} class="eye_box dekstop">
                 <div class="eye" style="left: {mouseX}px; top: {mouseY}px; border-width: 2px; border-color: gray;"></div>
                 <div class="eye" style="left: {circleX}px; top: {circleY}px;"></div>
-                <img src="/images/home/yoshi_noir.png" alt="" srcset="" class="start_yoshi">
+                <img src="/images/home/yoshi_noir.png" unselectable="on" alt="" srcset="" class="start_yoshi">
             </div>
             <h1 class="h1_outlined" style="display: inline-block; text-align: right;">AYMERI</h1>
         </div>
@@ -127,7 +100,7 @@
             <div class="text">
                 <img src="/images/icons/mail.svg" alt="" srcset="">
                 <span class="title">Mail</span>
-                <span class="subtext">yoshiip59@gmail.com</span>
+                <span class="subtext">Me contacter</span>
             </div>
             <img src="/images/icons/open.svg" alt="" srcset="">
         </a>

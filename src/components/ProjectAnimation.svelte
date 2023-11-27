@@ -1,112 +1,70 @@
 
 <script>
     import { onMount } from "svelte";
-	import projects from '../routes/projects/projects.json';
-
 	import { fade, blur, scale } from "svelte/transition";
 
 
-	/**
-	 * FROM: https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
-     * @param {string | any[]} array
-     */
-	function shuffle(array) {
-		let currentIndex = array.length,  randomIndex;
 
-		// While there remain elements to shuffle.
-		while (currentIndex > 0) {
-
-			// Pick a remaining element.
-			randomIndex = Math.floor(Math.random() * currentIndex);
-			currentIndex--;
-
-			// And swap it with the current element.
-			// @ts-ignore
-			[array[currentIndex], array[randomIndex]] = [
-			array[randomIndex], array[currentIndex]];
-		}
-
-		return array;
-	}
-
-	/**
-     * @type {string | any[]}
-     */
-	let shuffled_projects = [];
-
-
-	/**
-     * @type {any[String]}
-     */
-	let projects_name = [];
-
-	let projects_to_show = 4;
-
-	/**
-     * @type {any[]}
-     */
-	let colors = [];
-
-	onMount(() => {
-        show = true;
-		shuffled_projects = shuffle(projects.slice(0));
-		for (let i = 0; i < projects_to_show; i++) {
-			projects_name.push(shuffled_projects[i].name);
-			colors.push(shuffled_projects[i].color);
-		}
-    });
+	let frames_to_show = [0, 1, 2, 3, 4, 5];
 
     let show = false;
 
 
+    $: outerWidth = 0
+	$: outerHeight = 0
 
-
-
-	const paths_d = [
-		"M909.5 360C909.5 508.841 788.841 629.5 640 629.5C491.159 629.5 370.5 508.841 370.5 360C370.5 211.159 491.159 90.5 640 90.5C788.841 90.5 909.5 211.159 909.5 360Z",
-		"M989.5 360C989.5 553.023 833.023 709.5 640 709.5C446.976 709.5 290.5 553.023 290.5 360C290.5 166.976 446.976 10.5 640 10.5C833.023 10.5 989.5 166.976 989.5 360Z",
-		"M1079.5 360C1079.5 602.729 882.729 799.5 640 799.5C397.271 799.5 200.5 602.729 200.5 360C200.5 117.271 397.271 -79.5 640 -79.5C882.729 -79.5 1079.5 117.271 1079.5 360Z",
-		"M1159.5 360C1159.5 646.912 926.912 879.5 640 879.5C353.088 879.5 120.5 646.912 120.5 360C120.5 73.0881 353.088 -159.5 640 -159.5C926.912 -159.5 1159.5 73.0881 1159.5 360Z",
-		"M1239.5 360C1239.5 691.095 971.095 959.5 640 959.5C308.905 959.5 40.5 691.095 40.5 360C40.5 28.9053 308.905 -239.5 640 -239.5C971.095 -239.5 1239.5 28.9053 1239.5 360Z",
-	];
-
-	export let showProject = (/** @type {number} */ id) => {};
-
-	/**
-     * @param {number} [id]
+    /**
+     * @type {number}
      */
-	function textClicked(id) {
-		// @ts-ignore
-		console.log(projects.indexOf(shuffled_projects[id]))
-		// @ts-ignore
-		showProject(projects.indexOf(shuffled_projects[id]));
-	}
+    let mouseX = 0;
+    let mouseY = 0;
+    let circleX = 0;
+    let circleY = 0;
+
+    const clamp = (/** @type {number} */ num, /** @type {number} */ min, /** @type {number} */ max) => Math.min(Math.max(num, min), max);
 
 
-	/**
-     * @param {string} text
-     * @param {number} radius
+    /**
+     * @param {number} start
+     * @param {number} end
+     * @param {number} progress
      */
-	function calculateRepeat(text, radius) {
-		text = text + " • ";
-		let lengthPerRadius = [64, 86, 102, 120];
-		// var value = (75 * ((radius * 0.75) + 1)) / (text.length + 5);
-		return text.repeat(Math.floor(lengthPerRadius[radius] / text.length));
-	}
+    function lerp (start, end, progress){
+        return (1.0-progress)*start+progress*end
+    }
 
-	/**
-     * @param {number} radius
+    /**
+     * @type {Element | null}
      */
-	function getOpacity(radius)  {
-		radius = 1 - ((radius + 0.75) / projects_to_show);
-		return Math.sqrt(1 - Math.pow(radius - 1, 2));
-	}
+    let container;
+  
+    /**
+     * @param {{ clientX: number; clientY: number; }} event
+     */
+    function handleMouseMove(event) {
+      // @ts-ignore
+      const containerRect = container.getBoundingClientRect();
+	  console.log(containerRect.width)
+	  console.log(containerRect.height)
+      mouseX = clamp(event.clientX - containerRect.width / 2, -containerRect.width, containerRect.width);
+      mouseY = clamp(event.clientY - containerRect.height / 2, -containerRect.height, containerRect.height);
+    }
+
+    function moveCircle() {
+        circleX = clamp(lerp(circleX, mouseX / 20.0, 0.025), -25, 25);
+        circleY = clamp(lerp(circleY, mouseY / 20.0, 0.025), -25, 25);
+    }
+
+	onMount(() => {
+        show = true;
+		setInterval (moveCircle,1000.0 / 60.0);
+    });
 
 </script>
 
 
 {#if show}
-<div style="width: 100; height: 100%; overflow-y: hidden;">
+<div style="width: 100; height: 100%; overflow-y: hidden;" on:mousemove={handleMouseMove} bind:this={container}>
 	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 		 viewBox="0 0 1280 720" enable-background="new 0 0 1280 720" xml:space="preserve">
 
@@ -116,8 +74,6 @@
 	<circle transition:blur|local={{ delay: 0, duration: 300 }} id="circle_2" fill="none" opacity="0.8" cx="640" cy="360" r="177" stroke="#C81254" stroke-width="6"/>
 	<circle transition:blur|local={{ delay: 50, duration: 300 }} id="circle_3" fill="none" opacity="0.6" cx="640" cy="360" r="198" stroke="#C81254" stroke-width="4"/>
 	<circle transition:blur|local={{ delay: 100, duration: 300 }} id="circle_4" fill="none" opacity="0.4" cx="640" cy="360" r="218.5" stroke="#C81254" stroke-width="3"/>
-	<circle transition:blur|local={{ delay: 150, duration: 300 }} id="circle_5" fill="none" opacity="0.2" cx="640" cy="360" r="239" stroke="#C81254" stroke-width="2"/>
-
 	<g id="main_text">
 		<g id="shadow">
 		<mask id="path-8-outside-1_0_3" maskUnits="userSpaceOnUse" x="518" y="360" width="249" height="53" fill="black">
@@ -178,33 +134,11 @@
 		<path fill="white" d="M710.107 356.282L710.106 356.288C709.995 357.29 710.163 358.367 710.777 359.345C711.222 360.054 711.816 360.646 712.542 361.086C713.387 361.598 714.322 361.82 715.262 361.789C716.349 361.753 717.318 361.353 718.105 360.724L724.152 356.047L731.113 359.207C732.024 359.638 733.058 359.804 734.124 359.589C735.046 359.403 735.906 358.971 736.609 358.279C737.215 357.684 737.657 356.97 737.927 356.178C738.299 355.085 738.215 353.998 737.876 353.049L737.874 353.043L735.278 345.815L740.476 340.147L740.496 340.124L740.516 340.101C741.16 339.37 741.634 338.441 741.742 337.345C741.834 336.403 741.664 335.473 741.237 334.622C740.863 333.876 740.315 333.201 739.571 332.689C738.673 332.071 737.682 331.871 736.828 331.849L736.746 331.847L736.664 331.849L728.948 332.071L725.191 325.43C725.19 325.428 725.189 325.426 725.188 325.424C724.682 324.525 723.913 323.785 722.896 323.351C722.102 323.012 721.218 322.853 720.293 322.961C719.368 323.069 718.545 323.427 717.85 323.939C716.96 324.596 716.382 325.493 716.096 326.484L713.966 333.818L706.407 335.378L706.326 335.395L706.247 335.416C705.421 335.634 704.503 336.056 703.771 336.865C703.165 337.534 702.787 338.317 702.595 339.129C702.375 340.055 702.423 341 702.73 341.895C703.087 342.936 703.762 343.732 704.557 344.296L704.582 344.313L704.607 344.33L710.97 348.65L710.107 356.282Z" stroke="#C81254" stroke-width="6"/>
 	</g>
 	<rect transition:fade|local id="avatar" x="608" y="174" width="64" height="64" rx="32" fill="url(#pattern0)"/>
-	<!-- <rect style="opacity: 0.75;" fill="url(#rainbow)" width="100%" height="100%"></rect> -->
-	{#each projects_name as name}
-		<path id={name} fill="none" d="{paths_d[projects_name.indexOf(name)]}"/>
 
-		<!-- svelte-ignore a11y-click-events-have-key-events -->
-		<text
-			on:click={() => textClicked(projects_name.indexOf(name))}
-			fill="url(#rainbow)"
-			id="spinning_text"
-			class="circle{projects_name.indexOf(name) + 1}"
-			style="opacity: {getOpacity(projects_name.indexOf(name))};"
-			transition:blur|local={{duration: 1000}}
-		>
-			<textPath xlink:href="#{name}" method="stretch">
-				{calculateRepeat(name, projects_name.indexOf(name))}
-			</textPath>
-		</text>
+	{#each frames_to_show as id}
+			<image xlink:href="/images/projects/animation/frames/{id}.png" x="{-80 + (circleX / ((id + 6) / 2))}" y="{-360 + (circleY / ((id + 6) / 2))}" id="spinning_text" class="circle{id}"/>
 	{/each}
 	<defs>
-		<radialGradient id="rainbow" x1="0%" x2="100%" y1="0%" y2="100%" gradientTransform="translate(-320, -180) scale(1.5, 1.5)"  gradientUnits="userSpaceOnUse" >
-		  <stop stop-color="{colors[0]}" offset="20%"/>
-		  <stop stop-color="{colors[1]}" offset="40%"/>
-		  <stop stop-color="{colors[2]}" offset="60%"/>
-		  <stop stop-color="{colors[3]}" offset="80%"/>
-		  <stop stop-color="{colors[4]}" offset="100%"/>
-		</radialGradient>
-
 		<filter id="filter0_d_0_3" x="476" y="200" width="328" height="328" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 		<feFlood flood-opacity="0" result="BackgroundImageFix"/>
 		<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
@@ -237,7 +171,7 @@
 		<clipPath id="clip0_0_3">
 		<rect width="1280" height="720" fill="white"/>
 		</clipPath>
-		<image id="avatar_pink" width="256" height="256" xlink:href="/images/projects/avatar_pink.png"/>
+		<image id="avatar_pink" width="256" height="256" xlink:href="/images/projects/animation/avatar_pink.png"/>
 	</defs>
 	</svg>
 </div>
@@ -246,51 +180,41 @@
 
 <style>
 
-	@font-face {
-		font-family: 'leentankregular';
-		src: url('/fonts/leentank-webfont.woff2') format('woff2'),
-			url('/fonts/leentank-webfont.woff') format('woff');
-	}
-
 	div {
-		z-index: -5;
+		z-index: -1;
 	}
 
 	#spinning_text {
-		font-family: 'leentankregular';
-		transform-origin: 50% 50%;
-		font-weight: 700;
-		font-size: 54px;
-		user-select: none;
-	}
-	
-	#spinning_text:hover {
-		cursor: pointer;
-		fill: white;
-		stroke: black;
+		transform-origin: center center;
 	}
 
-	.circle1 {
+	.circle0 {
 		animation: rotating 30s linear infinite;
 	}
 	
-	.circle2 {
+	.circle1 {
 		animation: rotating 40s linear infinite;
 		animation-direction: reverse;
 	}
 	
-	.circle3 {
+	.circle2 {
 		animation: rotating 50s linear infinite;
 	}
 	
-	.circle4 {
+	.circle3 {
 		animation: rotating 60s linear infinite;
 		animation-direction: reverse;
 	}
 	
-	.circle5 {
+	.circle4 {
 		animation: rotating 70s linear infinite;
 	}
+	
+	.circle5 {
+		animation: rotating 80s linear infinite;
+		animation-direction: reverse;
+	}
+
 
 	@keyframes rotating {
 		from {

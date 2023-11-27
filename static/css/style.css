@@ -12,8 +12,8 @@ body {
 
 .background {
   position:fixed;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   left: 0;
   top: 0;
   background-repeat: no-repeat;
@@ -28,6 +28,24 @@ main {
 
 body {
   font-family: 'Open Sans', sans-serif;
+}
+
+.eye_box {
+  width: 64px;
+  height: 64px;
+  color: white;
+  border: 4px solid black;
+  position: relative;
+  display: inline-block;
+}
+
+.eye {
+  border-radius: 16px;
+  border: 4px solid black;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  background-color: white;
 }
 
 h1 {

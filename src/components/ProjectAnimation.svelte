@@ -3,7 +3,6 @@
     import { onMount } from "svelte";
 	import projects from '../routes/projects/projects.json';
 
-	// @ts-ignore
 	import { fade, blur, scale } from "svelte/transition";
 
 
@@ -83,14 +82,16 @@
 		showProject(projects.indexOf(shuffled_projects[id]));
 	}
 
+
 	/**
-     * @param {any} textLength
+     * @param {string} text
      * @param {number} radius
      */
-	function calculateRepeat(textLength, radius) {
-		var value = (75 * ((radius * 0.75) + 1)) / (textLength + 5);
-		// console.log(value + " (" + textLength + ", " + radius + ")");
-		return value;
+	function calculateRepeat(text, radius) {
+		text = text + " • ";
+		let lengthPerRadius = [64, 86, 102, 120];
+		// var value = (75 * ((radius * 0.75) + 1)) / (text.length + 5);
+		return text.repeat(Math.floor(lengthPerRadius[radius] / text.length));
 	}
 
 	/**
@@ -190,8 +191,8 @@
 			style="opacity: {getOpacity(projects_name.indexOf(name))};"
 			transition:blur|local={{duration: 1000}}
 		>
-			<textPath xlink:href="#{name}">
-				{(" " + name + " •").repeat(calculateRepeat(name.length + 3, projects_name.indexOf(name)))}
+			<textPath xlink:href="#{name}" method="stretch">
+				{calculateRepeat(name, projects_name.indexOf(name))}
 			</textPath>
 		</text>
 	{/each}
@@ -270,30 +271,25 @@
 	}
 
 	.circle1 {
-		animation: rotating 25s linear infinite;
+		animation: rotating 30s linear infinite;
 	}
 	
 	.circle2 {
-		animation: rotating 30s linear infinite;
-		animation-direction: reverse;
-	}
-	
-	.circle3 {
-		animation: rotating 35s linear infinite;
-	}
-	
-	.circle4 {
 		animation: rotating 40s linear infinite;
 		animation-direction: reverse;
 	}
 	
-	.circle5 {
-		animation: rotating 45s linear infinite;
+	.circle3 {
+		animation: rotating 50s linear infinite;
 	}
 	
-	.circle6 {
-		animation: rotating 50s linear infinite;
+	.circle4 {
+		animation: rotating 60s linear infinite;
 		animation-direction: reverse;
+	}
+	
+	.circle5 {
+		animation: rotating 70s linear infinite;
 	}
 
 	@keyframes rotating {

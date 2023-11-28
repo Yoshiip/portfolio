@@ -186,6 +186,7 @@
 
 	#spinning_text {
 		transform-origin: center center;
+		filter: invert(22%) sepia(66%) saturate(2929%) hue-rotate(-55deg) brightness(85%) contrast(120%);
 	}
 
 	.circle0 {

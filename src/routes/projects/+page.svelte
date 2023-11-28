@@ -48,11 +48,11 @@ function closeModal() {
     <header id="top">
         <ProjectAnimation showProject={showProject} />
         <a href="/" class="stylized_button back_button">
-            <img src="/images/icons/back.svg" alt="" srcset="">
+            <img src="/images/icons/back.svg" class="icon" alt="Back icon" srcset="">
             Retour
         </a>
         <a href="#projects" class="stylized_button scroll_button">
-            <img src="/images/icons/arrow_downward.svg" alt="" srcset="">
+            <img src="/images/icons/arrow_downward.svg" alt="Scroll arrow" srcset="">
             Voir mes projets
         </a>
     </header>

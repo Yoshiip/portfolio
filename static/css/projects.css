@@ -38,9 +38,18 @@ header {
   color: black;
 }
 
+
+.stylized_button:hover > .icon {
+  filter: invert();
+}
+
 .stylized_button:active {
   color: white;
   background-color: #C81254;
+}
+
+.stylized_button:active > img {
+  filter: none;
 }
 
 header > .back_button {

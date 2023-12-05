@@ -116,7 +116,7 @@ html, body {
   width: calc(33svw - 32px);;
   height: 200px;
   position: relative;
-  border: 2px solid white;
+  border: 2px solid rgb(224, 224, 224);
 
   background-size: cover;
   background-repeat: no-repeat;
@@ -130,19 +130,6 @@ html, body {
   transition: 0.15s ease;
 }
 
-@media screen and (max-width: 640px) {
-  .projects_container {
-    grid-template-columns: 1fr;
-  }
-
-  .project {
-    width: calc(100svw - 64px);
-  }
-
-  
-}
-
-
 @media screen and (max-width: 1024px) {
   .projects_container {
     grid-template-columns: repeat(2, 1fr);
@@ -155,6 +142,21 @@ html, body {
     display: none;
   }
 }
+
+@media screen and (max-width: 640px) {
+  .projects_container {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .project {
+    width: calc(100svw - 64px);
+  }
+
+  
+}
+
+
 
 
 .project:hover {

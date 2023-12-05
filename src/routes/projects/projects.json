@@ -1,5 +1,21 @@
 [
     {
+        "name": "Advent of Code",
+        "description": "",
+        "date": "2023-12-01",
+
+        "tools": {
+            "Langage (jour 1)": "C++",
+            "Langage (jour 2)": "Java",
+            "Langage (jour 3)": "Ruby",
+            "Langage (jour 4)": "D"
+        },
+        "main_image": "/images/projects/aoc/aoc.jpg",
+        "button_label": "Voir sur GitHub",
+        "link": "https://github.com/Yoshiip/aoc-2023",
+        "color": "#0000ff"
+    },
+    {
         "name": "Portfolio",
         "description": "C'est le portfolio que vous consultez actuellement! Je l'ai réalisé avec Svelte.",
         "date": "2023-11-23",

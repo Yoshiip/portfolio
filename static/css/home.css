@@ -17,7 +17,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -5;
-  background-image: url("/images/home/background.png");
+  background-image: url("/images/home/background.jpg");
 }
 
 main {
@@ -186,7 +186,7 @@ li > a {
   border-radius: 8px;
   background-size: cover;
   
-  background-image: url("/images/home/project_button_background.png");
+  background-image: url("/images/home/project_button_background.jpg");
   background-position: 0% 0%;
   text-decoration: none;
   position: relative;

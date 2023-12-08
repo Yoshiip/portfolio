@@ -39,7 +39,7 @@
             "Modélisation": "Blender",
             "Illustrations": "Illustrator"
         },
-        "main_image": "/images/projects/mecharia/0.png",
+        "main_image": "/images/projects/mecharia/0.jpg",
         "button_label": "Jouer",
         "link": "https://yoshiip.itch.io/mecharia",
         "logo": "/images/projects/mecharia/logo.png",
@@ -85,7 +85,7 @@
         "name": "Kahorn",
         "main_image": "/images/projects/kahorn/0.png",
         "left_image": "/images/projects/kahorn/1.png",
-        "right_image": "/images/projects/kahorn/2.png",
+        "right_image": "/images/projects/kahorn/2.jpg",
         "description": "Kahorn est un projet d'école s'inspirant fortement du jeu en ligne Kahoot. Kahorn se joue en multijoueur en ligne, pouvant être joué jusqu'à 32 joueurs. Le jeu utilise le protocole UDP pour transférer les données entre les utilisateurs (à l'aide de l'application ENet), et il possède un client et un serveur. Les questions sont récupérées depuis l'API TriviaDB, une API gratuite et simple d'utilisation permettant de récupérer des questions à choix multiples/vrai ou faux très facilement.",
         "button_label": "Télécharger",
         "date": "2022-04-14",
@@ -116,7 +116,7 @@
     {
         "name": "Yoshtimer",
         "main_image": "/images/projects/yoshtimer/1.jpg",
-        "left_image": "/images/projects/yoshtimer/0.png",
+        "left_image": "/images/projects/yoshtimer/0.jpg",
         "description": "Yoshtimer est une application web dans laquelle on peut paramétrer un chronomètre Pomodoro hautement personnalisable et écouter de la musique d'une playlist relaxante directement sur l'application.",
         "button_label": "Consulter",
         "date": "2022-08-21",
@@ -130,8 +130,8 @@
     {
         "name": "Ultimate Hangman",
         "main_image": "/images/projects/ultimate_hangman/0.png",
-        "left_image": "/images/projects/ultimate_hangman/1.png",
-        "right_image": "/images/projects/ultimate_hangman/2.png",
+        "left_image": "/images/projects/ultimate_hangman/1.jpg",
+        "right_image": "/images/projects/ultimate_hangman/2.jpg",
         "description": "Ultimate Hangman est une version améliorée du jeu du pendu. Il comprend une interface graphique très ludique, des musiques, une carte du monde et un scénario. Le jeu permet de jouer en multijoueur local, laissant les joueurs deviner des mots entre eux.",
         "logo": "/images/projects/ultimate_hangman/logo.png",
         "button_label": "Jouer",
@@ -146,7 +146,7 @@
     {
         "name": "Little Reactor",
         "main_image": "/images/projects/little_reactor/0.png",
-        "left_image": "/images/projects/little_reactor/1.png",
+        "left_image": "/images/projects/little_reactor/1.jpg",
         "right_image": "/images/projects/little_reactor/2.png",
         "logo":"/images/projects/little_reactor/logo.png",
         "description": "\"Little Reactor\" est un jeu issu d'une game jam nommée la Ludum Dare. Le concept est de fabriquer un jeu complet en moins de 72 heures, en partant de rien.<br>Ce jeu a été réalisé lors de la Ludum Dare 49, qui s'est déroulée en octobre 2021.<br>Le but du jeu est d'empêcher des petits robots de tomber tout en respectant leur ordre pour progresser dans les niveaux.<br>Le code, les graphismes et la musique du jeu ont été réalisés par moi-même.",

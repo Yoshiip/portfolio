@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+
+.modal {
+    width: 80%;
+    height: 80%;
+    background-color: #D9D9D9;
+    border-radius: 12px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    overflow-y: auto;
+    position: relative;
+    
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+
+}
+
 .black_background {
     position: fixed;
     left: 0;
@@ -14,8 +32,9 @@
     background-color: #0f0f10;
     color: white;
     min-width: 320px;
+    margin: 8px;
+    border-radius: 4px;
     height: 100%;
-    font-family: 'Space Mono', monospace;
 }
 
 .project_info_list > h2 {
@@ -24,7 +43,6 @@
     padding-top: 10px;
     font-size: 24px;
     text-align: center;
-    color: gray;
 }
 
 .project_info_list > ul {
@@ -34,29 +52,9 @@
 
 .project_info_list > ul > li {
     list-style-type: none;
-    background-color: #303030;
-    border-top: 1px solid #808080;
-    border-bottom: 1px solid #808080;
-    font-weight: 100;
-    padding: 10px;
-}
-
-.project_info_list > ul > li > .element_index {
-    color: gray;
     font-weight: 100;
 }
 
-
-.project_info_list > ul > li {
-    position: relative;
-}
-
-
-.project_info_list > ul > li > .value {
-    position: absolute;
-    right: 8px;
-    font-weight: 800;
-}
 
 .arrow.mobile {
     top: 64px;
@@ -65,44 +63,36 @@
 
 
 .modal_header {
-    background-color: #0f0f10;
-    padding-bottom: 20px;
-    padding-top: 20px;
 
     position: relative;
 
     width: 100%;
-    height: 96px;
-}
-
-.modal_header > .name {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
 }
 
-.modal_header > .name > h2 {
-    font-size: 48px;
-    color: white;
+ .name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 32px;
+    padding-right: 32px;
+    height: 64px;
+    border-radius: 32px;
+    border: 2px solid #00F;
+    box-shadow: 0px 2px 10px 0px #00F;
+}
+
+.name > h2 {
+    font-size: 32px;
+    color: #00F;
     margin: 0;
     padding: 0;
-    font-family: 'Arial', monospace;
 }
 
 
-.modal {
-    width: 80%;
-    height: 80%;
-    background-color: #D9D9D9;
-    border-radius: 10px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    overflow-y: auto;
-    position: relative;
-    
-    display: flex;
-    flex-direction: column;
-}
+
 
 .content {
     margin: 0;
@@ -199,20 +189,21 @@
 
 .images > img {
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inFt;
-}
-
-.secondary {
-    width: 25%;
-    aspect-ratio: 16 / 9;
-}
-
-.primary {
-    width: 40%;
+    width: 30%;
     aspect-ratio: 16 / 9;
     object-fit: contain;
-
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px;
+    animation: 0.1s;
 }
+
+.images > img:hover {
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 75%;
+    height: 75%;
+}
+
 
 .buttons_container {
     display: flex;
@@ -227,7 +218,7 @@
     color: white;
     width: 200px;
     height: 40px;
-    font-family: 'Space Mono', monospace;
+    font-family: inherit;
 }
 
 .play_btn {
@@ -278,7 +269,6 @@
 
 
 .modal_container > p {
-    font-family: 'Space Mono', monospace;
     padding: 8px;
 }
 
@@ -290,8 +280,6 @@
 
 .arrow {
     position: absolute;
-    font-family: 'Space Mono', monospace;
-    color: white;
     display: flex;
     align-items: center;
     justify-content: center;

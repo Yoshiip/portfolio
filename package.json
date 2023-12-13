@@ -11,6 +11,8 @@
 		"lint": "eslint ."
 	},
 	"devDependencies": {
+		"@slidy/animation": "^1.0.7",
+		"@slidy/core": "^3.7.4",
 		"@sveltejs/adapter-auto": "^1.0.0",
 		"@sveltejs/adapter-static": "^1.0.6",
 		"@sveltejs/kit": "^1.0.0",
@@ -24,6 +26,6 @@
 	"type": "module",
 	"dependencies": {
 		"idb-keyval": "^6.2.1",
-		"simple-parallax-js": "^5.6.2"
+		"slidy": "^0.6.0"
 	}
 }

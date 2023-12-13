@@ -58,7 +58,7 @@ function closeModal() {
     </header>
     <div class="projects_container" id="projects">
         {#each projects as project, i}
-        <button class="project" on:click={() => showProject(i)} style="background-image: url('{project.main_image}')">
+        <button class="project" on:click={() => showProject(i)} style="background-image: url('{project.images[0]}')">
             <div class="label"><span>{project.name}</span></div>
         </button>
         {/each}

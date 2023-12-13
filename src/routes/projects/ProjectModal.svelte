@@ -4,6 +4,8 @@
 import { fade, scale  } from 'svelte/transition';
 import projects from './projects.json';
 
+
+
 export let projectId = 0;
 
 /**
@@ -33,6 +35,9 @@ const ICONS = {
     "svelte": "/images/icons/svelte.svg",
     "javascript": "/images/icons/javascript.png",
 }
+
+let carousel; // for calling methods of the carousel instance
+
 
 /**
      * @param {string | number | Date} date
@@ -108,56 +113,44 @@ function offsetProjectId(delta) {
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div class="black_background" on:click|self={closeProjectModal} transition:fade>
     <div class="modal" transition:scale>
-        <div class="modal_header" style="background-color: {projects[projectId].color}">
-            <div class="name">
-                {#if "logo" in projects[projectId]}
-                    <img src={projects[projectId].logo} alt="Project Logo" class="project_logo">
-                {:else}
-                    <h2>{projects[projectId].name}</h2>
-                {/if}
-            </div>
-
-            <div class="left_position arrow mobile" on:click={() => offsetProjectId(-1)}>
-                <img src="/images/icons/right-arrow.png" alt="arrow icon">
-                <span>Précedent</span>
-            </div>
-            <div class="right_position arrow mobile" on:click={() => offsetProjectId(1)}>
-                <img alt="Next project" src="/images/icons/right-arrow.png">
-                <span>Suivant</span>
-            </div>
-
-
-
-        </div>
         <div class="content">
             <div class="project_info_list">
-                <h2>À propos</h2>
+                <h2>{projects[projectId].name}</h2>
                 <ul>
-                    {#each format_project_info(projects[projectId]) as project, i}
-                    <li>
-                        <span class="element_index">00{i + 1}</span>
-                        <span class="label">{project[0]}</span>
-                        <span class="value">{#if project.length >= 3}
-                            <img alt="Brand logo" src={project[2]}>
-                        {/if}{project[1]}</span>
-                    </li>
-                    {/each}
+                    <li>Galerie</li>
+                    <li>Description</li>
+                    <li>Technologies</li>
+                    <li>Liens</li>
                 </ul>
             </div>
             <div class="modal_container">
-                <div class="images">
-                    {#if "right_image" in projects[projectId]}
-                        <img alt="Project cover left" src={projects[projectId].left_image} class="secondary">
-                        <img alt="Project cover middle" src={projects[projectId].main_image} class="primary">
-                        <img alt="Project cover right" src={projects[projectId].right_image} class="secondary">
-                    {:else if "left_image" in projects[projectId]}
-                        <img alt="Project cover left" src={projects[projectId].left_image} class="primary">
-                        <img alt="Project cover middle" src={projects[projectId].main_image} class="primary">
-                    {:else}
-                        <img alt="Project cover middle" src={projects[projectId].main_image} class="primary">
-                    {/if}
+                <div class="modal_header">
+                    <div class="name">
+                        {#if "logo" in projects[projectId]}
+                            <img src={projects[projectId].logo} alt="Project Logo" class="project_logo">
+                        {:else}
+                            <h2>{projects[projectId].name}</h2>
+                        {/if}
+                    </div>
                 </div>
+                <h2>Description</h2>
                 <p>{@html projects[projectId].description}</p>
+                <h2>Galerie</h2>
+                <div class="images" style="width: 640px;">
+                    {#each projects[projectId].images as image_src}
+                        <img src={image_src} alt="Media">
+                    {/each}
+                </div>
+                <h2>Technologies</h2>
+                <div class="techno">
+                    {#each Object.keys(projects[projectId].tools) as tool}
+                        <div>
+                            {tool}
+                            {projects[projectId].tools[tool]}
+                        </div>
+                    {/each}
+                </div>
+                <h2>Liens</h2>
                 <div class="buttons_container">
                     <button class="button play_btn" on:click={() => open(projects[projectId].link)}>
                         {projects[projectId].button_label}
@@ -175,10 +168,8 @@ function offsetProjectId(delta) {
     </div>
     <div class="left_position arrow desktop" on:click={() => offsetProjectId(-1)}>
         <img src="/images/icons/right-arrow.png" alt="arrow icon">
-        <span>Précedent</span>
     </div>
     <div class="right_position arrow desktop" on:click={() => offsetProjectId(1)}>
         <img alt="Next project" src="/images/icons/right-arrow.png">
-        <span>Suivant</span>
     </div>
 </div>

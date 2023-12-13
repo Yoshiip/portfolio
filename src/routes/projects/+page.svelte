@@ -1,7 +1,7 @@
 <script>
 // @ts-nocheck
 
-import projects from './projects.json';
+import projects from '$lib/projects.json';
 import ProjectModal from './ProjectModal.svelte'
 import { onMount } from 'svelte';
 import ProjectAnimation from '../../components/ProjectAnimation.svelte';

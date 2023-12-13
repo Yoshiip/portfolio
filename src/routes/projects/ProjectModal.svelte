@@ -2,8 +2,8 @@
 // @ts-nocheck
 
 import { fade, scale  } from 'svelte/transition';
-import projects from './projects.json';
-import tools from './tools.json';
+import projects from '$lib/projects.json';
+import tools from '$lib/tools.json';
 
 
 

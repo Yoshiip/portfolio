@@ -78,7 +78,7 @@
             Mes projets
         </div>
     </a>
-    <a class="projects_button" href="/projects/">
+    <a class="projects_button" href="/skills/">
         <div>
             <img src="/images/icons/star.svg" alt="" srcset="">
             Compétences

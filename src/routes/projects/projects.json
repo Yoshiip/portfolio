@@ -1,14 +1,18 @@
 [
     {
         "name": "Advent of Code",
-        "description": "",
+        "description": "L'Advent of Code est un calendrier de l'avent numérique où chaque jour, du 1er au 25 décembre, apporte un nouveau défi de codage. Ces défis couvrent un large éventail de sujets, allant des algorithmes classiques aux problèmes de logique complexe.<br>Cette année, je l'ai fait en me lançant un défi; Faire un langage de programmation différent par jour.",
         "date": "2023-12-01",
 
         "tools": {
-            "Langage (jour 1)": "C++",
-            "Langage (jour 2)": "Java",
-            "Langage (jour 3)": "Ruby",
-            "Langage (jour 4)": "D"
+            "Langage (jour 1)": "cpp",
+            "Langage (jour 2)": "ruby",
+            "Langage (jour 3)": "java",
+            "Langage (jour 4)": "r",
+            "Langage (jour 6)": "julia",
+            "Langage (jour 7)": "cs",
+            "Langage (jour 8)": "dart",
+            "Langage (jour 9)": "lua"
         },
         "images": [
             "/images/projects/aoc/aoc.jpg"
@@ -23,9 +27,9 @@
         "date": "2023-11-23",
 
         "tools": {
-            "Langage": "JavaScript",
-            "Framework": "Svelte",
-            "Illustrations": "Illustrator"
+            "Langage": "js",
+            "Framework": "svelte",
+            "Illustrations": "ai"
         },
         "images": [
             "/images/projects/portfolio/0.png"
@@ -39,9 +43,9 @@
         "description": "Un jeu réalisé à l'occasion de la GMTK Jam 2023. Il s'agit d'un jeu de Tower Defense dans lequel le joueur doit attaquer un jardin défendu automatiquement par des plantes. Le jeu présente des similitudes avec le gameplay de Plants vs. Zombies.",
         "date": "2023-05-12",
         "tools": {
-            "Moteur": "Godot Engine",
-            "Modélisation": "Blender",
-            "Illustrations": "Illustrator"
+            "Moteur": "godot",
+            "Modélisation": "blender",
+            "Illustrations": "ai"
         },
         "images": [
             "/images/projects/mecharia/0.jpg"
@@ -62,10 +66,10 @@
         "button_label": "Jouer/Télécharger",
         "date": "2023-01-9",
         "tools": {
-            "Moteur": "Godot Engine",
-            "Modélisation": "Blender",
-            "Illustrations": "Illustrator",
-            "Montage": "Premiere Pro"
+            "Moteur": "godot",
+            "Modélisation": "blender",
+            "Illustrations": "ai",
+            "Montage": "premiere"
         },
         "link": "https://ilyva.sciencesky.fr",
         "github_link": "https://github.com/Yoshiip/ilyva",
@@ -83,9 +87,9 @@
         "button_label": "Jouer",
         "date": "2023-01-9",
         "tools": {
-            "Moteur": "Godot Engine",
-            "Graphismes": "Aseprite",
-            "Musiques": "FL Studio"
+            "Moteur": "godot",
+            "Graphismes": "aseprite",
+            "Musiques": "fl"
         },
         "link": "https://yoshiip.xyz/niptur/",
         "logo": "/images/projects/niptur/logo.png",
@@ -102,9 +106,9 @@
         "button_label": "Télécharger",
         "date": "2022-04-14",
         "tools": {
-            "Moteur": "Godot Engine",
-            "Réseau": "ENet",
-            "Illustrations": "Illustrator"
+            "Moteur": "godot",
+            "Réseau": "enet",
+            "Illustrations": "ai"
         },
         
         "link": "https://yoshiip.xyz/kahorn",
@@ -121,7 +125,7 @@
         "button_label": "Voir sur GitHub",
         "date": "2023-01-08",
         "tools": {
-            "Langage": "Java"
+            "Langage": "java"
         },
         "link": "https://github.com/Yoshiip/LavaRun",
         "color": "#BC1B1B"
@@ -137,8 +141,8 @@
         "button_label": "Consulter",
         "date": "2022-08-21",
         "tools": {
-            "Langage": "JavaScript",
-            "Framework": "Svelte"
+            "Langage": "js",
+            "Framework": "svelte"
         },
         "link": "https://yoshiip.xyz/timer",
         "color": "#AC4EC7"
@@ -155,8 +159,8 @@
         "button_label": "Jouer",
         "date": "2021-01-23",
         "tools": {
-            "Moteur": "Godot Engine",
-            "Langage": "Python"
+            "Moteur": "godot",
+            "Langage": "python"
         },
         "color": "#288bb6",
         "link": "https://yoshiip.xyz/hangman"
@@ -173,9 +177,9 @@
         "button_label": "Jouer",
         "date": "2021-10-11",
         "tools": {
-            "Moteur": "Godot Engine",
-            "Musiques/SFX": "FL Studio",
-            "Graphismes": "Aseprite"
+            "Moteur": "godot",
+            "Musiques/SFX": "fl",
+            "Graphismes": "aseprite"
         },
         "color": "#504c15",
         "link": "https://yoshiip.xyz/ld/49"
@@ -193,9 +197,9 @@
         "color": "#6d2a09",
         "logo":"/images/projects/fall_em_down/logo.png",
         "tools": {
-            "Moteur": "Godot Engine",
-            "Musiques/SFX": "FL Studio",
-            "Graphismes": "Aseprite"
+            "Moteur": "godot",
+            "Musiques/SFX": "fl",
+            "Graphismes": "aseprite"
         },
         "link": "https://yoshiip.xyz/ld/48"
     }

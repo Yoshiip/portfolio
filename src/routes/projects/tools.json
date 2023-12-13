@@ -1,0 +1,89 @@
+{
+    "ai": {
+        "name": "Illustrator"
+    },
+    "aseprite": {
+        "name": "Aseprite"
+    },
+    "blender": {
+        "name": "Blender"
+    },
+    "cpp": {
+        "name": "C++"
+    },
+    "cs": {
+        "name": "C#"
+    },
+    "css": {
+        "name": "CSS"
+    },
+    "dart": {
+        "name": "Dart"
+    },
+    "enet": {
+        "name": "ENet",
+        "icon": "enet.png"
+    },
+    "fl": {
+        "name": "FL Studio",
+        "icon": "fl.png"
+    },
+    "flutter": {
+        "name": "Flutter"
+    },
+    "git": {
+        "name": "Git"
+    },
+    "gitlab": {
+        "name": "Gitlab"
+    },
+    "godot": {
+        "name": "Godot"
+    },
+    "haxe": {
+        "name": "Haxe"
+    },
+    "java": {
+        "name": "Java"
+    },
+    "js": {
+        "name": "JavaScript"
+    },
+    "json": {
+        "name": "JSON"
+    },
+    "julia": {
+        "name": "Julia"
+    },
+    "kotlin": {
+        "name": "Kotlin"
+    },
+    "lua": {
+        "name": "Lua"
+    },
+    "node": {
+        "name": "Node"
+    },
+    "php": {
+        "name": "PHP"
+    },
+    "premiere": {
+        "name": "Premiere Pro"
+    },
+    "python": {
+        "name": "Python"
+    },
+    "ruby": {
+        "name": "Ruby"
+    },
+    "rust": {
+        "name": "Rust"
+    },
+    "svelte": {
+        "name": "Svelte"
+    },
+    "r": {
+        "name": "R"
+    }
+    
+}

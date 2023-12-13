@@ -3,6 +3,7 @@
 
 import { fade, scale  } from 'svelte/transition';
 import projects from './projects.json';
+import tools from './tools.json';
 
 
 
@@ -26,15 +27,6 @@ function add_formatted(property_label, value) {
 }
 
 const PROJECTS_TYPES = {"game": "Jeu"}
-const ICONS = {
-    "godot engine": "/images/icons/godot.svg",
-    "python": "/images/icons/python.svg",
-    "jeu": "/images/icons/video_game.png",
-    "unity": "/images/icons/unity.png",
-    "java": "/images/icons/java.svg",
-    "svelte": "/images/icons/svelte.svg",
-    "javascript": "/images/icons/javascript.png",
-}
 
 let carousel; // for calling methods of the carousel instance
 
@@ -45,42 +37,6 @@ let carousel; // for calling methods of the carousel instance
 function format_date(date) {
     var d = new Date(date);
     return d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear();
-}
-
-/**
-     * @param {{ name: string; type: string; date: string | number | Date; langage: string; framework: string; tools: string; }} project_data
-     */
-function format_project_info(project_data) {
-    var project_types = {
-        "game": "Jeu",
-        "tool": "Outil",
-        "website": "Site",
-    };
-    var data = [];
-    if(project_data.name) {
-        data.push(add_formatted("Nom", project_data.name));
-    }
-    if(project_data.date) {
-        data.push(add_formatted("Date ", format_date(project_data.date)));
-    }
-    if(project_data.type) {
-        data.push(add_formatted("Type de projet", project_data.type));
-    }
-    if(project_data.framework) {
-        if(project_data.type === "tool") {
-            data.push(add_formatted("Framework", project_data.framework))
-        } else {
-            data.push(add_formatted("Moteur", project_data.framework))
-        }
-    }
-    if(project_data.tools) {
-        for (let element in project_data.tools) {
-            data.push(add_formatted(element, project_data.tools[element]))
-
-        }
-    }
-        
-    return data;
 }
 
 
@@ -115,12 +71,25 @@ function offsetProjectId(delta) {
     <div class="modal" transition:scale>
         <div class="content">
             <div class="project_info_list">
-                <h2>{projects[projectId].name}</h2>
+                <div class="info_top">
+                    <img src={projects[projectId].images[0]} alt="">
+                    <div>
+                        <h2>{projects[projectId].name}</h2>
+                    </div>
+                </div>
                 <ul>
-                    <li>Galerie</li>
-                    <li>Description</li>
-                    <li>Technologies</li>
-                    <li>Liens</li>
+                    <li>
+                        <a href="#description">Description</a>
+                    </li>
+                    <li>
+                        <a href="#galerie">Galerie</a>
+                    </li>
+                    <li>
+                        <a href="#technologies">Technologies</a>
+                    </li>
+                    <li>
+                        <a href="#liens">Liens</a>
+                    </li>
                 </ul>
             </div>
             <div class="modal_container">
@@ -133,24 +102,37 @@ function offsetProjectId(delta) {
                         {/if}
                     </div>
                 </div>
-                <h2>Description</h2>
+                <h2 id="description">Description</h2>
                 <p>{@html projects[projectId].description}</p>
-                <h2>Galerie</h2>
+                <h2 id="galerie">Galerie</h2>
                 <div class="images" style="width: 640px;">
                     {#each projects[projectId].images as image_src}
-                        <img src={image_src} alt="Media">
+                        <img src={image_src} on:click={() => window.open(image_src, '_blank')} alt="Media">
                     {/each}
                 </div>
-                <h2>Technologies</h2>
+                <h2 id="technologies">Technologies</h2>
                 <div class="techno">
                     {#each Object.keys(projects[projectId].tools) as tool}
-                        <div>
-                            {tool}
-                            {projects[projectId].tools[tool]}
-                        </div>
+                    <div>
+                        {#if Object.hasOwn(tools, projects[projectId].tools[tool])}
+                            {#if Object.hasOwn(tools[projects[projectId].tools[tool]], "icon")}
+                                <img src={"/images/tools/" + tools[projects[projectId].tools[tool]].icon} alt="" srcset="">
+                            {:else}
+                                <img src={"/images/tools/" + projects[projectId].tools[tool] + ".svg"} alt="" srcset="">
+                            {/if}    
+                                <div class="label">{tool}</div>
+                            {#if Object.hasOwn(tools[projects[projectId].tools[tool]], "name")}    
+                                <span>{tools[projects[projectId].tools[tool]].name}</span>
+                            {:else}
+                                <span>{projects[projectId].tools[tool]}</span>
+                            {/if}
+                        {:else}
+                            <span>Erreur!</span>
+                        {/if}
+                    </div>
                     {/each}
                 </div>
-                <h2>Liens</h2>
+                <h2 id="liens">Liens</h2>
                 <div class="buttons_container">
                     <button class="button play_btn" on:click={() => open(projects[projectId].link)}>
                         {projects[projectId].button_label}

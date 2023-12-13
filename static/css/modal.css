@@ -1,13 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-
-
 .modal {
     width: 80%;
     height: 80%;
     background-color: #D9D9D9;
     border-radius: 12px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    overflow-y: auto;
     position: relative;
     
     display: flex;
@@ -32,15 +28,43 @@
     background-color: #0f0f10;
     color: white;
     min-width: 320px;
-    margin: 8px;
-    border-radius: 4px;
-    height: 100%;
+    margin: 12px;
+    border-radius: 12px;
+    height: calc(100% - 24px);
 }
 
-.project_info_list > h2 {
+.project_info_list li, ul, a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    margin: 4px;
+}
+
+.project_info_list > .info_top {
+    width: 320px;
+    position: relative;
+}
+
+.project_info_list > .info_top > img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.project_info_list > .info_top > div {
+    position: absolute;
     margin: 0;
-    margin-left: 20px;
-    padding-top: 10px;
+    bottom: 0px;
+    width: 100%;
+    padding: 0;
+    height: 100%;
+    
+    background: linear-gradient(0deg, #0f0f10, #0f0f1000);
+    
+}
+
+.info_top h2 {
+    text-align: center;
     font-size: 24px;
     text-align: center;
 }
@@ -80,13 +104,14 @@
     padding-right: 32px;
     height: 64px;
     border-radius: 32px;
-    border: 2px solid #00F;
-    box-shadow: 0px 2px 10px 0px #00F;
+    border: 2px solid rgba(0, 0, 255, 0.404);
+    box-shadow: 0px 2px 16px 0px rgba(0, 0, 255, 0.486);
 }
 
 .name > h2 {
     font-size: 32px;
     color: #00F;
+    font-weight: 900;
     margin: 0;
     padding: 0;
 }
@@ -182,26 +207,15 @@
 
 
 .images {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 8px;
 }
 
 .images > img {
     border-radius: 10px;
-    width: 30%;
-    aspect-ratio: 16 / 9;
-    object-fit: contain;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px;
-    animation: 0.1s;
-}
-
-.images > img:hover {
-    position: fixed;
-    left: 0;
-    right: 0;
-    width: 75%;
-    height: 75%;
+    width: 320px;
 }
 
 
@@ -263,8 +277,10 @@
 
 
 .modal_container {
+    width: 100%;
     max-height: 100%;
     margin-top: 16px;
+    overflow-y: auto;
 }
 
 
@@ -306,4 +322,51 @@
 
 .arrow:hover > span {
     visibility: visible;
+}
+
+.techno {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 8px;
+}
+
+.techno > div {
+    width: 200px;
+    height: 120px;
+    background-color: white;
+    border-radius: 8px;
+    position: relative;
+    animation: 0.1s;
+}
+
+.techno > div:hover {
+    width: 200px;
+    height: 120px;
+    background-color: white;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+
+
+.techno > div > .label {
+    color: gray;
+    position: absolute;
+    left: 16px;
+    bottom: 32px;
+}
+.techno > div > span {
+    font-size: 1.25em;
+    font-weight: 900;
+    position: absolute;
+    left: 16px;
+    bottom: 8px;
+}
+
+.techno > div > img {
+    width: 40px;
+    position: absolute;
+    left: 16px;
+    top: 20px;
 }

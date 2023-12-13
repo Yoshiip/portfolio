@@ -1,7 +1,4 @@
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/home.css">
-
-<title>Tourneur Aymeri</title>
+<title>Portfolio • Tourneur Aymeri</title>
 
 <script>
     import { onMount } from "svelte";
@@ -56,16 +53,18 @@
 
 <svelte:window bind:outerWidth bind:outerHeight/>
 
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/home.css">
+
 <div class="background" style="background-position: 0 {circleY}%"></div>
 <main on:mousemove={handleMouseMove}>
-    <div>
-        <h1>TOURNEUR</h1>
+    <div style="position: relative;">
+        <img src="/images/home/logo.svg" alt="" srcset="">
         <div bind:this={container} class="eye_box dekstop">
             <div class="eye" style="left: {mouseX}px; top: {mouseY}px; border-width: 2px; border-color: gray;"></div>
             <div class="eye" style="left: {circleX}px; top: {circleY}px;"></div>
             <img src="/images/home/yoshi_noir.png" unselectable="on" alt="" srcset="" class="start_yoshi">
         </div>
-        <h1 class="h1_outlined" style="display: inline-block; text-align: right;">AYMERI</h1>
     </div>
     <p>
         Je suis un étudiant en 2ème année de BUT Informatique, à l'<strong>Université de Lille</strong>.<br>

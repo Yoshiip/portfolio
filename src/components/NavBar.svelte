@@ -2,14 +2,13 @@
 
 
 <script>
-    import { fly } from 'svelte/transition';
     import {page} from '$app/stores'
 
     let page_name = $page.url.pathname.substr($page.url.pathname.lastIndexOf('/'));
 </script>
 
 
-<div class="navigation" transition:fly>
+<div class="navigation">
     <ul>
         <li class:active="{page_name === "/"}"><a href="/">Accueil</a></li>
         <li class:active="{page_name === "/about"}"><a href="about">À propos</a></li>

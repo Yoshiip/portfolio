@@ -44,8 +44,6 @@ declare module '$env/static/private' {
 	export const EMSDK: string;
 	export const EMSDK_NODE: string;
 	export const EMSDK_PYTHON: string;
-	export const FPS_BROWSER_APP_PROFILE_STRING: string;
-	export const FPS_BROWSER_USER_PROFILE_STRING: string;
 	export const GIT_ASKPASS: string;
 	export const HAXEPATH: string;
 	export const HOME: string;
@@ -171,8 +169,6 @@ declare module '$env/dynamic/private' {
 		EMSDK: string;
 		EMSDK_NODE: string;
 		EMSDK_PYTHON: string;
-		FPS_BROWSER_APP_PROFILE_STRING: string;
-		FPS_BROWSER_USER_PROFILE_STRING: string;
 		GIT_ASKPASS: string;
 		HAXEPATH: string;
 		HOME: string;

@@ -1,0 +1,43 @@
+body {
+    background-color: rgb(221, 228, 238);
+    margin-top: 80px;
+}
+
+.skills_container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 8px;
+}
+
+.skill {
+    width: 240px;
+    background-color: white;
+    border-radius: 8px;
+    animation: 0.25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.skill > img {
+    width: 64px;
+}
+
+.skill:hover {
+    width: 240px;
+    background-color: white;
+    border-radius: 8px;
+    animation: 0.25s;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.skill > h1 {
+    text-align: center;
+}
+
+.skill > p {
+    text-align: justify;
+    margin: 8px;
+}

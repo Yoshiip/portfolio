@@ -75,7 +75,7 @@
     <a class="projects_button" href="/projects/">
         <div>
             <img src="/images/icons/star.svg" alt="" srcset="">
-            Mes projets
+            Projets
         </div>
     </a>
     <a class="projects_button" href="/skills/">

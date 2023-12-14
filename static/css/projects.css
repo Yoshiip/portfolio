@@ -3,7 +3,11 @@
 html, body {
   margin: 0;
   padding: 0;
+}
+
+main {
   font-family: 'Space Mono', monospace;
+  scroll-behavior: smooth;
 }
 
 
@@ -83,12 +87,6 @@ header > .back_button > img {
   to   { transform: translate(0, 24px); }
 }
 
-
-
-html, body {
-  scroll-behavior: smooth;
-}
-
 .title_section {
   width: 100%;
   height: 100%;
@@ -152,8 +150,6 @@ html, body {
   .project {
     width: calc(100svw - 64px);
   }
-
-  
 }
 
 

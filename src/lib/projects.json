@@ -27,9 +27,13 @@
         "date": "2023-11-23",
 
         "tools": {
+            "Gestionnaire de version": "git",
             "Langage": "js",
             "Framework": "svelte",
-            "Illustrations": "ai"
+            "Illustrations": "ai",
+            "Backend": "node",
+            "Style": "css",
+            "Maquettage": "figma"
         },
         "images": [
             "/images/projects/portfolio/0.png"
@@ -66,10 +70,12 @@
         "button_label": "Jouer/Télécharger",
         "date": "2023-01-9",
         "tools": {
+            "Gestionnaire de version": "git",
             "Moteur": "godot",
             "Modélisation": "blender",
             "Illustrations": "ai",
-            "Montage": "premiere"
+            "Montage": "premiere",
+            "Maquettage": "figma"
         },
         "link": "https://ilyva.sciencesky.fr",
         "github_link": "https://github.com/Yoshiip/ilyva",
@@ -125,6 +131,7 @@
         "button_label": "Voir sur GitHub",
         "date": "2023-01-08",
         "tools": {
+            "Gestionnaire de version": "git",
             "Langage": "java"
         },
         "link": "https://github.com/Yoshiip/LavaRun",
@@ -141,8 +148,12 @@
         "button_label": "Consulter",
         "date": "2022-08-21",
         "tools": {
+            "Gestionnaire de version": "git",
             "Langage": "js",
-            "Framework": "svelte"
+            "Framework": "svelte",
+            "Backend": "node",
+            "Maquettage": "figma",
+            "Style": "css"
         },
         "link": "https://yoshiip.xyz/timer",
         "color": "#AC4EC7"

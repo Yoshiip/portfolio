@@ -1,4 +1,8 @@
-<title>Portfolio • Tourneur Aymeri</title>
+<svelte:head>
+    <title>Portfolio • Tourneur Aymeri</title>
+    <meta name="description" content="Portfolio de Tourneur Aymeri">
+</svelte:head>
+
 
 <script>
     import { onMount } from "svelte";
@@ -53,9 +57,6 @@
 
 <svelte:window bind:outerWidth bind:outerHeight/>
 
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/home.css">
-
 <div class="background" style="background-position: 0 {circleY}%"></div>
 <main on:mousemove={handleMouseMove}>
     <div style="position: relative;">
@@ -72,13 +73,13 @@
         Sur ce site, vous retrouverez les projets que j'ai pu réaliser.<br>
     </p>
     
-    <a class="projects_button" href="/projects/">
+    <a class="stylized_button" href="/projects/" style="background-image: url('/images/home/projects_button_background.jpg');">
         <div>
             <img src="/images/icons/star.svg" alt="" srcset="">
             Projets
         </div>
     </a>
-    <a class="projects_button" href="/skills/">
+    <a class="stylized_button" href="/skills/" style="background-image: url('/images/home/skills_button_background.jpg');">
         <div>
             <img src="/images/icons/star.svg" alt="" srcset="">
             Compétences
@@ -104,3 +105,168 @@
 </main>
 
 <img src="/images/home/side.svg" class="side" alt="" srcset="">
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+main {
+  margin: 20px;
+  margin-top: 80px;
+}
+
+.background {
+  position:fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -5;
+  background-image: url("/images/home/background.jpg");
+}
+
+
+
+
+
+.eye_box {
+  width: 64px;
+  height: 64px;
+  color: white;
+  border: 4px solid black;
+  
+  position: absolute;
+  left: 0px;
+  bottom: 20px;
+  display: inline-block;
+}
+
+.eye {
+  border-radius: 16px;
+  border: 4px solid black;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  background-color: white;
+}
+
+
+.start_yoshi {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0.0;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation: fade 5s 1;
+
+  user-select: none;
+  pointer-events: none;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1.0;
+  }
+  100% {
+    opacity: 0.0;
+  }
+}
+
+
+
+
+
+.link_button {
+  display: inline-block;
+  width: 220px;
+  height: 100px;
+  padding: 10px;
+  background-color: #191A1E;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+
+
+.link_button:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+
+.link_button > .text > img {
+  width: 24px;
+  display: block;
+}
+
+.link_button > .text {
+  position: absolute;
+  bottom: 16px;
+
+}
+
+.link_button > .text > .title {
+  font-size: 1.5em;
+}
+
+.link_button > .text > .subtext {
+  display: block;
+  font-family: 'Space Mono', monospace;
+  color: gray;
+}
+
+.link_button > img {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+}
+
+.stylized_button {
+  width: 240px;
+  height: 120px;
+  display: inline-block;
+  border-radius: 8px;
+  background-size: cover;
+  
+  background-position: 0% 0%;
+  text-decoration: none;
+  position: relative;
+  transition: 0.3s;
+}
+.stylized_button:hover {
+  background-position: 100%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.stylized_button > div > img {
+  width: 24px;
+  display: block;
+}
+
+.stylized_button > div {
+  color: #191A1E;
+  font-weight: 800;
+  font-size: 1.5em;
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+}
+
+.side {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .side {
+    display: none;
+  }
+}
+</style>

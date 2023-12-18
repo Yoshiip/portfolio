@@ -25,7 +25,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"idb-keyval": "^6.2.1",
-		"slidy": "^0.6.0"
+		"idb-keyval": "^6.2.1"
 	}
 }

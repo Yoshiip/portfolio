@@ -1,19 +1,22 @@
 <script>
     import {page} from '$app/stores'
-    import { onMount } from 'svelte';
 
     let page_name = $page.url.pathname.substr($page.url.pathname.lastIndexOf('/'));
-    onMount(() => {
-        console.log(page_name);
-    })
+
 </script>
 
 <nav>
     <ul>
-        <img src="/images/home/yoshi_noir.png" alt="" srcset="">
+        <img src="/images/home/yoshi_noir.png" class="avatar" alt="Website icon">
         <li class:selected={page_name === "/"}><a href="/">Accueil</a></li>
-        <li class:selected={page_name === "/projects"}><a href="/projects">Réalisations</a></li>
+        <li class:selected={page_name === "/projects"}><a href="/projects">Projets</a></li>
         <li class:selected={page_name === "/skills"}><a href="/skills">Compétences</a></li>
+        <!-- <li>
+            <img src="/images/icons/github_black.png" alt="GitHub" srcset="">
+        </li>
+        <li>
+            <img src="/images/icons/mail.svg" alt="Mail" srcset="">
+        </li> -->
     </ul>
 </nav>
 
@@ -21,14 +24,25 @@
 
 <slot/>
 
-<style>
-    nav {
+<!-- {#if page_name != "/"}
+    <footer>
+        <a href="#top" class="stylized_button">Revenir en haut</a>
         
+        <div class="made_with">
+            <span>Fait avec</span> <img src="/images/tools/svelte.svg" style="" alt="" srcset="" width="16"> <span>Svelte</span>
+        </div>
+    </footer>
+{/if} -->
+
+<style>
+    @import '$lib/style.css';
+    
+    nav {
         position: fixed;
         top: 8px;
         left: 50%;
         transform: translate(-50%, 0);
-        width: 440px;
+        width: 520px;
         height: 44px;
         background-color: white;
         border-radius: 128px;
@@ -41,45 +55,72 @@
         z-index: 3;
     }
 
-    nav img {
+    /* li img {
+        width: 24px;
+    } */
+
+    ul > img {
         position: absolute;
         left: 8px;
     }
 
-    nav li {
+    li {
         transition: 0.1s;
         border-radius: 20px;
         padding: 8px;
     }
     
-    nav li:hover {
+    li:hover {
         background-color: black;
         color: white;
     }
 
-    nav a {
+    a {
         text-decoration: none;
-        color:unset;
+        color: unset;
     }
 
-    nav a .selected {
+    .selected {
         background-color: black;
         color: white;
     }
 
-    nav ul {
+    ul {
         margin: 0;
     }
 
-    nav img {
+    .avatar {
         width: 36px;
         vertical-align: middle;
         border-radius: 128px;
     }
 
-    nav ul li {
+    ul li {
         margin-left: 8px;
         margin-right: 8px;
         display: inline-block;
     }
+
+
+    /* footer {
+        width: 100%;
+        display: flex;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        background: linear-gradient(180deg, rgb(37, 37, 37), rgb(15, 15, 15));
+        color: white;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    footer a {
+        text-decoration: none;
+        color: white;
+        font-weight: 900;
+    }
+
+    footer > .made_with {
+        margin: 8px;
+    } */
 </style>

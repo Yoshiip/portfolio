@@ -1,7 +1,7 @@
 <script>
     import {page} from '$app/stores'
 
-    let page_name = $page.url.pathname.substr($page.url.pathname.lastIndexOf('/'));
+    $: page_name = $page.url.pathname.substr($page.url.pathname.lastIndexOf('/'));
 
 </script>
 
@@ -24,7 +24,7 @@
 
 <slot/>
 
-<!-- {#if page_name != "/"}
+{#if page_name != "/"}
     <footer>
         <a href="#top" class="stylized_button">Revenir en haut</a>
         
@@ -32,7 +32,7 @@
             <span>Fait avec</span> <img src="/images/tools/svelte.svg" style="" alt="" srcset="" width="16"> <span>Svelte</span>
         </div>
     </footer>
-{/if} -->
+{/if}
 
 <style>
     @import '$lib/style.css';
@@ -102,7 +102,7 @@
     }
 
 
-    /* footer {
+    footer {
         width: 100%;
         display: flex;
         padding-top: 32px;
@@ -122,5 +122,5 @@
 
     footer > .made_with {
         margin: 8px;
-    } */
+    }
 </style>

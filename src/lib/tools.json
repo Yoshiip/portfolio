@@ -66,7 +66,7 @@
     },
     "godot": {
       "name": "Godot",
-      "description": "Godot est un moteur de jeu open source utilisé pour créer des jeux en 2D et 3D avec un langage de programmation visuel et un support de scripts.",
+      "description": "Godot est un moteur de jeu open source utilisé pour créer des jeux en 2D et 3D.",
       "mastery": 1,
       "url": "https://godotengine.org/"
     },

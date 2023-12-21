@@ -21,8 +21,7 @@
 
 
 <main>
-    <h1>Compétences</h1>
-    <p>Vous pouvez retrouvez sur cette page mes divers compétences.</p>
+    <img src="/images/skills/skills_header.jpg" alt="Skills" class="header">
     <div class="skills_container">
         {#each Object.keys(tools) as tool}
             {#if (tools[tool].mastery ?? 0) != -1}
@@ -52,6 +51,14 @@
     main {
         margin-top: 80px;
     }
+
+    .header {
+      width: calc(100% - 64px);
+      border-radius: 16px;
+      margin-left: 32px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    }
+
     .skills_container {
         margin: 32px;
         width: calc(100% - 64px);

@@ -30,11 +30,13 @@ function closeModal() {
 
 <title>Projets • Tourneur Aymeri</title>
 <main class:scroll-lock={disabledScroll}>
-    <h1>Projets</h1>
+    <img src="/images/projects/projects_header.jpg" alt="Projects" class="header">
     <div class="projects_container" id="projects">
         {#each projects as project, i}
-            <button class="project" on:click={() => showProject(i)} style="background-image: url('{project.images[0]}')">
-                <div class="label"><span>{project.name}</span></div>
+            <button class="project" on:click={() => showProject(i)}>
+              <img src="{project.images[0]}" alt="" class="cover">
+                <div class="name">{project.name}</div>
+                <div class="date">{project.date.split("-")[0]}</div>
             </button>
         {/each}
     </div>
@@ -49,14 +51,15 @@ function closeModal() {
 <style>
     @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 
+    .header {
+      width: calc(100% - 64px);
+      border-radius: 16px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    }
 
 main {
   margin-top: 80px;
   text-align: center;
-}
-
-h1 {
-    font-size: 3em;
 }
 
 .scroll-lock {
@@ -65,7 +68,7 @@ h1 {
 
 .projects_container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
   gap: 8px;
   padding-top: 64px;
   padding-left: 32px;
@@ -74,21 +77,46 @@ h1 {
 }
 
 .project {
-  width: calc(33svw - 32px);;
-  height: 200px;
+  width: 320px;
   position: relative;
-  border: 2px solid rgb(224, 224, 224);
+  border: none;
 
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
 
   align-self: center;
   justify-self: center;
   transition: 0.15s ease;
+
+  background-color: rgb(27, 28, 29);
+
+  font-size: 16px;
+}
+
+.project > .cover {
+  width: calc(100% - 16px);
+  aspect-ratio: 16 / 9;
+  margin-top: 8px;
+}
+
+.project > .name {
+  color: white;
+  text-align: left;
+  margin: 8px;
+  font-weight: 700;
+  font-family: 'Space Mono', monospace;
+}
+
+.project > .date {
+  position: absolute;
+  right: 14px;
+  bottom: 8px;
+  background-color: blue;
+  padding: 2px;
+  border-radius: 4px;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-family: 'Space Mono', monospace;
 }
 
 @media screen and (max-width: 1024px) {
@@ -114,27 +142,5 @@ h1 {
 
 .project:hover {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
-}
-
-.project > .label {
-
-  bottom: 8px;
-  position: absolute;
-  width: 100%;
-
-  
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.project > .label > span {
-  color: black;
-  background-color: white;
-  border-radius: 48px;
-  padding: 6px;
-  font-size: 18px;
-  font-weight: 700;
-  font-family: 'Space Mono', monospace;
 }
 </style>

@@ -65,7 +65,7 @@ function closeModal() {
 
     .header {
       width: calc(100% - 64px);
-      max-width: 1280px;
+      max-width: 800px;
       border-radius: 16px;
       margin-bottom: 64px;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;

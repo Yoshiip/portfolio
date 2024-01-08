@@ -1,16 +1,13 @@
 <script>
-    import {page} from '$app/stores'
-
-    $: page_name = $page.url.pathname.substr($page.url.pathname.lastIndexOf('/'));
-
+    import { page } from '$app/stores'
 </script>
 
 <nav>
     <ul>
         <img src="/images/home/yoshi_noir.png" class="avatar" alt="Website icon">
-        <li class:selected={page_name === "/"}><a href="/">Accueil</a></li>
-        <li class:selected={page_name === "/projects"}><a href="/projects">Projets</a></li>
-        <li class:selected={page_name === "/skills"}><a href="/skills">Compétences</a></li>
+        <li class:selected={$page.url.pathname === "/"}><a href="/">Accueil</a></li>
+        <li class:selected={$page.url.pathname === "/projects/"}><a href="/projects">Projets</a></li>
+        <li class:selected={$page.url.pathname === "/skills/"}><a href="/skills">Compétences</a></li>
         <!-- <li>
             <img src="/images/icons/github_black.png" alt="GitHub" srcset="">
         </li>
@@ -24,10 +21,8 @@
 
 <slot/>
 
-{#if page_name != "/"}
-    <footer>
-        <a href="#top" class="stylized_button">Revenir en haut</a>
-        
+{#if $page.url.pathname != "/"}
+    <footer>        
         <div class="made_with">
             <span>Fait avec</span> <img src="/images/tools/svelte.svg" style="" alt="" srcset="" width="16"> <span>Svelte</span>
         </div>
@@ -42,7 +37,7 @@
         top: 8px;
         left: 50%;
         transform: translate(-50%, 0);
-        width: 520px;
+        width: 400px;
         height: 44px;
         background-color: white;
         border-radius: 128px;
@@ -112,12 +107,6 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-    }
-
-    footer a {
-        text-decoration: none;
-        color: white;
-        font-weight: 900;
     }
 
     footer > .made_with {

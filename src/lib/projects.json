@@ -1,6 +1,28 @@
 [
     {
+        "name": "WEjs",
+        "type": "Site",
+        "description": "WEjs est un projet en cours de développement permettant l'édition de graphes en JavaScript pur (sans librairie externe). Le projet est encore très expérimental et les performances sont assez mauvaises sur de gros graphes.<br>Il permet de modifier les graphes en utilisant un éditeur simple et d'ajouter de la signalisation (marquage stop, passage piéton).<br>Il est également possible de charger des données cartographiques en utilisant l'API d'OpenStreetMap, un équivalent open source et bien plus complet que Google Maps.<br>Un effet 3D est également activé par défaut, rendant l'éditeur un peu plus agréable à utiliser.",
+        "date": "2024-01-04",
+
+        "tools": {
+            "Données cartographiques": "osm",
+            "Gestionnaire de version": "git",
+            "Langage": "js",
+            "Style": "css"
+        },
+        "images": [
+            "/images/projects/wejs/0.jpg",
+            "/images/projects/wejs/1.jpg"
+        ],
+        "button_label": "Consulter",
+        "link": "https://yoshiip.xyz/wejs",
+        "github_link": "https://github.com/Yoshiip/wejs",
+        "color": "#0000ff"
+    },
+    {
         "name": "Advent of Code",
+        "type": "Évènement",
         "description": "L'Advent of Code est un calendrier de l'avent numérique où chaque jour, du 1er au 25 décembre, apporte un nouveau défi de codage. Ces défis couvrent un large éventail de sujets, allant des algorithmes classiques aux problèmes de logique complexe.<br>Cette année, je l'ai fait en me lançant un défi; Faire un langage de programmation différent par jour.",
         "date": "2023-12-01",
 
@@ -15,7 +37,7 @@
             "Langage (jour 9)": "lua"
         },
         "images": [
-            "/images/projects/aoc/aoc.jpg"
+            "/images/projects/aoc/0.jpg"
         ],
         "button_label": "Voir sur GitHub",
         "link": "https://github.com/Yoshiip/aoc-2023",
@@ -23,7 +45,8 @@
     },
     {
         "name": "Portfolio",
-        "description": "C'est le portfolio que vous consultez actuellement! Je l'ai réalisé avec Svelte.",
+        "type": "Site",
+        "description": "C'est le portfolio que vous consultez actuellement.<br>Je l'ai réalisé avec Svelte.",
         "date": "2023-11-23",
 
         "tools": {
@@ -43,7 +66,24 @@
         "color": "#0000ff"
     },
     {
+        "name": "Chasse au monstre",
+        "type": "Jeu",
+        "description": "<strong>Chasse au monstre</strong> est un projet scolaire réalisé à l'aide du langage Java et de la bibliothèque JavaFX. Ce jeu a été créé en équipe de 5 personnes.<br>Le jeu peut se jouer à 1 ou 2 joueurs, où dans chaque partie il y a un monstre et un chasseur. Le jeu se déroule tour par tour, le monstre doit essayer de rejoindre la sortie pendant que le chasseur lui tire dessus.<br>Il est également possible de jouer en réseau sur 2 machines différentes.<br>Le jeu possède de nombreuses mécaniques de gameplay additionnelles, comme par exemple un brouillard de guerre qui masque les cases que le monstre n'a pas explorées, ou encore des grenades que le chasseur peut utiliser pour découvrir une grande zone.",
+        "date": "2023-10-12",
+        "tools": {
+            "Gestionnaire de version": "git",
+            "Langage": "java"
+        },
+        "images": [
+            "/images/projects/chasse_au_monstre/0.png"
+        ],
+        "button_label": "Voir sur GitHub",
+        "link": "https://github.com/Yoshiip/chasse-au-monstre",
+        "color": "#0000ff"
+    },
+    {
         "name": "Mecharia",
+        "type": "Game Jam",
         "description": "Un jeu réalisé à l'occasion de la GMTK Jam 2023. Il s'agit d'un jeu de Tower Defense dans lequel le joueur doit attaquer un jardin défendu automatiquement par des plantes. Le jeu présente des similitudes avec le gameplay de Plants vs. Zombies.",
         "date": "2023-05-12",
         "tools": {
@@ -61,6 +101,7 @@
     },
     {
         "name": "Ilyva",
+        "type": "Jeu",
         "images": [
             "/images/projects/ilyva/0.jpg",
             "/images/projects/ilyva/1.jpg",
@@ -83,7 +124,27 @@
         "color": "#db281c"
     },
     {
+        "name": "Site covoiturage",
+        "type": "Site",
+        "images": [
+            "/images/projects/nvidia/0.png",
+            "/images/projects/nvidia/1.png",
+            "/images/projects/nvidia/2.png"
+        ],
+        "description": "LavaRun est un jeu réalisé en IJava dans le cadre du BUT Informatique. C'est un jeu dans lequel vous devez vous échapper d'un labyrinthe (généré de manière procédurale à chaque partie) et éviter la lave en répondant correctement à des questions.",
+        "button_label": "Voir sur GitHub",
+        "date": "2023-01-08",
+        "tools": {
+            "Style": "css",
+            "Maquettage": "figma",
+            "Prototype": "wordpress"
+        },
+        "link": "https://github.com/Yoshiip/LavaRun",
+        "color": "#BC1B1B"
+    },
+    {
         "name": "Niptur's Curse",
+        "type": "Game Jam",
         "images": [
             "/images/projects/niptur/1.png",
             "/images/projects/niptur/0.png",
@@ -103,6 +164,7 @@
     },
     {
         "name": "LavaRun",
+        "type": "Jeu",
         "images": [
             "/images/projects/lavarun/1.png",
             "/images/projects/lavarun/0.png"
@@ -116,22 +178,23 @@
         },
         "link": "https://github.com/Yoshiip/LavaRun",
         "color": "#BC1B1B"
-
     },
     {
         "name": "Kahorn",
+        "type": "Jeu",
         "images": [
             "/images/projects/kahorn/1.png",
             "/images/projects/kahorn/0.png",
             "/images/projects/kahorn/2.jpg"
         ],
-        "description": "Kahorn est un projet d'école s'inspirant fortement du jeu en ligne Kahoot. Kahorn se joue en multijoueur en ligne, pouvant être joué jusqu'à 32 joueurs. Le jeu utilise le protocole UDP pour transférer les données entre les utilisateurs (à l'aide de l'application ENet), et il possède un client et un serveur. Les questions sont récupérées depuis l'API TriviaDB, une API gratuite et simple d'utilisation permettant de récupérer des questions à choix multiples/vrai ou faux très facilement.",
+        "description": "Kahorn est un projet d'école s'inspirant fortement du jeu en ligne Kahoot. Kahorn se joue en multijoueur en ligne, pouvant être joué jusqu'à 32 joueurs. Le jeu utilise le protocole UDP pour transférer les données entre les utilisateurs (à l'aide de la librairie ENet). Les questions sont récupérées depuis l'API TriviaDB, une API permettant de récupérer des questions à choix multiples/vrai ou faux très facilement.",
         "button_label": "Télécharger",
         "date": "2022-04-14",
         "tools": {
             "Moteur": "godot",
             "Réseau": "enet",
-            "Illustrations": "ai"
+            "Illustrations": "ai",
+            "Serveur": "linux"
         },
         
         "link": "https://yoshiip.xyz/kahorn",
@@ -140,6 +203,7 @@
     },
     {
         "name": "Yoshtimer",
+        "type": "Site",
         "images": [
             "/images/projects/yoshtimer/0.jpg",
             "/images/projects/yoshtimer/1.jpg"
@@ -160,6 +224,7 @@
     },
     {
         "name": "Ultimate Hangman",
+        "type": "Jeu",
         "images": [
             "/images/projects/ultimate_hangman/2.jpg",
             "/images/projects/ultimate_hangman/0.png",
@@ -174,10 +239,11 @@
             "Langage": "python"
         },
         "color": "#288bb6",
-        "link": "https://yoshiip.xyz/hangman"
+        "link": "https://yoshiip.xyz/games/hangman"
     },
     {
         "name": "Little Reactor",
+        "type": "Game Jam",
         "images": [
             "/images/projects/little_reactor/0.png",
             "/images/projects/little_reactor/1.jpg",
@@ -193,10 +259,11 @@
             "Graphismes": "aseprite"
         },
         "color": "#504c15",
-        "link": "https://yoshiip.xyz/ld/49"
+        "link": "https://yoshiip.xyz/games/ld49"
     },
     {
         "name": "Fall'em Down",
+        "type": "Game Jam",
         "images": [
             "/images/projects/fall_em_down/1.png",
             "/images/projects/fall_em_down/0.png",
@@ -212,6 +279,6 @@
             "Musiques/SFX": "fl",
             "Graphismes": "aseprite"
         },
-        "link": "https://yoshiip.xyz/ld/48"
+        "link": "https://yoshiip.xyz/games/ld48"
     }
 ]

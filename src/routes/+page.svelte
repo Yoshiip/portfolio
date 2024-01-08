@@ -70,7 +70,7 @@
     <p>
         Je suis un étudiant en 2ème année de BUT Informatique, à l'<strong>Université de Lille</strong>.<br>
         Je recherche actuellement un stage d'une durée de <strong>10 semaines</strong>, à partir du 15 avril 2024.<br>
-        Sur ce site, vous retrouverez les projets que j'ai pu réaliser.<br>
+        Sur ce site, vous retrouverez les projets que j'ai pu réaliser, ainsi que mes compétences.<br>
     </p>
     
     <a class="stylized_button" href="/projects/" style="background-image: url('/images/home/projects_button_background.jpg');">
@@ -94,7 +94,7 @@
         </div>
         <img src="/images/icons/open.svg" alt="" srcset="">
     </a>
-    <a href="mailto:yoshiip59@gmail.com" class="link_button">
+    <a href="mailto:aymeri.tourneur.etu@univ-lille.fr" class="link_button">
         <div class="text">
             <img src="/images/icons/mail.svg" alt="" srcset="">
             <span class="title">Mail</span>

@@ -1,7 +1,7 @@
 <script>
 // @ts-nocheck
 
-import { fade, scale  } from 'svelte/transition';
+import { fade, blur, fly, slide, scale, draw, crossfade } from 'svelte/transition';
 import projects from '$lib/projects.json';
 import tools from '$lib/tools.json';
 
@@ -68,12 +68,8 @@ function offsetProjectId(delta) {
     <div class="modal" transition:scale>
         <div class="content">
             <div class="project_info_list desktop">
-                <div class="info_top">
-                    <img src={projects[projectId].images[0]} alt="">
-                    <div>
-                        <h2>{projects[projectId].name}</h2>
-                    </div>
-                </div>
+                <h2>{projects[projectId].name}</h2>
+                <div class="year">{projects[projectId].type} • {projects[projectId].date.split('-')[0]}</div>
                 <ul>
                     <li>
                         <a href="#description">Description</a>
@@ -102,7 +98,7 @@ function offsetProjectId(delta) {
                 <h2 id="description">Description</h2>
                 <p>{@html projects[projectId].description}</p>
                 <h2 id="galerie">Galerie</h2>
-                <div class="images" style="width: 640px;">
+                <div class="images">
                     {#each projects[projectId].images as image_src}
                         <img src={image_src} on:click={() => window.open(image_src, '_blank')} alt="Media">
                     {/each}
@@ -191,47 +187,38 @@ function offsetProjectId(delta) {
 }
 
 .project_info_list li, ul, a {
-    list-style: none;
     text-decoration: none;
     color: white;
     margin: 4px;
 }
 
-.project_info_list > .info_top {
-    width: 320px;
-    position: relative;
-}
-
-.project_info_list > .info_top > img {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-}
-
-.project_info_list > .info_top > div {
-    position: absolute;
-    margin: 0;
-    bottom: 0px;
-    width: 100%;
-    padding: 0;
-    height: 100%;
-    
-    background: linear-gradient(0deg, #0f0f10, #0f0f1000);
-    
-}
-
-.info_top h2 {
+.project_info_list h2 {
     text-align: center;
     font-size: 24px;
+    margin-top: 64px;
+    margin-bottom: 0;
+}
+
+.project_info_list .year {
     text-align: center;
+    color: lightgray;
 }
 
 .project_info_list > ul {
-    margin: 0;
-    padding: 0;
+    margin: 8px;
+    padding: 4px;
 }
 
 .project_info_list > ul > li {
+    padding: 4px;
+    font-weight: 100;
+    margin: 0;
+}
+
+.project_info_list > ul > li:hover {
+    padding: 4px;
+    background-color: rgb(26, 26, 26);
+    border-radius: 4px;
     list-style-type: none;
     font-weight: 100;
 }
@@ -253,6 +240,7 @@ function offsetProjectId(delta) {
     padding-right: 32px;
     height: 64px;
     border-radius: 32px;
+    margin-top: 64px;
     border: 2px solid rgba(0, 0, 255, 0.404);
     box-shadow: 0px 2px 16px 0px rgba(0, 0, 255, 0.486);
 }
@@ -273,15 +261,7 @@ function offsetProjectId(delta) {
     width: 100%;
 }
 
-.close_btn {
-    position: absolute;
-    right: 0px;
-    top: 68px;
-    border: none;
-    background: none;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-}
+
 
 
 @media only screen and (max-width: 1024px) {
@@ -306,32 +286,48 @@ function offsetProjectId(delta) {
 
     .close_btn {
         position: absolute;
-        width: 56px;
         top: 32px;
         right: 32px;
-        height: 56px;
-        border-radius: 64px;
-        background: white;
-        z-index: 100;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
-
     .modal_header {
         padding-top: 96px;
     }
+}
 
-    .close_btn > img {
-        filter: invert();
-    }
+.close_btn {
+    position: absolute;
+    right: 32px;
+    top: 64px;
+    border: none;
+    background: none;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+
+    width: 56px;
+    height: 56px;
+    border-radius: 64px;
+    background: white;
+    z-index: 4;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.close_btn > img {
+    filter: invert();
+    width: 48px;
+    height: 48px;
 }
 
 .images {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 8px;
+
+    
 }
 
 .images > img {
@@ -383,16 +379,11 @@ function offsetProjectId(delta) {
     background-color: white;
 }
 
-.close_btn > img {
-    width: 48px;
-    height: 48px;
-}
 
 
 .modal_container {
     width: 100%;
     max-height: 100%;
-    margin-top: 16px;
     overflow-y: auto;
 }
 
@@ -403,7 +394,7 @@ function offsetProjectId(delta) {
 
 
 .project_logo {
-    height: 80px;
+    height: calc(100% - 16px);
 }
 
 
@@ -435,42 +426,34 @@ function offsetProjectId(delta) {
 
 .techno > div {
     width: 200px;
-    height: 120px;
+    min-height: 96px;
     background-color: white;
     border-radius: 8px;
+    padding: 8px;
     position: relative;
     animation: 0.1s;
 }
 
 .techno > div:hover {
     width: 200px;
-    height: 120px;
     background-color: white;
     border-radius: 8px;
     position: relative;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+.techno > div > img {
+    width: 40px;
+    max-height: 40px;
+}
 
 
 .techno > div > .label {
     color: gray;
-    position: absolute;
-    left: 16px;
-    bottom: 32px;
 }
 .techno > div > span {
     font-size: 1.25em;
     font-weight: 900;
-    position: absolute;
-    left: 16px;
-    bottom: 8px;
 }
 
-.techno > div > img {
-    width: 40px;
-    position: absolute;
-    left: 16px;
-    top: 20px;
-}
 </style>

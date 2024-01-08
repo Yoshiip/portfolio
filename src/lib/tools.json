@@ -1,145 +1,161 @@
 {
-    "ai": {
-      "name": "Illustrator",
-      "description": "Adobe Illustrator est un éditeur graphique vectoriel utilisé pour créer des illustrations, des logos et des graphiques.",
-      "url": "https://www.adobe.com/products/illustrator.html"
-    },
-    "aseprite": {
-      "name": "Aseprite",
-      "description": "Aseprite est un outil d'art pixelisé permettant aux artistes de créer des sprites animés et des graphiques à base de pixels.",
-      "url": "https://www.aseprite.org/"
-    },
-    "blender": {
-      "name": "Blender",
-      "description": "Blender est un puissant logiciel 3D open source pour la modélisation, l'animation, le rendu, et plus encore.",
-      "url": "https://www.blender.org/"
-    },
-    "cpp": {
-      "name": "C++",
-      "description": "C++ est un langage de programmation polyvalent largement utilisé pour le développement de systèmes, de logiciels et de jeux.",
-      "url": "https://isocpp.org/"
-    },
-    "cs": {
-      "name": "C#",
-      "description": "C# est un langage de programmation moderne développé par Microsoft, couramment utilisé pour la création d'applications Windows et de jeux.",
-      "mastery": 1,
-      "url": "https://docs.microsoft.com/en-us/dotnet/csharp/"
-    },
-    "css": {
-      "name": "CSS",
-      "description": "CSS (Feuilles de style en cascade) est un langage de style utilisé pour contrôler la présentation des pages web écrites en HTML ou XML.",
-      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
-    },
-    "dart": {
-      "name": "Dart",
-      "description": "Dart est un langage de programmation optimisé pour la création d'applications mobiles, de bureau, de serveur et web avec un accent sur la facilité d'utilisation.",
-      "mastery": -1,
-      "url": "https://dart.dev/"
-    },
-    "enet": {
-      "name": "ENet",
-      "icon": "enet.png",
-      "description": "ENet est une bibliothèque réseau permettant de créer des jeux multijoueurs en ligne et des applications avec un protocole léger et fiable.",
-      "url": "http://enet.bespin.org/"
-    },
-    "figma": {
-        "name": "Figma",
-        "description": "Figma est un outil de design d'interface utilisateur basé sur le cloud, permettant la collaboration en temps réel.",
-        "url": "https://www.figma.com/"
-    },
-    "fl": {
-      "name": "FL Studio",
-      "icon": "fl.png",
-      "description": "FL Studio est une station de travail audio numérique utilisée pour la production musicale, le mixage et l'enregistrement.",
-      "url": "https://www.image-line.com/"
-    },
-    "flutter": {
-      "name": "Flutter",
-      "description": "Flutter est une boîte à outils d'interface utilisateur de Google pour la création d'applications compilées nativement pour mobile, web et bureau à partir d'une seule base de code.",
-      "mastery": -1,
-      "url": "https://flutter.dev/"
-    },
-    "git": {
-      "name": "Git",
-      "description": "Git est un système de contrôle de version distribué largement utilisé pour suivre les changements dans le code source lors du développement de logiciels.",
-      "url": "https://git-scm.com/"
-    },
-    "godot": {
-      "name": "Godot",
-      "description": "Godot est un moteur de jeu open source utilisé pour créer des jeux en 2D et 3D.",
-      "mastery": 1,
-      "url": "https://godotengine.org/"
-    },
-    "java": {
-      "name": "Java",
-      "description": "Java est un langage de programmation polyvalent et orienté objet utilisé pour le développement d'une large gamme d'applications, du mobile à l'entreprise.",
-      "mastery": 1,
-      "url": "https://www.java.com/"
-    },
-    "js": {
-      "name": "JavaScript",
-      "description": "JavaScript est un langage de programmation de haut niveau couramment utilisé pour le développement web afin de créer des interfaces utilisateur interactives et dynamiques.",
-      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-    },
-    "julia": {
-      "name": "Julia",
-      "description": "Julia est un langage de programmation hautes performances pour le calcul technique avec une syntaxe familière aux utilisateurs d'autres environnements de calcul technique.",
-      "mastery": -1,
-      "url": "https://julialang.org/"
-    },
-    "kotlin": {
-      "name": "Kotlin",
-      "description": "Kotlin est un langage de programmation moderne et expressif entièrement compatible avec Java et largement utilisé pour le développement d'applications Android.",
-      "mastery": -1,
-      "url": "https://kotlinlang.org/"
-    },
-    "lua": {
-      "name": "Lua",
-      "description": "Lua est un langage de script léger souvent intégré dans des applications pour fournir une personnalisation et une extensibilité.",
-      "url": "https://www.lua.org/"
-    },
-    "node": {
-      "name": "Node",
-      "description": "Node.js est un moteur JavaScript permettant aux développeurs d'exécuter du JavaScript côté serveur, facilitant ainsi le développement d'applications web évolutives et efficaces.",
-      "url": "https://nodejs.org/"
-    },
-    "php": {
-      "name": "PHP",
-      "description": "PHP est un langage de script côté serveur couramment utilisé pour le développement web afin de créer des pages web dynamiques et interactives.",
-      "url": "https://www.php.net/"
-    },
-    "premiere": {
-      "name": "Premiere Pro",
-      "description": "Adobe Premiere Pro est un logiciel de montage vidéo professionnel largement utilisé dans la production cinématographique, télévisuelle et vidéo sur le web.",
-      "url": "https://www.adobe.com/products/premiere.html"
-    },
-    "python": {
-      "name": "Python",
-      "description": "Python est un langage de programmation polyvalent et de haut niveau connu pour sa lisibilité et utilisé dans divers domaines, du développement web à la science des données.",
-      "url": "https://www.python.org/"
-    },
-    "ruby": {
-      "name": "Ruby",
-      "description": "Ruby est un langage de programmation dynamique orienté objet connu pour sa simplicité et sa productivité, souvent utilisé pour le développement web.",
-      "url": "https://www.ruby-lang.org/"
-    },
-    "rust": {
-      "name": "Rust",
-      "description": "Rust est un langage de programmation système réputé pour son accent sur la sécurité, la performance et la concurrence, adapté à la création de logiciels fiables et efficaces.",
-      "mastery": -1,
-      "url": "https://www.rust-lang.org/"
-    },
-    "svelte": {
-      "name": "Svelte",
-      "description": "Svelte est un framework JavaScript qui compile les composants en JavaScript vanilla hautement efficace au moment de la construction pour des applications web rapides et légères.",
-      "mastery": 1,
-      "url": "https://svelte.dev/"
-    },
-    "r": {
-      "name": "R",
-      "description": "R est un langage de programmation pour les statistiques.",
-      "mastery": -1,
-      "url": "https://www.r-project.org/"
-    }
+  "ai": {
+    "name": "Illustrator",
+    "description": "Adobe Illustrator est un éditeur graphique vectoriel utilisé pour créer des illustrations, des logos et des graphiques.",
+    "url": "https://www.adobe.com/products/illustrator.html"
+  },
+  "aseprite": {
+    "name": "Aseprite",
+    "description": "Aseprite est un outil d'art pixelisé permettant aux artistes de créer des sprites animés et des graphiques à base de pixels.",
+    "url": "https://www.aseprite.org/"
+  },
+  "blender": {
+    "name": "Blender",
+    "description": "Blender est un puissant logiciel 3D open source pour la modélisation, l'animation, le rendu, et plus encore.",
+    "url": "https://www.blender.org/"
+  },
+  "cpp": {
+    "name": "C++",
+    "description": "C++ est un langage de programmation polyvalent largement utilisé pour le développement de systèmes, de logiciels et de jeux.",
+    "url": "https://isocpp.org/"
+  },
+  "cs": {
+    "name": "C#",
+    "description": "C# est un langage de programmation moderne développé par Microsoft, couramment utilisé pour la création d'applications Windows et de jeux.",
+    "mastery": 1,
+    "url": "https://docs.microsoft.com/en-us/dotnet/csharp/"
+  },
+  "css": {
+    "name": "CSS",
+    "description": "CSS (Feuilles de style en cascade) est un langage de style utilisé pour contrôler la présentation des pages web écrites en HTML ou XML.",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+    "mastery": -1
+  },
+  "dart": {
+    "name": "Dart",
+    "description": "Dart est un langage de programmation optimisé pour la création d'applications mobiles, de bureau, de serveur et web avec un accent sur la facilité d'utilisation.",
+    "mastery": -1,
+    "url": "https://dart.dev/"
+  },
+  "enet": {
+    "name": "ENet",
+    "icon": "enet.png",
+    "description": "ENet est une bibliothèque réseau permettant de créer des jeux multijoueurs en ligne et des applications avec un protocole léger et fiable.",
+    "url": "http://enet.bespin.org/"
+  },
+  "figma": {
+    "name": "Figma",
+    "description": "Figma est un outil de design d'interface utilisateur basé sur le cloud, permettant la collaboration en temps réel.",
+    "url": "https://www.figma.com/"
+  },
+  "fl": {
+    "name": "FL Studio",
+    "icon": "fl.png",
+    "description": "FL Studio est une station de travail audio numérique utilisée pour la production musicale, le mixage et l'enregistrement.",
+    "url": "https://www.image-line.com/"
+  },
+  "flutter": {
+    "name": "Flutter",
+    "description": "Flutter est une boîte à outils d'interface utilisateur de Google pour la création d'applications compilées nativement pour mobile, web et bureau à partir d'une seule base de code.",
+    "mastery": -1,
+    "url": "https://flutter.dev/"
+  },
+  "git": {
+    "name": "Git",
+    "description": "Git est un système de contrôle de version distribué largement utilisé pour suivre les changements dans le code source lors du développement de logiciels.",
+    "url": "https://git-scm.com/"
+  },
+  "godot": {
+    "name": "Godot",
+    "description": "Godot est un moteur de jeu open source utilisé pour créer des jeux en 2D et 3D.",
+    "mastery": 1,
+    "url": "https://godotengine.org/"
+  },
+  "java": {
+    "name": "Java",
+    "description": "Java est un langage de programmation polyvalent et orienté objet utilisé pour le développement d'une large gamme d'applications, du mobile à l'entreprise.",
+    "mastery": 1,
+    "url": "https://www.java.com/"
+  },
+  "js": {
+    "name": "JavaScript",
+    "description": "JavaScript est un langage de programmation de haut niveau couramment utilisé pour le développement web afin de créer des interfaces utilisateur interactives et dynamiques.",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+  },
+  "julia": {
+    "name": "Julia",
+    "description": "Julia est un langage de programmation hautes performances pour le calcul technique avec une syntaxe familière aux utilisateurs d'autres environnements de calcul technique.",
+    "mastery": -1,
+    "url": "https://julialang.org/"
+  },
+  "kotlin": {
+    "name": "Kotlin",
+    "description": "Kotlin est un langage de programmation moderne et expressif entièrement compatible avec Java et largement utilisé pour le développement d'applications Android.",
+    "mastery": -1,
+    "url": "https://kotlinlang.org/"
+  },
+  "linux": {
+    "name": "Linux",
+    "url": "https://kernel.org/",
+    "description": "Linux est un système d'exploitation open source."
+  },
+  "lua": {
+    "name": "Lua",
+    "description": "Lua est un langage de script léger souvent intégré dans des applications pour fournir une personnalisation et une extensibilité.",
+    "url": "https://www.lua.org/"
+  },
+  "node": {
+    "name": "Node",
+    "description": "Node.js est un moteur JavaScript permettant aux développeurs d'exécuter du JavaScript côté serveur, facilitant ainsi le développement d'applications web évolutives et efficaces.",
+    "url": "https://nodejs.org/"
+  },
+  "osm": {
+    "name": "OpenStreetMap",
+    "url": "https://openstreetmap.org/",
+    "description": "OpenStreetMap est un projet collaboratif de cartographie en ligne, permettant de créer une carte du monde librement accessible.",
+    "mastery": 1
+  },
+  "php": {
+    "name": "PHP",
+    "description": "PHP est un langage de script côté serveur couramment utilisé pour le développement web afin de créer des pages web dynamiques et interactives.",
+    "url": "https://www.php.net/"
+  },
+  "premiere": {
+    "name": "Premiere Pro",
+    "description": "Adobe Premiere Pro est un logiciel de montage vidéo professionnel largement utilisé dans la production cinématographique, télévisuelle et vidéo sur le web.",
+    "url": "https://www.adobe.com/products/premiere.html"
+  },
+  "python": {
+    "name": "Python",
+    "description": "Python est un langage de programmation polyvalent et de haut niveau connu pour sa lisibilité et utilisé dans divers domaines, du développement web à la science des données.",
+    "url": "https://www.python.org/"
+  },
+  "ruby": {
+    "name": "Ruby",
+    "description": "Ruby est un langage de programmation dynamique orienté objet connu pour sa simplicité et sa productivité, souvent utilisé pour le développement web.",
+    "url": "https://www.ruby-lang.org/"
+  },
+  "rust": {
+    "name": "Rust",
+    "description": "Rust est un langage de programmation système réputé pour son accent sur la sécurité, la performance et la concurrence, adapté à la création de logiciels fiables et efficaces.",
+    "mastery": -1,
+    "url": "https://www.rust-lang.org/"
+  },
+  "svelte": {
+    "name": "Svelte",
+    "description": "Svelte est un framework JavaScript qui compile les composants en JavaScript vanilla hautement efficace au moment de la construction pour des applications web rapides et légères.",
+    "mastery": 1,
+    "url": "https://svelte.dev/"
+  },
+  "r": {
+    "name": "R",
+    "description": "R est un langage de programmation pour les statistiques.",
+    "mastery": -1,
+    "url": "https://www.r-project.org/"
+  },
+  "wordpress": {
+    "name": "WordPress",
+    "url": "https://wordpress.com/fr/",
+    "description": "WordPress est un système de gestion de contenu (CMS) open source largement utilisé pour la création de sites web et de blogs."
   }
-  
+}

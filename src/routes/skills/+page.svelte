@@ -50,25 +50,27 @@
 <style>
     main {
         margin-top: 80px;
+        text-align: center;
     }
 
     .header {
-      width: calc(100% - 64px);
-      border-radius: 16px;
-      margin-left: 32px;
-      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+        width: calc(100% - 64px);
+        max-width: 1280px;
+        border-radius: 16px;
+        margin-left: 32px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
     }
 
     .skills_container {
         margin: 32px;
         width: calc(100% - 64px);
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); 
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
         gap: 8px;
     }
 
     .skill {
-        width: 240px;
+        width: 280px;
         background-color: white;
         border-radius: 8px;
         padding-top: 8px;

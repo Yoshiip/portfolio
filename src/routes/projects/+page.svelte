@@ -12,9 +12,9 @@ let modal_visible = false;
 let disabledScroll = false;
 
 
-    /**
-     * @param {number} id
-     */
+/**
+ * @param {number} id
+ */
 function showProject(id) {
     modal_visible = true;
     projectId = id
@@ -28,9 +28,12 @@ function closeModal() {
 
 </script>
 
+
 <title>Projets • Tourneur Aymeri</title>
 <main class:scroll-lock={disabledScroll}>
+    
     <img src="/images/projects/projects_header.jpg" alt="Projects" class="header">
+    <h1>Tous mes projets ({projects.length})</h1> 
     <div class="projects_container" id="projects">
         {#each projects as project, i}
             <button class="project" on:click={() => showProject(i)}>
@@ -51,16 +54,23 @@ function closeModal() {
 <style>
     @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 
+    main {
+      margin-top: 80px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
     .header {
       width: calc(100% - 64px);
+      max-width: 1280px;
       border-radius: 16px;
+      margin-bottom: 64px;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
     }
 
-main {
-  margin-top: 80px;
-  text-align: center;
-}
 
 .scroll-lock {
   overflow-y: hidden;
@@ -95,6 +105,7 @@ main {
 
 .project > .cover {
   width: calc(100% - 16px);
+  object-fit: contain;
   aspect-ratio: 16 / 9;
   margin-top: 8px;
 }

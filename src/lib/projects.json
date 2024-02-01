@@ -154,14 +154,14 @@
             "/images/projects/nvidia/2.png"
         ],
         "description": "Le site de covoiturage est un projet scolaire dans lequel nous devions créer un site fictif pour une entreprise du secteur technologique, et avons choisi NVIDIA.<br>Cette plateforme permet aux employé(e)s de NVIDIA de proposer des trajets communs vers le lieu de travail. De plus, nous avons simulé un partenariat avec le constructeur automobile Audi, qui offrait aux employés des véhicules électriques pour encourager le covoiturage.<br>La maquette initiale du site a été réalisée avec l'outil WordPress, puis a été reconstruite en utilisant HTML, CSS et JavaScript.",
-        "button_label": "Voir sur GitHub",
+        "button_label": "Consulter",
         "date": "2023-01-08",
         "tools": {
             "Style": "css",
             "Maquettage": "figma",
             "Prototype": "wordpress"
         },
-        "link": "https://github.com/Yoshiip/LavaRun",
+        "link": "https://yoshiip.xyz/projects/covoiturage/",
         "color": "#BC1B1B"
     },
     {
@@ -180,7 +180,7 @@
             "Graphismes": "aseprite",
             "Musiques": "fl"
         },
-        "link": "https://yoshiip.xyz/niptur/",
+        "link": "https://yoshiip.xyz/games/niptur/",
         "logo": "/images/projects/niptur/logo.png",
         "color": "#239063"
     },
@@ -219,7 +219,7 @@
             "Serveur": "linux"
         },
         
-        "link": "https://yoshiip.xyz/kahorn",
+        "link": "https://yoshiip.xyz/games/kahorn",
         "logo": "/images/projects/kahorn/logo.png",
         "color": "#fa1a32"
     },
@@ -241,7 +241,7 @@
             "Maquettage": "figma",
             "Style": "css"
         },
-        "link": "https://yoshiip.xyz/timer",
+        "link": "https://yoshiip.xyz/projects/timer",
         "color": "#AC4EC7"
     },
     {

@@ -37,6 +37,11 @@
     "mastery": -1,
     "url": "https://dart.dev/"
   },
+  "docker": {
+    "name": "Docker",
+    "description": "",
+    "url": "https://www.docker.com/"
+  },
   "enet": {
     "name": "ENet",
     "icon": "enet.png",

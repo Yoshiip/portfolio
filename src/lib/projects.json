@@ -1,5 +1,27 @@
 [
     {
+        "name": "Codenoms",
+        "type": "Site",
+        "description": "Codenoms est un clone de Codenames (jeu de réflexion) réalisé en JavaScript avec Socket.io. Le serveur est un serveur Express.js. Le déploiement a été fait à l'aide de Docker, une plateforme simplifiant le déploiement d'applications.",
+        "date": "2024-01-20",
+        "tools": {
+            "Gestionnaire de version": "git",
+            "Langage": "js",
+            "Serveur": "node",
+            "Déploiement": "docker",
+            "Style": "css"
+        },
+        "images": [
+            "/images/projects/codenoms/0.jpg",
+            "/images/projects/codenoms/1.jpg",
+            "/images/projects/codenoms/2.jpg"
+        ],
+        "button_label": "Consulter",
+        "link": "https://codenoms.yoshiip.xyz/",
+        "github_link": "https://github.com/Yoshiip/codenoms",
+        "color": "#b11c22"
+    },
+    {
         "name": "WEjs",
         "type": "Site",
         "description": "WEjs est un projet en cours de développement permettant l'édition de graphes en JavaScript pur (sans librairie externe). Le projet est encore très expérimental et les performances sont assez mauvaises sur de gros graphes.<br>Il permet de modifier les graphes en utilisant un éditeur simple et d'ajouter de la signalisation (marquage stop, passage piéton).<br>Il est également possible de charger des données cartographiques en utilisant l'API d'OpenStreetMap, un équivalent open source et bien plus complet que Google Maps.<br>Un effet 3D est également activé par défaut, rendant l'éditeur un peu plus agréable à utiliser.",

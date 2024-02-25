@@ -7,7 +7,8 @@
   "aseprite": {
     "name": "Aseprite",
     "description": "Aseprite est un outil d'art pixelisé permettant aux artistes de créer des sprites animés et des graphiques à base de pixels.",
-    "url": "https://www.aseprite.org/"
+    "url": "https://www.aseprite.org/",
+    "mastery": -1
   },
   "blender": {
     "name": "Blender",

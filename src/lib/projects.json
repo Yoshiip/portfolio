@@ -1,306 +1,317 @@
 [
-    {
-        "name": "Codenoms",
-        "type": "Site",
-        "description": "Codenoms est un clone de Codenames (jeu de réflexion) réalisé en JavaScript avec Socket.io. Le serveur est un serveur Express.js. Le déploiement a été fait à l'aide de Docker, une plateforme simplifiant le déploiement d'applications.",
-        "date": "2024-01-20",
-        "tools": {
-            "Gestionnaire de version": "git",
-            "Langage": "js",
-            "Serveur": "node",
-            "Déploiement": "docker",
-            "Style": "css"
-        },
-        "images": [
-            "/images/projects/codenoms/0.jpg",
-            "/images/projects/codenoms/1.jpg",
-            "/images/projects/codenoms/2.jpg"
-        ],
-        "button_label": "Consulter",
-        "link": "https://codenoms.yoshiip.xyz/",
-        "github_link": "https://github.com/Yoshiip/codenoms",
-        "color": "#b11c22"
+  {
+    "name": "L'Hôtel Bizarre",
+    "type": "Game Jam",
+    "description": "\"L'Hôtel Bizarre\" est un jeu réalisé en 2 semaines pour l'Acerola Jam 0. Le jeu a été développé avec le moteur de jeu Godot. J'ai utilisé Blender pour créer les modèles 3D et j'ai composé les textures et les musiques moi-même.<br>Il s'agit d'un jeu dans lequel le joueur doit gérer un hôtel en assignant des chambres à des clients.<br>L'objectif est de leur offrir la meilleure expérience possible, en utilisant leurs couleurs préférées pour la décoration de leur chambre ou en leur fournissant des meubles adaptés.<br>Chaque client rapporte de l'argent, ce qui permet d'acheter des améliorations, d'ajouter des étages à l'hôtel, de construire de nouvelles chambres ou d'acheter de nouvelles décorations.<br>La principale mécanique du jeu concerne les rongeurs, qui se déplacent librement dans l'hôtel et doivent être chassés. Ces rongeurs peuvent voler les meubles de l'hôtel, ce qui entraîne une baisse de la satisfaction des clients.",
+    "date": "2024-03-16",
+    "tools": {
+      "Moteur": "godot",
+      "Modélisation": "blender",
+      "Illustrations": "figma",
+      "Musiques/SFX": "fl"
     },
-    {
-        "name": "WEjs",
-        "type": "Site",
-        "description": "WEjs est un projet en cours de développement permettant l'édition de graphes en JavaScript pur (sans librairie externe). Le projet est encore très expérimental et les performances sont assez mauvaises sur de gros graphes.<br>Il permet de modifier les graphes en utilisant un éditeur simple et d'ajouter de la signalisation (marquage stop, passage piéton).<br>Il est également possible de charger des données cartographiques en utilisant l'API d'OpenStreetMap, un équivalent open source et bien plus complet que Google Maps.<br>Un effet 3D est également activé par défaut, rendant l'éditeur un peu plus agréable à utiliser.",
-        "date": "2024-01-04",
+    "images": [
+      "/images/projects/hotel_bizarre/0.png",
+      "/images/projects/hotel_bizarre/1.png",
+      "/images/projects/hotel_bizarre/2.png",
+      "/images/projects/hotel_bizarre/3.png"
+    ],
+    "button_label": "Jouer",
+    "link": "https://yoshiip.itch.io/hotel-bizarre",
+    "github_link": "https://itch.io/jam/acerola-jam-0",
+    "color": "#b71e00"
+  },
+  {
+    "name": "Codenoms",
+    "type": "Site",
+    "description": "Codenoms est un clone de Codenames (jeu de réflexion) réalisé en JavaScript avec Socket.io. Le serveur est un serveur Express.js. Le déploiement a été fait à l'aide de Docker, une plateforme simplifiant le déploiement d'applications.",
+    "date": "2024-01-20",
+    "tools": {
+      "Gestionnaire de version": "git",
+      "Langage": "js",
+      "Serveur": "node",
+      "Déploiement": "docker",
+      "Style": "css"
+    },
+    "images": [
+      "/images/projects/codenoms/0.jpg",
+      "/images/projects/codenoms/1.jpg",
+      "/images/projects/codenoms/2.jpg"
+    ],
+    "button_label": "Consulter",
+    "link": "https://codenoms.yoshiip.xyz/",
+    "github_link": "https://github.com/Yoshiip/codenoms",
+    "color": "#b11c22"
+  },
+  {
+    "name": "WEjs",
+    "type": "Site",
+    "description": "WEjs est un projet en cours de développement permettant l'édition de graphes en JavaScript pur (sans librairie externe). Le projet est encore très expérimental et les performances sont assez mauvaises sur de gros graphes.<br>Il permet de modifier les graphes en utilisant un éditeur simple et d'ajouter de la signalisation (marquage stop, passage piéton).<br>Il est également possible de charger des données cartographiques en utilisant l'API d'OpenStreetMap, un équivalent open source et bien plus complet que Google Maps.<br>Un effet 3D est également activé par défaut, rendant l'éditeur un peu plus agréable à utiliser.",
+    "date": "2024-01-04",
 
-        "tools": {
-            "Données cartographiques": "osm",
-            "Gestionnaire de version": "git",
-            "Langage": "js",
-            "Style": "css"
-        },
-        "images": [
-            "/images/projects/wejs/0.jpg",
-            "/images/projects/wejs/1.jpg"
-        ],
-        "button_label": "Consulter",
-        "link": "https://yoshiip.xyz/wejs",
-        "github_link": "https://github.com/Yoshiip/wejs",
-        "color": "#0000ff"
+    "tools": {
+      "Données cartographiques": "osm",
+      "Gestionnaire de version": "git",
+      "Langage": "js",
+      "Style": "css"
     },
-    {
-        "name": "Advent of Code",
-        "type": "Évènement",
-        "description": "L'Advent of Code est un calendrier de l'avent numérique où chaque jour, du 1er au 25 décembre, apporte un nouveau défi de codage. Ces défis couvrent un large éventail de sujets, allant des algorithmes classiques aux problèmes de logique complexe.<br>Cette année, je l'ai fait en me lançant un défi; Faire un langage de programmation différent par jour.",
-        "date": "2023-12-01",
+    "images": ["/images/projects/wejs/0.jpg", "/images/projects/wejs/1.jpg"],
+    "button_label": "Consulter",
+    "link": "https://yoshiip.xyz/wejs",
+    "github_link": "https://github.com/Yoshiip/wejs",
+    "color": "#0000ff"
+  },
+  {
+    "name": "Advent of Code",
+    "type": "Évènement",
+    "description": "L'Advent of Code est un calendrier de l'avent numérique où chaque jour, du 1er au 25 décembre, apporte un nouveau défi de codage. Ces défis couvrent un large éventail de sujets, allant des algorithmes classiques aux problèmes de logique complexe.<br>Cette année, je l'ai fait en me lançant un défi; Faire un langage de programmation différent par jour.",
+    "date": "2023-12-01",
 
-        "tools": {
-            "Langage (jour 1)": "cpp",
-            "Langage (jour 2)": "ruby",
-            "Langage (jour 3)": "java",
-            "Langage (jour 4)": "r",
-            "Langage (jour 6)": "julia",
-            "Langage (jour 7)": "cs",
-            "Langage (jour 8)": "dart",
-            "Langage (jour 9)": "lua"
-        },
-        "images": [
-            "/images/projects/aoc/0.jpg"
-        ],
-        "button_label": "Voir sur GitHub",
-        "link": "https://github.com/Yoshiip/aoc-2023",
-        "color": "#0000ff"
+    "tools": {
+      "Langage (jour 1)": "cpp",
+      "Langage (jour 2)": "ruby",
+      "Langage (jour 3)": "java",
+      "Langage (jour 4)": "r",
+      "Langage (jour 6)": "julia",
+      "Langage (jour 7)": "cs",
+      "Langage (jour 8)": "dart",
+      "Langage (jour 9)": "lua"
     },
-    {
-        "name": "Portfolio",
-        "type": "Site",
-        "description": "C'est le portfolio que vous consultez actuellement.<br>Je l'ai réalisé avec Svelte.",
-        "date": "2023-11-23",
+    "images": ["/images/projects/aoc/0.jpg"],
+    "button_label": "Voir sur GitHub",
+    "link": "https://github.com/Yoshiip/aoc-2023",
+    "color": "#0000ff"
+  },
+  {
+    "name": "Portfolio",
+    "type": "Site",
+    "description": "C'est le portfolio que vous consultez actuellement.<br>Je l'ai réalisé avec Svelte.",
+    "date": "2023-11-23",
 
-        "tools": {
-            "Gestionnaire de version": "git",
-            "Langage": "js",
-            "Framework": "svelte",
-            "Illustrations": "ai",
-            "Backend": "node",
-            "Style": "css",
-            "Maquettage": "figma"
-        },
-        "images": [
-            "/images/projects/portfolio/0.png"
-        ],
-        "button_label": "Voir sur GitHub",
-        "link": "https://github.com/Yoshiip/portfolio",
-        "color": "#0000ff"
+    "tools": {
+      "Gestionnaire de version": "git",
+      "Langage": "js",
+      "Framework": "svelte",
+      "Illustrations": "ai",
+      "Backend": "node",
+      "Style": "css",
+      "Maquettage": "figma"
     },
-    {
-        "name": "Chasse au monstre",
-        "type": "Jeu",
-        "description": "<strong>Chasse au monstre</strong> est un projet scolaire réalisé à l'aide du langage Java et de la bibliothèque JavaFX. Ce jeu a été créé en équipe de 5 personnes.<br>Le jeu peut se jouer à 1 ou 2 joueurs, où dans chaque partie il y a un monstre et un chasseur. Le jeu se déroule tour par tour, le monstre doit essayer de rejoindre la sortie pendant que le chasseur lui tire dessus.<br>Il est également possible de jouer en réseau sur 2 machines différentes.<br>Le jeu possède de nombreuses mécaniques de gameplay additionnelles, comme par exemple un brouillard de guerre qui masque les cases que le monstre n'a pas explorées, ou encore des grenades que le chasseur peut utiliser pour découvrir une grande zone.",
-        "date": "2023-10-12",
-        "tools": {
-            "Gestionnaire de version": "git",
-            "Langage": "java"
-        },
-        "images": [
-            "/images/projects/chasse_au_monstre/0.png"
-        ],
-        "button_label": "Voir sur GitHub",
-        "link": "https://github.com/Yoshiip/chasse-au-monstre",
-        "color": "#0000ff"
+    "images": ["/images/projects/portfolio/0.png"],
+    "button_label": "Voir sur GitHub",
+    "link": "https://github.com/Yoshiip/portfolio",
+    "color": "#0000ff"
+  },
+  {
+    "name": "Chasse au monstre",
+    "type": "Jeu",
+    "description": "<strong>Chasse au monstre</strong> est un projet scolaire réalisé à l'aide du langage Java et de la bibliothèque JavaFX. Ce jeu a été créé en équipe de 5 personnes.<br>Le jeu peut se jouer à 1 ou 2 joueurs, où dans chaque partie il y a un monstre et un chasseur. Le jeu se déroule tour par tour, le monstre doit essayer de rejoindre la sortie pendant que le chasseur lui tire dessus.<br>Il est également possible de jouer en réseau sur 2 machines différentes.<br>Le jeu possède de nombreuses mécaniques de gameplay additionnelles, comme par exemple un brouillard de guerre qui masque les cases que le monstre n'a pas explorées, ou encore des grenades que le chasseur peut utiliser pour découvrir une grande zone.",
+    "date": "2023-10-12",
+    "tools": {
+      "Gestionnaire de version": "git",
+      "Langage": "java"
     },
-    {
-        "name": "Mecharia",
-        "type": "Game Jam",
-        "description": "Un jeu réalisé à l'occasion de la GMTK Jam 2023. Il s'agit d'un jeu de Tower Defense dans lequel le joueur doit attaquer un jardin défendu automatiquement par des plantes. Le jeu présente des similitudes avec le gameplay de Plants vs. Zombies.",
-        "date": "2023-05-12",
-        "tools": {
-            "Moteur": "godot",
-            "Modélisation": "blender",
-            "Illustrations": "ai"
-        },
-        "images": [
-            "/images/projects/mecharia/0.jpg"
-        ],
-        "button_label": "Jouer",
-        "link": "https://yoshiip.itch.io/mecharia",
-        "logo": "/images/projects/mecharia/logo.png",
-        "color": "#ffc561"
+    "images": ["/images/projects/chasse_au_monstre/0.png"],
+    "button_label": "Voir sur GitHub",
+    "link": "https://github.com/Yoshiip/chasse-au-monstre",
+    "color": "#0000ff"
+  },
+  {
+    "name": "Mecharia",
+    "type": "Game Jam",
+    "description": "Un jeu réalisé à l'occasion de la GMTK Jam 2023. Il s'agit d'un jeu de Tower Defense dans lequel le joueur doit attaquer un jardin défendu automatiquement par des plantes. Le jeu présente des similitudes avec le gameplay de Plants vs. Zombies.",
+    "date": "2023-05-12",
+    "tools": {
+      "Moteur": "godot",
+      "Modélisation": "blender",
+      "Illustrations": "ai"
     },
-    {
-        "name": "Ilyva",
-        "type": "Jeu",
-        "images": [
-            "/images/projects/ilyva/0.jpg",
-            "/images/projects/ilyva/1.jpg",
-            "/images/projects/ilyva/2.jpg"
-        ],
-        "description": "Un escape game original créé par des étudiants. Échappez-vous du monde parallèle dans lequel vous êtes bloqué(es) en vous exerçant à Bash.",
-        "button_label": "Jouer/Télécharger",
-        "date": "2023-01-9",
-        "tools": {
-            "Gestionnaire de version": "git",
-            "Moteur": "godot",
-            "Modélisation": "blender",
-            "Illustrations": "ai",
-            "Montage": "premiere",
-            "Maquettage": "figma"
-        },
-        "link": "https://ilyva.sciencesky.fr",
-        "github_link": "https://github.com/Yoshiip/ilyva",
-        "logo": "/images/projects/ilyva/logo.png",
-        "color": "#db281c"
+    "images": ["/images/projects/mecharia/0.jpg"],
+    "button_label": "Jouer",
+    "link": "https://yoshiip.itch.io/mecharia",
+    "logo": "/images/projects/mecharia/logo.png",
+    "color": "#ffc561"
+  },
+  {
+    "name": "Ilyva",
+    "type": "Jeu",
+    "images": [
+      "/images/projects/ilyva/0.jpg",
+      "/images/projects/ilyva/1.jpg",
+      "/images/projects/ilyva/2.jpg"
+    ],
+    "description": "Un escape game original créé par des étudiants. Échappez-vous du monde parallèle dans lequel vous êtes bloqué(es) en vous exerçant à Bash.",
+    "button_label": "Jouer/Télécharger",
+    "date": "2023-01-9",
+    "tools": {
+      "Gestionnaire de version": "git",
+      "Moteur": "godot",
+      "Modélisation": "blender",
+      "Illustrations": "ai",
+      "Montage": "premiere",
+      "Maquettage": "figma"
     },
-    {
-        "name": "Site covoiturage",
-        "type": "Site",
-        "images": [
-            "/images/projects/nvidia/0.png",
-            "/images/projects/nvidia/1.png",
-            "/images/projects/nvidia/2.png"
-        ],
-        "description": "Le site de covoiturage est un projet scolaire dans lequel nous devions créer un site fictif pour une entreprise du secteur technologique, et avons choisi NVIDIA.<br>Cette plateforme permet aux employé(e)s de NVIDIA de proposer des trajets communs vers le lieu de travail. De plus, nous avons simulé un partenariat avec le constructeur automobile Audi, qui offrait aux employés des véhicules électriques pour encourager le covoiturage.<br>La maquette initiale du site a été réalisée avec l'outil WordPress, puis a été reconstruite en utilisant HTML, CSS et JavaScript.",
-        "button_label": "Consulter",
-        "date": "2023-01-08",
-        "tools": {
-            "Style": "css",
-            "Maquettage": "figma",
-            "Prototype": "wordpress"
-        },
-        "link": "https://yoshiip.xyz/projects/covoiturage/",
-        "color": "#BC1B1B"
+    "link": "https://ilyva.sciencesky.fr",
+    "github_link": "https://github.com/Yoshiip/ilyva",
+    "logo": "/images/projects/ilyva/logo.png",
+    "color": "#db281c"
+  },
+  {
+    "name": "Site covoiturage",
+    "type": "Site",
+    "images": [
+      "/images/projects/nvidia/0.png",
+      "/images/projects/nvidia/1.png",
+      "/images/projects/nvidia/2.png"
+    ],
+    "description": "Le site de covoiturage est un projet scolaire dans lequel nous devions créer un site fictif pour une entreprise du secteur technologique, et avons choisi NVIDIA.<br>Cette plateforme permet aux employé(e)s de NVIDIA de proposer des trajets communs vers le lieu de travail. De plus, nous avons simulé un partenariat avec le constructeur automobile Audi, qui offrait aux employés des véhicules électriques pour encourager le covoiturage.<br>La maquette initiale du site a été réalisée avec l'outil WordPress, puis a été reconstruite en utilisant HTML, CSS et JavaScript.",
+    "button_label": "Consulter",
+    "date": "2023-01-08",
+    "tools": {
+      "Style": "css",
+      "Maquettage": "figma",
+      "Prototype": "wordpress"
     },
-    {
-        "name": "Niptur's Curse",
-        "type": "Game Jam",
-        "images": [
-            "/images/projects/niptur/1.png",
-            "/images/projects/niptur/0.png",
-            "/images/projects/niptur/2.png"
-        ],
-        "description": "Niptur's Curse est un jeu issu d'une game jam nommée la Ludum Dare. Le concept est de fabriquer un jeu complet en moins de 72 heures, en partant de rien.<br>Ce jeu a été réalisé lors de la Ludum Dare 52, qui s'est déroulée du vendredi 6 janvier au lundi 9 janvier 2023.<br>Le but du jeu est d'explorer un monde infesté d'ennemis pour pousser des graines, permettant d'augmenter les caractéristiques de votre personnage ou de débloquer de nouvelles armes.<br>Le code, les graphismes et la musique du jeu ont été réalisés par moi-même.",
-        "button_label": "Jouer",
-        "date": "2023-01-9",
-        "tools": {
-            "Moteur": "godot",
-            "Graphismes": "aseprite",
-            "Musiques": "fl"
-        },
-        "link": "https://yoshiip.xyz/games/niptur/",
-        "logo": "/images/projects/niptur/logo.png",
-        "color": "#239063"
+    "link": "https://yoshiip.xyz/projects/covoiturage/",
+    "color": "#BC1B1B"
+  },
+  {
+    "name": "Niptur's Curse",
+    "type": "Game Jam",
+    "images": [
+      "/images/projects/niptur/1.png",
+      "/images/projects/niptur/0.png",
+      "/images/projects/niptur/2.png"
+    ],
+    "description": "Niptur's Curse est un jeu issu d'une game jam nommée la Ludum Dare. Le concept est de fabriquer un jeu complet en moins de 72 heures, en partant de rien.<br>Ce jeu a été réalisé lors de la Ludum Dare 52, qui s'est déroulée du vendredi 6 janvier au lundi 9 janvier 2023.<br>Le but du jeu est d'explorer un monde infesté d'ennemis pour pousser des graines, permettant d'augmenter les caractéristiques de votre personnage ou de débloquer de nouvelles armes.<br>Le code, les graphismes et la musique du jeu ont été réalisés par moi-même.",
+    "button_label": "Jouer",
+    "date": "2023-01-9",
+    "tools": {
+      "Moteur": "godot",
+      "Graphismes": "aseprite",
+      "Musiques": "fl"
     },
-    {
-        "name": "LavaRun",
-        "type": "Jeu",
-        "images": [
-            "/images/projects/lavarun/1.png",
-            "/images/projects/lavarun/0.png"
-        ],
-        "description": "LavaRun est un jeu réalisé en IJava dans le cadre du BUT Informatique. C'est un jeu dans lequel vous devez vous échapper d'un labyrinthe (généré de manière procédurale à chaque partie) et éviter la lave en répondant correctement à des questions.",
-        "button_label": "Voir sur GitHub",
-        "date": "2023-01-08",
-        "tools": {
-            "Gestionnaire de version": "git",
-            "Langage": "java"
-        },
-        "link": "https://github.com/Yoshiip/LavaRun",
-        "color": "#BC1B1B"
+    "link": "https://yoshiip.xyz/games/niptur/",
+    "logo": "/images/projects/niptur/logo.png",
+    "color": "#239063"
+  },
+  {
+    "name": "LavaRun",
+    "type": "Jeu",
+    "images": [
+      "/images/projects/lavarun/1.png",
+      "/images/projects/lavarun/0.png"
+    ],
+    "description": "LavaRun est un jeu réalisé en IJava dans le cadre du BUT Informatique. C'est un jeu dans lequel vous devez vous échapper d'un labyrinthe (généré de manière procédurale à chaque partie) et éviter la lave en répondant correctement à des questions.",
+    "button_label": "Voir sur GitHub",
+    "date": "2023-01-08",
+    "tools": {
+      "Gestionnaire de version": "git",
+      "Langage": "java"
     },
-    {
-        "name": "Kahorn",
-        "type": "Jeu",
-        "images": [
-            "/images/projects/kahorn/1.png",
-            "/images/projects/kahorn/0.png",
-            "/images/projects/kahorn/2.jpg"
-        ],
-        "description": "Kahorn est un projet d'école s'inspirant fortement du jeu en ligne Kahoot. Kahorn se joue en multijoueur en ligne, pouvant être joué jusqu'à 32 joueurs. Le jeu utilise le protocole UDP pour transférer les données entre les utilisateurs (à l'aide de la librairie ENet). Les questions sont récupérées depuis l'API TriviaDB, une API permettant de récupérer des questions à choix multiples/vrai ou faux très facilement.",
-        "button_label": "Télécharger",
-        "date": "2022-04-14",
-        "tools": {
-            "Moteur": "godot",
-            "Réseau": "enet",
-            "Illustrations": "ai",
-            "Serveur": "linux"
-        },
-        
-        "link": "https://yoshiip.xyz/games/kahorn",
-        "logo": "/images/projects/kahorn/logo.png",
-        "color": "#fa1a32"
+    "link": "https://github.com/Yoshiip/LavaRun",
+    "color": "#BC1B1B"
+  },
+  {
+    "name": "Kahorn",
+    "type": "Jeu",
+    "images": [
+      "/images/projects/kahorn/1.png",
+      "/images/projects/kahorn/0.png",
+      "/images/projects/kahorn/2.jpg"
+    ],
+    "description": "Kahorn est un projet d'école s'inspirant fortement du jeu en ligne Kahoot. Kahorn se joue en multijoueur en ligne, pouvant être joué jusqu'à 32 joueurs. Le jeu utilise le protocole UDP pour transférer les données entre les utilisateurs (à l'aide de la librairie ENet). Les questions sont récupérées depuis l'API TriviaDB, une API permettant de récupérer des questions à choix multiples/vrai ou faux très facilement.",
+    "button_label": "Télécharger",
+    "date": "2022-04-14",
+    "tools": {
+      "Moteur": "godot",
+      "Réseau": "enet",
+      "Illustrations": "ai",
+      "Serveur": "linux"
     },
-    {
-        "name": "Yoshtimer",
-        "type": "Site",
-        "images": [
-            "/images/projects/yoshtimer/0.jpg",
-            "/images/projects/yoshtimer/1.jpg"
-        ],
-        "description": "Yoshtimer est une application web dans laquelle on peut paramétrer un chronomètre Pomodoro hautement personnalisable et écouter de la musique d'une playlist relaxante directement sur l'application.",
-        "button_label": "Consulter",
-        "date": "2022-08-21",
-        "tools": {
-            "Gestionnaire de version": "git",
-            "Langage": "js",
-            "Framework": "svelte",
-            "Backend": "node",
-            "Maquettage": "figma",
-            "Style": "css"
-        },
-        "link": "https://yoshiip.xyz/projects/timer",
-        "color": "#AC4EC7"
+
+    "link": "https://yoshiip.xyz/games/kahorn",
+    "logo": "/images/projects/kahorn/logo.png",
+    "color": "#fa1a32"
+  },
+  {
+    "name": "Yoshtimer",
+    "type": "Site",
+    "images": [
+      "/images/projects/yoshtimer/0.jpg",
+      "/images/projects/yoshtimer/1.jpg"
+    ],
+    "description": "Yoshtimer est une application web dans laquelle on peut paramétrer un chronomètre Pomodoro hautement personnalisable et écouter de la musique d'une playlist relaxante directement sur l'application.",
+    "button_label": "Consulter",
+    "date": "2022-08-21",
+    "tools": {
+      "Gestionnaire de version": "git",
+      "Langage": "js",
+      "Framework": "svelte",
+      "Backend": "node",
+      "Maquettage": "figma",
+      "Style": "css"
     },
-    {
-        "name": "Ultimate Hangman",
-        "type": "Jeu",
-        "images": [
-            "/images/projects/ultimate_hangman/2.jpg",
-            "/images/projects/ultimate_hangman/0.png",
-            "/images/projects/ultimate_hangman/1.jpg"
-        ],
-        "description": "Ultimate Hangman est une version améliorée du jeu du pendu. Il comprend une interface graphique très ludique, des musiques, une carte du monde et un scénario. Le jeu permet de jouer en multijoueur local, laissant les joueurs deviner des mots entre eux.",
-        "logo": "/images/projects/ultimate_hangman/logo.png",
-        "button_label": "Jouer",
-        "date": "2021-01-23",
-        "tools": {
-            "Moteur": "godot",
-            "Langage": "python"
-        },
-        "color": "#288bb6",
-        "link": "https://yoshiip.xyz/games/hangman"
+    "link": "https://yoshiip.xyz/projects/timer",
+    "color": "#AC4EC7"
+  },
+  {
+    "name": "Ultimate Hangman",
+    "type": "Jeu",
+    "images": [
+      "/images/projects/ultimate_hangman/2.jpg",
+      "/images/projects/ultimate_hangman/0.png",
+      "/images/projects/ultimate_hangman/1.jpg"
+    ],
+    "description": "Ultimate Hangman est une version améliorée du jeu du pendu. Il comprend une interface graphique très ludique, des musiques, une carte du monde et un scénario. Le jeu permet de jouer en multijoueur local, laissant les joueurs deviner des mots entre eux.",
+    "logo": "/images/projects/ultimate_hangman/logo.png",
+    "button_label": "Jouer",
+    "date": "2021-01-23",
+    "tools": {
+      "Moteur": "godot",
+      "Langage": "python"
     },
-    {
-        "name": "Little Reactor",
-        "type": "Game Jam",
-        "images": [
-            "/images/projects/little_reactor/0.png",
-            "/images/projects/little_reactor/1.jpg",
-            "/images/projects/little_reactor/2.png"
-        ],
-        "logo":"/images/projects/little_reactor/logo.png",
-        "description": "\"Little Reactor\" est un jeu issu d'une game jam nommée la Ludum Dare. Le concept est de fabriquer un jeu complet en moins de 72 heures, en partant de rien.<br>Ce jeu a été réalisé lors de la Ludum Dare 49, qui s'est déroulée en octobre 2021.<br>Le but du jeu est d'empêcher des petits robots de tomber tout en respectant leur ordre pour progresser dans les niveaux.<br>Le code, les graphismes et la musique du jeu ont été réalisés par moi-même.",
-        "button_label": "Jouer",
-        "date": "2021-10-11",
-        "tools": {
-            "Moteur": "godot",
-            "Musiques/SFX": "fl",
-            "Graphismes": "aseprite"
-        },
-        "color": "#504c15",
-        "link": "https://yoshiip.xyz/games/ld49"
+    "color": "#288bb6",
+    "link": "https://yoshiip.xyz/games/hangman"
+  },
+  {
+    "name": "Little Reactor",
+    "type": "Game Jam",
+    "images": [
+      "/images/projects/little_reactor/0.png",
+      "/images/projects/little_reactor/1.jpg",
+      "/images/projects/little_reactor/2.png"
+    ],
+    "logo": "/images/projects/little_reactor/logo.png",
+    "description": "\"Little Reactor\" est un jeu issu d'une game jam nommée la Ludum Dare. Le concept est de fabriquer un jeu complet en moins de 72 heures, en partant de rien.<br>Ce jeu a été réalisé lors de la Ludum Dare 49, qui s'est déroulée en octobre 2021.<br>Le but du jeu est d'empêcher des petits robots de tomber tout en respectant leur ordre pour progresser dans les niveaux.<br>Le code, les graphismes et la musique du jeu ont été réalisés par moi-même.",
+    "button_label": "Jouer",
+    "date": "2021-10-11",
+    "tools": {
+      "Moteur": "godot",
+      "Musiques/SFX": "fl",
+      "Graphismes": "aseprite"
     },
-    {
-        "name": "Fall'em Down",
-        "type": "Game Jam",
-        "images": [
-            "/images/projects/fall_em_down/1.png",
-            "/images/projects/fall_em_down/0.png",
-            "/images/projects/fall_em_down/2.png"
-        ],
-        "description": "Fall'em Down est un jeu issu d'une game jam nommée la Ludum Dare. Le concept est de fabriquer un jeu complet en moins de 72 heures, en partant de rien.<br>Ce jeu a été réalisé lors de la Ludum Dare 48, qui s'est déroulée en avril 2021.<br>Le but du jeu est de tomber dans un puits en tuant les ennemis qui s'y dressent avec votre arme. Récupérez les gemmes pour améliorer votre personnage et tuez les trois boss pour gagner.<br>Le code et les graphismes du jeu ont été réalisés par moi-même.",
-        "button_label": "Jouer/Télécharger",
-        "date": "2021-04-13",
-        "color": "#6d2a09",
-        "logo":"/images/projects/fall_em_down/logo.png",
-        "tools": {
-            "Moteur": "godot",
-            "Musiques/SFX": "fl",
-            "Graphismes": "aseprite"
-        },
-        "link": "https://yoshiip.xyz/games/ld48"
-    }
+    "color": "#504c15",
+    "link": "https://yoshiip.xyz/games/ld49"
+  },
+  {
+    "name": "Fall'em Down",
+    "type": "Game Jam",
+    "images": [
+      "/images/projects/fall_em_down/1.png",
+      "/images/projects/fall_em_down/0.png",
+      "/images/projects/fall_em_down/2.png"
+    ],
+    "description": "Fall'em Down est un jeu issu d'une game jam nommée la Ludum Dare. Le concept est de fabriquer un jeu complet en moins de 72 heures, en partant de rien.<br>Ce jeu a été réalisé lors de la Ludum Dare 48, qui s'est déroulée en avril 2021.<br>Le but du jeu est de tomber dans un puits en tuant les ennemis qui s'y dressent avec votre arme. Récupérez les gemmes pour améliorer votre personnage et tuez les trois boss pour gagner.<br>Le code et les graphismes du jeu ont été réalisés par moi-même.",
+    "button_label": "Jouer/Télécharger",
+    "date": "2021-04-13",
+    "color": "#6d2a09",
+    "logo": "/images/projects/fall_em_down/logo.png",
+    "tools": {
+      "Moteur": "godot",
+      "Musiques/SFX": "fl",
+      "Graphismes": "aseprite"
+    },
+    "link": "https://yoshiip.xyz/games/ld48"
+  }
 ]

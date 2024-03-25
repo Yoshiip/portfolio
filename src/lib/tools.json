@@ -40,7 +40,7 @@
   },
   "docker": {
     "name": "Docker",
-    "description": "",
+    "description": "Docker est une plateforme de conteneurisation open source permettant de développer, déployer et exécuter des applications de manière portable et scalable.",
     "url": "https://www.docker.com/"
   },
   "enet": {
@@ -152,6 +152,11 @@
     "description": "Svelte est un framework JavaScript qui compile les composants en JavaScript vanilla hautement efficace au moment de la construction pour des applications web rapides et légères.",
     "mastery": 1,
     "url": "https://svelte.dev/"
+  },
+  "symfony": {
+    "name": "Symfony",
+    "description": "Symfony est un framework web PHP open source utilisé pour développer des applications web modernes et performantes. Il fournit une architecture flexible et modulaire, des composants réutilisables et une grande communauté de développeurs.",
+    "url": "https://symfony.com/"
   },
   "r": {
     "name": "R",

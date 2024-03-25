@@ -1,5 +1,23 @@
 [
   {
+    "name": "CookAssist",
+    "type": "Site",
+    "description": "CookAssist est une petite application faite en Symfony (PHP) permettant d'interagir avec une base de données (CRUD). L'application possède également une intégration avec l'API de ChatGPT pour générer des idées de plats.",
+    "date": "2024-03-25",
+    "tools": {
+      "Langage": "php",
+      "Framework": "symfony"
+    },
+    "images": [
+      "/images/projects/cookassist/0.png",
+      "/images/projects/cookassist/1.png",
+      "/images/projects/cookassist/2.png"
+    ],
+    "button_label": "Voir sur GitHub",
+    "link": "https://itch.io/jam/acerola-jam-0",
+    "color": "#b71e00"
+  },
+  {
     "name": "L'Hôtel Bizarre",
     "type": "Game Jam",
     "description": "\"L'Hôtel Bizarre\" est un jeu réalisé en 2 semaines pour l'Acerola Jam 0. Le jeu a été développé avec le moteur de jeu Godot. J'ai utilisé Blender pour créer les modèles 3D et j'ai composé les textures et les musiques moi-même.<br>Il s'agit d'un jeu dans lequel le joueur doit gérer un hôtel en assignant des chambres à des clients.<br>L'objectif est de leur offrir la meilleure expérience possible, en utilisant leurs couleurs préférées pour la décoration de leur chambre ou en leur fournissant des meubles adaptés.<br>Chaque client rapporte de l'argent, ce qui permet d'acheter des améliorations, d'ajouter des étages à l'hôtel, de construire de nouvelles chambres ou d'acheter de nouvelles décorations.<br>La principale mécanique du jeu concerne les rongeurs, qui se déplacent librement dans l'hôtel et doivent être chassés. Ces rongeurs peuvent voler les meubles de l'hôtel, ce qui entraîne une baisse de la satisfaction des clients.",

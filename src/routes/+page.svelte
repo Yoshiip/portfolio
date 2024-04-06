@@ -92,13 +92,6 @@
     Sur ce site, vous retrouverez les <strong>projets</strong> que j'ai pu
     réaliser, ainsi que mes <strong>compétences</strong>.<br />
   </p>
-  <h4>Stage</h4>
-  <p>
-    Je recherche actuellement un stage à partir de mi-avril/mai/début juin<br />
-    Pour une durée de 10 semaines, avec si possible
-    <strong>poursuite en alternance</strong><br />
-  </p>
-
   <a
     class="stylized_button"
     href="/projects/"

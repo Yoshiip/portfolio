@@ -2,6 +2,7 @@
     import Navbar from "$lib/components/Navbar.svelte";
     import StylizedButton from "$lib/components/StylizedButton.svelte";
     import { Shapes, Star } from "lucide-svelte";
+    import { dark } from "../stores/theme";
 </script>
 
 <svelte:head>
@@ -16,7 +17,8 @@
 ></div>
 
 <div
-    class="dark:hidden fixed inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]"
+    class:hidden={$dark}
+    class=" fixed inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]"
 ></div>
 
 <main class="mt-64 flex items-center justify-center dark:text-gray-50">

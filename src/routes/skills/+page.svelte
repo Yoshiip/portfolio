@@ -3,6 +3,7 @@
     import ProjectModal from "$lib/components/ProjectModal.svelte";
     import SkillCard from "$lib/components/SkillCard.svelte";
     import SkillDetailModal from "$lib/components/SkillDetailModal.svelte";
+    import { dark } from "../../stores/theme";
     import type {
         ProjectsResponse,
         SkillsResponse,
@@ -29,7 +30,7 @@
     };
 
     let gradients = [
-        "from-blue-200 to-blue-100",
+        "from-blue-200 to-blue-100 dark:from-blue-800 dark:to-blue-700",
         "from-red-200 to-red-100",
         "from-purple-200 to-purple-100",
         "from-green-200 to-green-100",
@@ -59,7 +60,8 @@
 ></div>
 
 <div
-    class="dark:hidden fixed inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]"
+    class:hidden={$dark}
+    class="fixed inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]"
 ></div>
 
 <main class="max-w-6xl m-auto">

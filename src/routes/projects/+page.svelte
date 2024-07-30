@@ -15,13 +15,13 @@
         projectsTypeName,
     } from "../../stores/utils";
     import ProjectYearButton from "$lib/components/ProjectYearButton.svelte";
+    import { dark } from "../../stores/theme";
 
     let showModal: (project: ProjectsResponse) => void;
 
     let listYears: any[] = [];
     let filteredQuery: string = "";
     let filteredType: string = "";
-    let filteredYear: string = "";
 
     interface PageData {
         projects: ProjectsResponse[];
@@ -43,32 +43,16 @@
             showedProjects = showedProjects.filter(
                 (p) => p.type === filteredType,
             );
-        if (filteredYear !== "")
-            showedProjects = showedProjects.filter(
-                (p) => p.date.split("-")[0] === filteredYear,
-            );
         if (filteredQuery !== "")
             showedProjects = showedProjects.filter((p) =>
                 p.name.toLowerCase().includes(filteredQuery.toLowerCase()),
             );
     }
 
-    function filterProjectByYear(year: string) {
-        if (filteredYear === year) {
-            filteredYear = "";
-            currentColor = "white";
-        } else {
-            filteredYear = year;
-        }
-        updateFilters();
-    }
-
     function filterProjectByType(type: string) {
         filteredType = type;
         updateFilters();
     }
-
-    let currentColor: string = "white";
 
     function projectCardPressed(index: number) {
         currentProjectIndex = index;
@@ -100,7 +84,8 @@
     class="fixed inset-0 -z-10 h-full w-full bg-[#020617] bg-[linear-gradient(to_right,#0F1321_1px,transparent_1px),linear-gradient(to_bottom,#0F1321_1px,transparent_1px)] bg-[size:6rem_4rem]"
 ></div>
 <div
-    class="dark:hidden fixed inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"
+    class:hidden={$dark}
+    class="fixed inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"
 ></div>
 
 <ProjectModal bind:showModal {showPreviousProject} {showNextProject} />
@@ -147,7 +132,6 @@
             {#if !listYears.includes(year) && listYears.push(year)}
                 <ProjectYearButton
                     {year}
-                    {filterProjectByYear}
                     projectsCount={showedProjects.filter(
                         (p) => p.date.split("-")[0] === year,
                     ).length}
@@ -159,7 +143,10 @@
                 cardPressed={projectCardPressed}
             >
                 <svelte:fragment slot="icon">
-                    <svelte:component this={projectsTypeIcons[project.type]} />
+                    <svelte:component
+                        this={projectsTypeIcons[project.type]}
+                        class="size-4"
+                    />
                 </svelte:fragment>
             </ProjectCard>
         {/each}

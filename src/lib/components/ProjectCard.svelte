@@ -51,7 +51,7 @@
             class="shadow-md bg-gray-800 group-hover:bg-neutral p-2 rounded-full text-white font-bold flex gap-2"
         >
             {#each skills as skill}
-                {#if !skill.hidden}
+                {#if skill.important}
                     <div class="tooltip" data-tip={skill.name}>
                         <img
                             src={pb.files.getUrl(skill, skill.image)}

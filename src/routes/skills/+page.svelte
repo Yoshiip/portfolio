@@ -3,7 +3,6 @@
     import ProjectModal from "$lib/components/ProjectModal.svelte";
     import SkillCard from "$lib/components/SkillCard.svelte";
     import SkillDetailModal from "$lib/components/SkillDetailModal.svelte";
-    import { dark } from "../../stores/theme";
     import type {
         ProjectsResponse,
         SkillsResponse,
@@ -54,15 +53,6 @@
 </svelte:head>
 
 <Navbar />
-
-<div
-    class="fixed inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"
-></div>
-
-<div
-    class:hidden={$dark}
-    class="fixed inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]"
-></div>
 
 <main class="max-w-6xl m-auto">
     <h1 class="text-6xl font-black text-center mt-32 mb-24">Compétences</h1>

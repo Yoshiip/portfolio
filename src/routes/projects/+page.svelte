@@ -9,13 +9,11 @@
     import Navbar from "$lib/components/Navbar.svelte";
     import { Search } from "lucide-svelte";
     import {
-        camelToTitleCase,
         mod,
         projectsTypeIcons,
         projectsTypeName,
     } from "../../stores/utils";
     import ProjectYearButton from "$lib/components/ProjectYearButton.svelte";
-    import { dark } from "../../stores/theme";
 
     let showModal: (project: ProjectsResponse) => void;
 
@@ -80,14 +78,6 @@
 
 <Navbar />
 
-<div
-    class="fixed inset-0 -z-10 h-full w-full bg-[#020617] bg-[linear-gradient(to_right,#0F1321_1px,transparent_1px),linear-gradient(to_bottom,#0F1321_1px,transparent_1px)] bg-[size:6rem_4rem]"
-></div>
-<div
-    class:hidden={$dark}
-    class="fixed inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"
-></div>
-
 <ProjectModal bind:showModal {showPreviousProject} {showNextProject} />
 
 <main class="max-w-7xl m-auto flex flex-col gap-4">
@@ -99,20 +89,21 @@
         <div class="text-slate-500 select-none">|</div>
         <span class="text-sm">Filtrer les projets</span>
         <div class="join border border-slate-700">
-            <button
+            <input
                 class="btn join-item"
-                class:btn-ghost={filteredType !== ""}
-                on:click={() => filterProjectByType("")}>Tous</button
-            >
+                on:click={() => filterProjectByType("")}
+                type="radio"
+                name="projectType"
+                aria-label="Tous"
+            />
             {#each Object.keys(ProjectsTypeOptions) as projectType}
-                <button
+                <input
                     class="btn join-item"
-                    class:btn-ghost={filteredType !== projectType}
                     on:click={() => filterProjectByType(projectType)}
-                >
-                    <svelte:component this={projectsTypeIcons[projectType]} />
-                    {projectsTypeName[projectType]}</button
-                >
+                    type="radio"
+                    name="projectType"
+                    aria-label={projectsTypeName[projectType]}
+                />
             {/each}
         </div>
         <div class="flex-grow"></div>

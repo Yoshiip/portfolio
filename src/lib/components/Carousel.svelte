@@ -1,5 +1,5 @@
 <script lang="ts">
-    import ImageFullscreenModal from "./dashboard/modals/ImageFullscreenModal.svelte";
+    import ImageFullscreenModal from "./ImageFullscreenModal.svelte";
     import { onMount } from "svelte";
     import { ArrowLeft, ArrowRight } from "lucide-svelte";
     import type { ImagesResponse } from "../../types/pocketbase-types";

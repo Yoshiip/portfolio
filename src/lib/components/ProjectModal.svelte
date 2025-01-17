@@ -156,7 +156,7 @@
         </a>
       {/if}
       {#if project.git_url}
-        <a href={project.git_url} class="btn" target="_blank" rel="noopener "
+        <a href={project.git_url} class="btn" target="_blank" rel="noopener"
           ><Github />
           Code source
         </a>

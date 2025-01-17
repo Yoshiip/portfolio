@@ -3,9 +3,15 @@ import ProjectModal from "./components/ProjectModal.svelte";
 import SkillModal from "./components/SkillModal.svelte";
 
 export const ModalComponents = {
-  ProjectModal,
-  SkillModal,
-  ImageFullscreenModal,
+  get ProjectModal() {
+    return ProjectModal;
+  },
+  get SkillModal() {
+    return SkillModal;
+  },
+  get ImageFullscreenModal() {
+    return ImageFullscreenModal;
+  },
 };
 
 type ModalInstance = {

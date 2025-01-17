@@ -114,13 +114,10 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {#each projects as project, i (project.id)}
                 {@const images = project.expand?.images ?? []}
-                <!-- svelte-ignore a11y_click_events_have_key_events -->
-                <!-- svelte-ignore a11y_no_static_element_interactions -->
-                <div
+                <button
+                  type="button"
                   class="card card-compact bg-base-100 shadow-xl active:scale-95 transition-all cursor-pointer hover:-translate-y-2 hover:shadow-2xl"
-                  onclick={() => () => {
-                    console.log(i);
-                    console.log(projects);
+                  onclick={() => {
                     openModal("ProjectModal", {
                       projects,
                       index: i,
@@ -146,7 +143,7 @@
                       {@html project.description}
                     </p>
                   </div>
-                </div>
+                </button>
               {/each}
             </div>
           {/if}

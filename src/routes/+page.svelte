@@ -11,10 +11,6 @@
 
 <Navbar />
 
-<div
-  class="fixed inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]"
-></div>
-
 <main class="mt-64 flex items-center justify-center dark:text-gray-50">
   <div class="flex flex-col gap-8">
     <h1 class="text-6xl font-bold">TOURNEUR AYMERI</h1>

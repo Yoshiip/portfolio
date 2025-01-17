@@ -3,7 +3,6 @@
   import { type Snippet } from "svelte";
   import { projectsTypeName } from "../../stores/utils";
   import { type ProjectsResponseExtended } from "../db/pb-extended-types";
-  import { openModal } from "$lib/modals.svelte";
 
   let {
     project,

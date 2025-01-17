@@ -1,39 +1,44 @@
 <script lang="ts">
-    import { pb } from "$lib/pocketbase";
+  import { pb } from "$db/pocketbase";
+  import type { ImagesResponse } from "$db/pocketbase-types";
+  import { closeModal } from "$lib/modals.svelte";
+  import { onMount } from "svelte";
 
-    export const showModal = (imageId: string) => {
-        modal.showModal();
-        pb.collection("images")
-            .getOne(imageId)
-            .then((res) => {
-                src = pb.files.getUrl(res, res.image);
-                alt = res.alt;
-            });
+  let modal = $state<HTMLDialogElement>();
+
+  let src = $state<string>("");
+  let alt = $state<string>("");
+
+  let {
+    id,
+    data,
+  }: {
+    id: string;
+    data: {
+      image: ImagesResponse;
     };
+  } = $props();
 
-    let modal: HTMLDialogElement;
-
-    let src: string = "";
-    let alt: string = "";
-
-    function closeModal() {
-        modal.close();
-    }
+  onMount(() => {
+    modal?.showModal();
+    const image = data.image;
+    src = pb.files.getURL(image, image.image);
+    alt = image.alt;
+  });
 </script>
 
 <dialog bind:this={modal} class="modal">
-    <div class="modal-box w-11/12 max-w-5xl">
-        <div class="flex flex-col gap-2">
-            <img {src} {alt} class="w-full rounded-xl" />
-            <div class="flex items-center">
-                {#if alt}
-                    <span class="flex-grow">{alt}</span>
-                {/if}
-                <button on:click={closeModal} class="btn">Retour</button>
-            </div>
-        </div>
+  <div class="modal-box w-11/12 max-w-5xl">
+    <div class="flex flex-col gap-2">
+      <img {src} {alt} class="w-full rounded-xl" />
+      <div class="flex items-center">
+        {#if alt}
+          <span class="flex-grow">{alt}</span>
+        {/if}
+      </div>
     </div>
-    <form method="dialog" class="modal-backdrop">
-        <button>close</button>
-    </form>
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button onclick={() => closeModal(id)}>close</button>
+  </form>
 </dialog>

@@ -1,12 +1,16 @@
-<script>
+<script lang="ts">
     import { ArrowLeft, ArrowRight } from "lucide-svelte";
-    export let onClick = () => {};
-    export let direction = "left";
+    interface Props {
+        onClick?: any;
+        direction?: string;
+    }
+
+    let { onClick = () => {}, direction = "left" }: Props = $props();
 </script>
 
 <button
     class="flex items-center justify-center bg-white text-black size-12 rounded-full hover:bg-slate-100 hover:shadow"
-    on:click={onClick}
+    onclick={onClick}
 >
     {#if direction === "left"}
         <ArrowLeft />

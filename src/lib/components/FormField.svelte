@@ -1,6 +1,11 @@
 <script lang="ts">
-    export let label: string;
-    export let required: boolean = false;
+    interface Props {
+        label: string;
+        required?: boolean;
+        children?: import('svelte').Snippet;
+    }
+
+    let { label, required = false, children }: Props = $props();
 </script>
 
 <div>
@@ -12,5 +17,5 @@
             </div>
         {/if}
     </div>
-    <slot></slot>
+    {@render children?.()}
 </div>

@@ -9,6 +9,7 @@
 </script>
 
 <div
+  id="card"
   class="bg-card-year-pattern shadow-xl bg-primary text-white font-mono w-full h-full flex flex-col justify-end items-end gap-2 scale-90 p-6"
 >
   <h2 class="text-6xl font-black">

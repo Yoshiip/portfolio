@@ -18,21 +18,21 @@ export function mod(n: number, m: number) {
 }
 
 export let projectsTypeName: { [key: string]: string } = {
-  website: "Site web",
-  game: "Jeu",
+  website: "Website",
+  game: "Game",
   jam: "Game Jam",
   //   app: "Application",
-  other: "Autre",
+  other: "Other",
 };
 
 export let skillsTypeName = {
-  language: "Langage",
-  software: "Logiciel",
-  tool: "Outil",
-  gameEngine: "Moteur de jeu",
+  language: "Language",
+  software: "Software",
+  tool: "Tool",
+  gameEngine: "Game Engine",
   api: "API",
   framework: "Framework",
-  os: "Système d'exploitation",
-  database: "Base de données",
-  other: "Autre",
+  os: "Operating System",
+  database: "Database",
+  other: "Other",
 };

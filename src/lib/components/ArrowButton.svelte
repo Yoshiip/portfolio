@@ -9,7 +9,7 @@
 </script>
 
 <button
-    class="flex items-center justify-center bg-white text-black size-12 rounded-full hover:bg-slate-100 hover:shadow"
+    class="flex items-center justify-center bg-white text-black size-12 rounded-full hover:bg-slate-100 hover:shadow-sm"
     onclick={onClick}
 >
     {#if direction === "left"}

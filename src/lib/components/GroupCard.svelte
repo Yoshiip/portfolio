@@ -10,7 +10,7 @@
 <div class="card bg-base-100">
     <div class="card-body">
         <h1>{title}</h1>
-        <div class="bg-base-300 rounded shadow-inner">
+        <div class="bg-base-300 rounded-sm shadow-inner">
             {@render icons?.()}
         </div>
     </div>

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onMount } from "svelte";
+  import { onMount, tick } from "svelte";
   import { ProjectsTypeOptions } from "$db/pocketbase-types";
   import ProjectCard from "$lib/components/ProjectCard.svelte";
   import Navbar from "$lib/components/Navbar.svelte";
@@ -9,6 +9,7 @@
   import type { ProjectsResponseExtended } from "$db/pb-extended-types";
   import { type PageData } from "./$types";
   import { openModal } from "$lib/modals.svelte";
+  import gsap from "gsap";
 
   let filteredQuery: string = "";
   let filteredType: ProjectsTypeOptions | "" = "";
@@ -18,10 +19,19 @@
   }: {
     data: PageData;
   } = $props();
-  onMount(() => {
+  onMount(async () => {
     showedProjects = data.projects;
 
     updateFilters();
+
+    await tick();
+    const cards = document.querySelectorAll("#projectCard");
+    gsap.from(cards, {
+      opacity: 0,
+      y: 50,
+      duration: 0.5,
+      stagger: 0.1,
+    });
   });
 
   let cards = $state<Card[]>([]);
@@ -59,13 +69,6 @@
     updateFilters();
   }
 
-  function projectCardPressed(index: number) {
-    openModal("ProjectModal", {
-      projects: showedProjects,
-      index,
-    });
-  }
-
   function filterProjectByName(query: string) {
     filteredQuery = query;
     updateFilters();
@@ -77,25 +80,23 @@
   };
 </script>
 
-<Navbar />
-
 <main class="max-w-7xl m-auto flex flex-col gap-4">
-  <h1 class="text-6xl font-black text-center mt-32 mb-24">Projets</h1>
+  <h1 class="text-6xl font-black text-center mt-32 mb-24">Projects</h1>
   <div
-    class="flex flex-row items-center justify-center gap-4 p-2 bg-slate-900 rounded text-white"
+    class="flex flex-row items-center justify-center gap-4 p-2 bg-slate-900 rounded-sm text-white"
   >
     <div>
-      {showedProjects.length} projet{showedProjects.length === 1 ? "" : "s"}
+      {showedProjects.length} project{showedProjects.length === 1 ? "" : "s"}
     </div>
     <div class="text-slate-500 select-none">|</div>
-    <span class="text-sm">Filtrer les projets</span>
+    <span class="text-sm">Filter projects</span>
     <div class="join border border-slate-700">
       <input
         class="btn join-item btn-neutral"
         onclick={() => filterProjectByType("")}
         type="radio"
         name="projectType"
-        aria-label="Tous"
+        aria-label="All"
       />
       {#each Object.keys(ProjectsTypeOptions) as projectType}
         <input
@@ -108,11 +109,11 @@
         />
       {/each}
     </div>
-    <div class="flex-grow"></div>
+    <div class="grow"></div>
     <label class="input input-ghost flex items-center p-2">
       <input
         type="text"
-        placeholder="Rechercher un projet"
+        placeholder="Search by name"
         class="grow"
         oninput={(e) => filterProjectByName((e.target as any).value)}
       />

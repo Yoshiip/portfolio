@@ -16,10 +16,11 @@
 </script>
 
 <button
+  id="card"
   onclick={() => {
     cardClicked();
   }}
-  class="card group shadow bg-gray-950 h-80 flex flex-col items-center gap-2 hover:shadow-xl hover:bg-primary"
+  class="card group shadow-sm bg-gray-950 h-80 flex flex-col items-center gap-2 hover:shadow-xl hover:bg-primary"
 >
   {#if project.expand.images}
     {@const images = project.expand.images}

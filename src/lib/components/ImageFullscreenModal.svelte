@@ -33,7 +33,7 @@
       <img {src} {alt} class="w-full rounded-xl" />
       <div class="flex items-center">
         {#if alt}
-          <span class="flex-grow">{alt}</span>
+          <span class="grow">{alt}</span>
         {/if}
       </div>
     </div>

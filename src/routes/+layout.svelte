@@ -4,7 +4,9 @@
   import ImageFullscreenModal from "$lib/components/ImageFullscreenModal.svelte";
   import ProjectModal from "$lib/components/ProjectModal.svelte";
   import SkillModal from "$lib/components/SkillModal.svelte";
-  import "tailwindcss/tailwind.css";
+  import Navbar from "$lib/components/Navbar.svelte";
+  import "../app.css";
+
   interface Props {
     children?: import("svelte").Snippet;
   }
@@ -12,11 +14,9 @@
   let { children }: Props = $props();
 
   onNavigate((navigation) => {
-    // @ts-ignore
     if (!document.startViewTransition) return;
 
     return new Promise((resolve) => {
-      // @ts-ignore
       document.startViewTransition(async () => {
         resolve();
         await navigation.complete;
@@ -39,6 +39,8 @@
       };
   </script>
 </svelte:head>
+
+<Navbar />
 
 {@render children?.()}
 

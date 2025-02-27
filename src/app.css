@@ -1,3 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@plugin "daisyui";
+
+
+@theme {
+  --background-image-card-year-pattern: /images/circuit-board.svg;
+}

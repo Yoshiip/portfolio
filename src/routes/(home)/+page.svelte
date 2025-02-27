@@ -1,7 +1,7 @@
 <script lang="ts">
-  import Navbar from "$lib/components/Navbar.svelte";
   import StylizedButton from "$lib/components/StylizedButton.svelte";
   import { Gamepad, Shapes, Star } from "lucide-svelte";
+  import BigName from "./BigName.svelte";
 </script>
 
 <svelte:head>
@@ -9,11 +9,13 @@
   <meta name="description" content="Portfolio de Tourneur Aymeri" />
 </svelte:head>
 
-<Navbar />
-
-<main class="mt-64 flex items-center justify-center dark:text-gray-50">
+<main
+  class="flex items-center flex-col justify-center h-full bg-neutral text-white"
+>
+  <div class="w-full">
+    <BigName />
+  </div>
   <div class="flex flex-col gap-8">
-    <h1 class="text-6xl font-bold">TOURNEUR AYMERI</h1>
     <p>
       Je suis un étudiant en 3ème année de <strong>BUT Informatique</strong>, à
       l'Université de Lille.<br />

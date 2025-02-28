@@ -1,31 +1,52 @@
-<script>
+<script lang="ts">
   import { page } from "$app/stores";
-  import { Github, GithubIcon, LucideGithub } from "lucide-svelte";
+  import { House, LayoutGrid, Medal } from "lucide-svelte";
+  import type { Component } from "svelte";
 
-  let routes = {
-    "/": "Hello",
-    "/projects": "Projects",
-    "/skills": "Skills",
+  type Route = {
+    href: string;
+    name: String;
+    icon: any;
   };
+
+  const ROUTES: Route[] = [
+    {
+      href: "/",
+      name: "Hello",
+      icon: House,
+    },
+    {
+      href: "/projects",
+      name: "Projects",
+      icon: LayoutGrid,
+    },
+    {
+      href: "/skills",
+      name: "Skills",
+      icon: Medal,
+    },
+  ];
 </script>
 
 <div
   class="w-screen flex items-center bg-neutral text-base-100 px-8 justify-center gap-4 p-2 shadow-sm"
 >
-  {#each Object.entries(routes) as [route, name]}
+  {#each ROUTES as { href, name, icon }}
+    {@const Component = icon}
     <a
-      href={route}
+      {href}
       class="btn btn-lg btn-ghost flex-1"
-      class:btn-primary={$page.url.pathname === route}
-      class:btn-ghost={$page.url.pathname !== route}
+      class:btn-primary={$page.url.pathname === href}
+      class:btn-ghost={$page.url.pathname !== href}
     >
+      <Component />
       {name}
     </a>
   {/each}
   <div class="flex-1">
     <span class="text-sm uppercase">Links</span>
-    <ul>
-      <li class="tooltip tooltip-bottom" data-tip="GitHub">
+    <div class="flex">
+      <div class="tooltip tooltip-bottom" data-tip="GitHub">
         <a href="https://github.com/Yoshiip" class="btn btn-ghost btn-circle">
           <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
             ><title>GitHub</title><path
@@ -33,15 +54,19 @@
             /></svg
           >
         </a>
-      </li>
-      <li>
-        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+      </div>
+      <div>
+        <svg
+          class="size-5"
+          role="img"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
           ><title>Itch.io</title><path
             d="M3.13 1.338C2.08 1.96.02 4.328 0 4.95v1.03c0 1.303 1.22 2.45 2.325 2.45 1.33 0 2.436-1.102 2.436-2.41 0 1.308 1.07 2.41 2.4 2.41 1.328 0 2.362-1.102 2.362-2.41 0 1.308 1.137 2.41 2.466 2.41h.024c1.33 0 2.466-1.102 2.466-2.41 0 1.308 1.034 2.41 2.363 2.41 1.33 0 2.4-1.102 2.4-2.41 0 1.308 1.106 2.41 2.435 2.41C22.78 8.43 24 7.282 24 5.98V4.95c-.02-.62-2.082-2.99-3.13-3.612-3.253-.114-5.508-.134-8.87-.133-3.362 0-7.945.053-8.87.133zm6.376 6.477a2.74 2.74 0 0 1-.468.602c-.5.49-1.19.795-1.947.795a2.786 2.786 0 0 1-1.95-.795c-.182-.178-.32-.37-.446-.59-.127.222-.303.412-.486.59a2.788 2.788 0 0 1-1.95.795c-.092 0-.187-.025-.264-.052-.107 1.113-.152 2.176-.168 2.95v.005l-.006 1.167c.02 2.334-.23 7.564 1.03 8.85 1.952.454 5.545.662 9.15.663 3.605 0 7.198-.21 9.15-.664 1.26-1.284 1.01-6.514 1.03-8.848l-.006-1.167v-.004c-.016-.775-.06-1.838-.168-2.95-.077.026-.172.052-.263.052a2.788 2.788 0 0 1-1.95-.795c-.184-.178-.36-.368-.486-.59-.127.22-.265.412-.447.59a2.786 2.786 0 0 1-1.95.794c-.76 0-1.446-.303-1.948-.793a2.74 2.74 0 0 1-.468-.602 2.738 2.738 0 0 1-.463.602 2.787 2.787 0 0 1-1.95.794h-.16a2.787 2.787 0 0 1-1.95-.793 2.738 2.738 0 0 1-.464-.602zm-2.004 2.59v.002c.795.002 1.5 0 2.373.953.687-.072 1.406-.108 2.125-.107.72 0 1.438.035 2.125.107.873-.953 1.578-.95 2.372-.953.376 0 1.876 0 2.92 2.934l1.123 4.028c.832 2.995-.266 3.068-1.636 3.07-2.03-.075-3.156-1.55-3.156-3.025-1.124.184-2.436.276-3.748.277-1.312 0-2.624-.093-3.748-.277 0 1.475-1.125 2.95-3.156 3.026-1.37-.004-2.468-.077-1.636-3.072l1.122-4.027c1.045-2.934 2.545-2.934 2.92-2.934zM12 12.714c-.002.002-2.14 1.964-2.523 2.662l1.4-.056v1.22c0 .056.56.033 1.123.007.562.026 1.124.05 1.124-.008v-1.22l1.4.055C14.138 14.677 12 12.713 12 12.713z"
           /></svg
         >
-      </li>
-      <li class="tooltip tooltip-bottom" data-tip="Aymeri's 100">
+      </div>
+      <div class="tooltip tooltip-bottom" data-tip="Aymeri's 100">
         <a
           href="https://aymeri100.fr"
           target="_blank"
@@ -49,7 +74,7 @@
         >
           <img class="w-8 h-8" src="https://aymeri100.fr/favicon.png" />
         </a>
-      </li>
-    </ul>
+      </div>
+    </div>
   </div>
 </div>

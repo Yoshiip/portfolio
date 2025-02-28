@@ -2,6 +2,22 @@
   import StylizedButton from "$lib/components/StylizedButton.svelte";
   import { Gamepad, Shapes, Star } from "lucide-svelte";
   import BigName from "./BigName.svelte";
+  import { onMount } from "svelte";
+  import gsap from "gsap";
+
+  onMount(() => {
+    gsap.from("#mainParagraph", {
+      autoAlpha: 0,
+      delay: 1.5,
+      y: 20,
+    });
+    gsap.from(document.querySelectorAll("#actions"), {
+      y: 10,
+      autoAlpha: 0.0,
+      stagger: 0.1,
+      delay: 2.5,
+    });
+  });
 </script>
 
 <svelte:head>
@@ -16,13 +32,14 @@
     <BigName />
   </div>
   <div class="flex flex-col gap-8">
-    <p>
-      Je suis un étudiant en 3ème année de <strong>BUT Informatique</strong>, à
-      l'Université de Lille.<br />
-      Sur ce site, vous retrouverez les <strong>projets</strong> que j'ai pu
-      réaliser, ainsi que mes <strong>compétences</strong>.
+    <p class="font-serif text-lg" id="mainParagraph">
+      I am a third-year student in <strong>BUT Computer Science</strong> at the
+      University of Lille.<br />
+      On this site, you will find the <strong>projects</strong> I have worked
+      on, as well as my <strong>skills</strong>.
     </p>
-    <div class="flex gap-4">
+
+    <div class="flex gap-4" id="actions">
       <StylizedButton
         href="https://aymeri100.fr"
         background="/images/projects_button_background.jpg"
@@ -35,14 +52,14 @@
         background="/images/projects_button_background.jpg"
       >
         <Star fill="true" />
-        Projets
+        Projects
       </StylizedButton>
       <StylizedButton
         href="/skills/"
         background="/images/skills_button_background.jpg"
       >
         <Shapes fill="true" />
-        Compétences
+        Skills
       </StylizedButton>
     </div>
   </div>

@@ -2,9 +2,12 @@
   import { onMount, tick } from "svelte";
   import Letter from "./Letter.svelte";
   import gsap from "gsap";
+  import { LucideThermometerSnowflake } from "lucide-svelte";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
 
   onMount(async () => {
     await tick();
+    gsap.registerPlugin(ScrollTrigger);
     const letters = document.querySelectorAll("path");
 
     gsap.fromTo(
@@ -21,10 +24,22 @@
         translateY: 0,
       }
     );
+    gsap.to("#bigName", {
+      scrollTrigger: {
+        scrub: 1,
+        pin: true,
+        start: "top top",
+        end: "+=100",
+      },
+      scale: 0.4,
+      y: "-100%",
+    });
   });
 </script>
 
 <svg
+  id="bigName"
+  class="w-full"
   width="1137"
   height="250"
   viewBox="0 0 1137 250"

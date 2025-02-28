@@ -6,12 +6,13 @@
   import SkillModal from "$lib/components/SkillModal.svelte";
   import Navbar from "$lib/components/Navbar.svelte";
   import "../app.css";
+  import type { Snippet } from "svelte";
 
-  interface Props {
-    children?: import("svelte").Snippet;
-  }
-
-  let { children }: Props = $props();
+  let {
+    children,
+  }: {
+    children: Snippet;
+  } = $props();
 
   onNavigate((navigation) => {
     if (!document.startViewTransition) return;

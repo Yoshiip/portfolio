@@ -68,7 +68,7 @@
     >
     {#if currentSkill}
       <div class="flex gap-4 flex-col lg:flex-row">
-        <div class="card bg-gray-950 min-w-80 lg:max-w-80 lg:min-h-[640px]">
+        <div class="card bg-neutral min-w-80 lg:max-w-80 lg:min-h-[640px]">
           <div class="card-body">
             <img
               class="w-full max-w-12"
@@ -84,15 +84,13 @@
           </div>
         </div>
         <div class="md:overflow-y-auto md:max-h-[640px]">
-          <h2
-            class="text-2xl font-bold text-slate-700 dark:text-gray-300 mt-6 mb-3"
-          >
-            Projet{projects.length !== 1 ? "s" : ""}
-            utilisant
+          <h2 class="text-2xl font-bold text-slate-700 mt-6 mb-3">
+            Project{projects.length !== 1 ? "s" : ""}
+            using
             <img
               alt={currentSkill.name}
               src={pb.files.getURL(currentSkill, currentSkill.image)}
-              class="size-6 inline-block"
+              class="size-6 inline-block align-middle"
             />
             <span class="text-primary">
               {currentSkill.name}
@@ -103,12 +101,6 @@
               class="flex items-center justify-center flex-col gap-2 text-gray-500"
             >
               <SearchX class="size-8" />
-              <p>
-                J'ai utilisé cette technologie dans aucun projet public.
-                Néanmoins, je l'ai très probablement utilisée lors de stages en
-                entreprise, et je ne peux pas les lister ici pour des raisons de
-                confidentialité.
-              </p>
             </div>
           {:else}
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">

@@ -8,7 +8,7 @@
   onMount(async () => {
     await tick();
     gsap.registerPlugin(ScrollTrigger);
-    const letters = document.querySelectorAll("path");
+    const letters = document.querySelectorAll("#bigName path");
 
     gsap.fromTo(
       letters,
@@ -24,22 +24,12 @@
         translateY: 0,
       }
     );
-    gsap.to("#bigName", {
-      scrollTrigger: {
-        scrub: 1,
-        pin: true,
-        start: "top top",
-        end: "+=100",
-      },
-      scale: 0.4,
-      y: "-100%",
-    });
   });
 </script>
 
 <svg
   id="bigName"
-  class="w-full"
+  class="w-full text-primary"
   width="1137"
   height="250"
   viewBox="0 0 1137 250"

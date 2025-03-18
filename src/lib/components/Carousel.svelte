@@ -54,7 +54,7 @@
       alt="Frame"
     />
     <div
-      class="rounded-sm absolute left-[11.5%] top-[4.5%] right-[11.5%] bottom-[17.5%]"
+      class="rounded-box absolute left-[11.5%] top-[4.5%] right-[11.5%] bottom-[17.5%]"
     >
       {#each images as image, index}
         <!-- svelte-ignore a11y_click_events_have_key_events -->
@@ -62,7 +62,7 @@
         <img
           src={pb.files.getURL(image, image.image)}
           alt="Slide"
-          class="absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-150 cursor-zoom-in"
+          class="absolute inset-0 w-full h-full object-cover rounded-box transition-opacity duration-150 cursor-zoom-in"
           class:opacity-0={currentIndex !== index}
           onclick={() => {
             imageClicked(image);

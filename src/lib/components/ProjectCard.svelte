@@ -20,7 +20,7 @@
   onclick={() => {
     cardClicked();
   }}
-  class="card group shadow-sm bg-gray-950 h-80 flex flex-col items-center gap-2 hover:shadow-xl hover:bg-primary"
+  class="card group shadow-sm bg-neutral h-80 flex flex-col items-center gap-2 hover:shadow-xl hover:bg-primary hover:text-primary-content"
 >
   {#if project.expand.images}
     {@const images = project.expand.images}
@@ -41,7 +41,7 @@
       </div>
     </div>
     <span
-      class="shadow-md bg-gray-800 group-hover:bg-neutral p-2 rounded-full text-white font-bold flex gap-2"
+      class="shadow-md bg-neutral group-hover:bg-neutral p-2 rounded-full text-base-100 font-bold flex gap-2"
     >
       {#if project.expand.skills}
         {@const skills = project.expand.skills}

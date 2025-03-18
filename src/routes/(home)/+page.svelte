@@ -4,6 +4,7 @@
   import BigName from "./BigName.svelte";
   import { onMount } from "svelte";
   import gsap from "gsap";
+  import Background from "$lib/components/Background.svelte";
 
   onMount(() => {
     gsap.from("#mainParagraph", {
@@ -25,14 +26,12 @@
   <meta name="description" content="Portfolio de Tourneur Aymeri" />
 </svelte:head>
 
-<main
-  class="flex items-center flex-col justify-center h-full bg-neutral text-white"
->
-  <div class="w-full">
+<main class="flex items-center flex-col justify-center h-full">
+  <div class="w-full max-w-xl">
     <BigName />
   </div>
   <div class="flex flex-col gap-8">
-    <p class="font-serif text-lg" id="mainParagraph">
+    <p class="text-lg" id="mainParagraph">
       I am a third-year student in <strong>BUT Computer Science</strong> at the
       University of Lille.<br />
       On this site, you will find the <strong>projects</strong> I have worked
@@ -40,25 +39,16 @@
     </p>
 
     <div class="flex gap-4" id="actions">
-      <StylizedButton
-        href="https://aymeri100.fr"
-        background="/images/projects_button_background.jpg"
-      >
+      <StylizedButton href="https://aymeri100.fr">
         <Gamepad />
         Aymeri's 100
       </StylizedButton>
-      <StylizedButton
-        href="/projects/"
-        background="/images/projects_button_background.jpg"
-      >
-        <Star fill="true" />
+      <StylizedButton href="/projects/">
+        <Star />
         Projects
       </StylizedButton>
-      <StylizedButton
-        href="/skills/"
-        background="/images/skills_button_background.jpg"
-      >
-        <Shapes fill="true" />
+      <StylizedButton href="/skills/">
+        <Shapes />
         Skills
       </StylizedButton>
     </div>

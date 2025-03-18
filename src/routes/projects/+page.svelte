@@ -83,31 +83,32 @@
 <main class="max-w-7xl m-auto flex flex-col gap-4">
   <h1 class="text-6xl font-black text-center mt-32 mb-24">Projects</h1>
   <div
-    class="flex flex-row items-center justify-center gap-4 p-2 bg-slate-900 rounded-sm text-white"
+    class="flex flex-row items-center justify-center gap-4 p-2 bg-neutral text-neutral-content"
   >
     <div>
       {showedProjects.length} project{showedProjects.length === 1 ? "" : "s"}
     </div>
-    <div class="text-slate-500 select-none">|</div>
-    <span class="text-sm">Filter projects</span>
-    <div class="join border border-slate-700">
-      <input
-        class="btn join-item btn-neutral"
-        onclick={() => filterProjectByType("")}
-        type="radio"
-        name="projectType"
-        aria-label="All"
-      />
-      {#each Object.keys(ProjectsTypeOptions) as projectType}
+    <div class="text-neutral-content/50 select-none">|</div>
+    <span class="text-sm">Filter</span>
+    <div class="join">
+      <form class="filter">
         <input
-          class="btn join-item btn-neutral"
-          onclick={() =>
-            filterProjectByType(projectType as ProjectsTypeOptions)}
-          type="radio"
-          name="projectType"
-          aria-label={projectsTypeName[projectType]}
+          class="btn btn-square"
+          type="reset"
+          value="×"
+          onclick={() => filterProjectByType("")}
         />
-      {/each}
+        {#each Object.keys(ProjectsTypeOptions) as projectType}
+          <input
+            class="btn btn-neutral"
+            type="radio"
+            onclick={() =>
+              filterProjectByType(projectType as ProjectsTypeOptions)}
+            name="projectType"
+            aria-label={projectsTypeName[projectType]}
+          />
+        {/each}
+      </form>
     </div>
     <div class="grow"></div>
     <label class="input input-ghost flex items-center p-2">
@@ -117,7 +118,7 @@
         class="grow"
         oninput={(e) => filterProjectByName((e.target as any).value)}
       />
-      <Search class="text-gray-400" size="1rem" />
+      <Search class="text-neutral-content/60 size-5" />
     </label>
   </div>
   <div class="grid gap-2 grid-cols-2 xl:grid-cols-3">

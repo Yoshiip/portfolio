@@ -12,7 +12,7 @@
 
 <a
   {href}
-  class="btn flex bg-yellow-300 justify-end p-4 text-xl font-black hover:-translate-y-2 transition-all flex-col text-yellow-800 w-56 h-28 rounded-xl shadow-sm hover:shadow-xl"
+  class="btn btn-primary flex justify-end p-4 text-xl font-black hover:-translate-y-2 transition-all flex-col w-56 h-28 rounded-xl shadow-sm hover:shadow-xl"
 >
   {@render children?.()}
 </a>

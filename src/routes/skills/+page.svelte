@@ -21,7 +21,7 @@
     {
       name: "Web Development",
       icon: Globe,
-      gradient: "from-blue-200 to-blue-100 dark:from-blue-800 dark:to-blue-700",
+      gradient: "from-blue-200 to-blue-100",
     },
     {
       name: "Video Game Development",
@@ -75,7 +75,7 @@
       <div class="card bg-linear-to-t {domain.gradient}">
         <div class="card-body">
           <div class="flex justify-between px-4 gap-4">
-            <span class="text-gray-700 font-bold">{domain.name}</span>
+            <span class="text-base-content font-bold">{domain.name}</span>
 
             <SvelteComponent />
           </div>

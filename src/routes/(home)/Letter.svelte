@@ -11,7 +11,7 @@
 </script>
 
 {#if evenodd}
-  <path {id} fill-rule="evenodd" clip-rule="evenodd" {d} fill="#FFDD00" />
+  <path {id} fill-rule="evenodd" clip-rule="evenodd" {d} fill="currentColor" />
 {:else}
-  <path {id} {d} fill="#FFDD00" />
+  <path {id} {d} fill="currentColor" />
 {/if}

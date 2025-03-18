@@ -11,7 +11,7 @@
   } = $props();
 
   let shadowColor = skill.master
-    ? "shadow-md shadow-yellow-500/50 border border-yellow-200 dark:border-yellow-800 dark:shadow-yellow-800/50"
+    ? "shadow-md shadow-yellow-500/50 border border-yellow-200"
     : "shadow-md hover:shadow-xl";
 
   function cardPressed() {
@@ -37,7 +37,7 @@
     alt="{skill.name} logo"
     class="size-10 object-scale-down"
   />
-  <div class="text-slate-600 mt-2 text-xs font-semibold dark:text-slate-400">
+  <div class="text-slate-600 mt-2 text-xs font-semibold">
     {skillsTypeName[skill.type]}
   </div>
   <span>{skill.name}</span>

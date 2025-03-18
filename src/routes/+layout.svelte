@@ -7,6 +7,7 @@
   import Navbar from "$lib/components/Navbar.svelte";
   import "../app.css";
   import type { Snippet } from "svelte";
+  import Background from "$lib/components/Background.svelte";
 
   let {
     children,
@@ -25,6 +26,8 @@
     });
   });
 </script>
+
+<Background />
 
 <svelte:head>
   <script
